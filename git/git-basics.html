@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <title>Git Basics</title>
+</head>
+<body>
+    <button class="button-goback" onclick="history.back()">Go back</button>
+    <h1 class="text-underline">Git</h1>
+	<h2>Definición</h2>
+    <p>Version control system. Sistema de control de versiones. <a href="https://git-scm.com/docs" target="_blank">Documentación oficial</a></p>
+    <h2>Comandos básicos de consola de Git</h2>
+    <ul>
+        <li><a href="https://training.github.com/downloads/es_ES/github-git-cheat-sheet/" target="_blank">Resumen oficial</a></li>
+        <li><a href="github-git-cheat-sheet.pdf" target="_blank">PDF</a></li>
+    </ul>
+    <h3>Configuración inicial</h3>
+    <ol>
+        <li><strong>git init</strong> dentro del directorio de trabajo para ejecutar git</li>
+		<li><strong>git config --global user.name "USUARIO"</strong> configura el usuario de git en toda la computadora</li>
+		<li><strong>git config --global user.email "EMAIL"</strong> configura el email de usuario en toda la computadora</li>
+    </ol>
+
+    <h3>Gestión de ramas</h3>
+    <ol>
+        <li><strong>git branch</strong> lista las ramas existentes e indica la actual</li>
+        <li><strong>git branch NOMBRE</strong> crea una nueva la rama</li>
+        <li><strong>git branch -m NOMBRE</strong> cambia el nombre por defecto de la rama</li>
+        <li><strong>git switch NOMBRERAMA</strong> cambia a la rama señalada</li>
+        <li><strong>git checkout NOMBRERAMA</strong> cambia a la rama señalada solo si se aplicó un commit</li>
+        <li><strong>git merge NOMBRERAMA</strong> fusiona la rama actual con la rama señalada. Ubicarse en la que absorberá los cambios de la otra</li>
+        <li><strong>git branch -d NOMBRERAMA</strong> elimina la rama seleccionada mientras no se esté en ella</li>
+    </ol>
+
+    <h3>Gestión de commits</h3>
+    <ol>
+        <li><strong>git add ARCHIVO.EXTENSION | CARPETA</strong> prepara para el commit los archivos y carpetas indicados. Se pueden señalar varios elementos separando los nombres con espacios</li>
+        <li><strong>git add .</strong> prepara para el commit todos los archivos y carpetas que se han modificado</li>
+        <li><strong>git commit -m "NOMBRE"</strong> aplica un commit sobre el archivo. Este nombre genera un ID único</li>
+        <li><strong>git checkout ARCHIVO.EXTENSION | CARPETA</strong> restaura el último commit de un archivo o contenido de una carpeta</li>
+        <li><strong>git restore ARCHIVO.EXTENSION | CARPETA</strong> restaura el último commit de un archivo o contenido de una carpeta</li>
+		<li><strong>git restore --staged ARCHIVO.EXTENSION</strong> recupera el último commit eliminado con rm --cached</li>
+		<li><strong>git reset</strong> muestra los archivos que pueden recuperar una versión anterior</li>
+		<li><strong>git reset --hard IDCOMMIT</strong> elimina/devuelve todos los commits posteriores/anteriores desde el commit indicado</li>
+    </ol>
+
+    <h3>Gestión de tags</h3>
+    <ol>
+        <li><strong>git tag NOMBRE</strong> crea una etiqueta que identifica un commit. Esta etiqueta puede ser usada en lugar del ID del commit</li>
+        <li><strong>git tag</strong> lista el registro de tags</li>
+        <li><strong>git checkout NOMBRETAG</strong> cambia a la etiqueta señalada</li>
+    </ol>
+
+    <h3>Gestión de stash</h3>
+    <ol>
+        <li><strong>git stash</strong> almacena temporalmente los cambios no guardados con commit</li>
+		<li><strong>git stash pop</strong> restaura los cambios almacenados temporalmente y que no han sido guardados con commit</li>
+		<li><strong>git stash drop</strong> elimina el último stash junto con los cambios almacenados temporalmente en él</li>
+        <li><strong>git stash list</strong> muestra una lista de los stash creados. Una vez que un stash es restaurado o eliminado, no se muestra en esta lista</li>
+    </ol>
+
+    <h3>Gestión de archivos y carpetas</h3>
+    <ol>
+        <li><strong>git mv ARCHIVO.EXTENSION | CARPETA</strong> mueve o renombra un archivo o carpeta</li>
+		<li><strong>git rm ARCHIVO.EXTENSION</strong> elimina físicamente un archivo y lo agrega al área de espera</li>
+        <li><strong>git rm --cached ARCHIVO.EXTENSION</strong> elimina el archivo del commit pero no físicamente</li>
+        <li><strong>git rmdir CARPETA</strong> elimina una carpeta</li>
+    </ol>
+
+    <h3>Ignorando archivos</h3>
+    <ol>
+        <li><strong><a href="../.gitignore">.gitignore</a></strong> es el archivo donde se listan archivos y carpetas que serán ignorados al ser modificados y no se mostrarán en el git status. Se puede crear con el comando touch</li>
+        <li><strong>ARCHIVO.EXTENSION</strong> dentro de .gitignore para listar archivos a ignorar</li>
+		<li><strong>/CARPETA</strong> dentro de .gitignore para listar carpetas a ignorar</li>
+    </ol>
+
+    <h3>Revisión de logs</h3>
+    <ol>
+        <li><strong>git status</strong> muestra el estado de los archivos</li>
+        <li><strong>git checkout</strong> muestra el estado de los archivos</li>
+        <li><strong>git log</strong> muestra el registro de commits creados hasta el momento. Para salir de esa pantalla presionar la Q</li>
+        <li><strong>git reflog</strong> muestra el registro de commits creados y eliminados</li>
+        <li><strong>git diff</strong> muestra los cambios realizados a partir del último commmit</li>
+        <li><strong>git diff NOMBRERAMA</strong> muestra los cambios realizados a partir del último commmit en la rama indicada</li>
+        <li><strong>git checkout</strong> muestra archivos y carpetas que han sido modificados y no fueron guardados con commit</li>
+    </ol>
+
+    <h3>Otros</h3>
+    <ol>
+        <li><a href="https://docs.github.com/es/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent" target="_blank">Generación de una nueva clave SSH y adición al agente SSH (Windows)</a>. Ruta: C:\Program Files\Git\etc\ssh</li>
+    </ol>
+
+    <h3>Comandos básicos de la consola GNU Bash (Bourne-again shell)</h3>
+    <ol>
+        <li><strong>cd</strong> muestra la ruta del directorio actual</li>
+        <li><strong>cd RUTA | CARPETA</strong> cambia de directorio</li>
+        <li><strong>cd ..</strong> sube un nivel de directorio</li>
+        <li><strong>ls</strong> lista la estructura de directorios actual</li>
+		<li><strong>ls CARPETA/</strong> lista la estructura de directorios de la carpeta</li>
+        <li><strong>dir</strong> lista la estructura de directorios</li>
+        <li><strong>touch ARCHIVO.EXTENSION</strong> crea un archivo o carpeta</li>
+        <li><strong>mkdir CARPETA</strong> crea una carpeta</li>
+        <li><strong>rm ARCHIVO.EXTENSION</strong> borra un archivo o carpeta</li>
+        <li><strong>rmdir CARPETA</strong> borra una carpeta</li>
+		<li><strong>mv ARCHIVO.EXTENSION NUEVOARCHIVO.EXTENSION | CARPETA NUEVACARPETA | ARCHIVO.EXTENSION RUTA | CARPETA RUTA</strong> mueve o cambia el nombre al archivo o carpeta</li>
+		<li><strong>copy ARCHIVO.EXTENSION | CARPETA </strong> copia el archivo a la carpeta o ruta indicada. Usar ../ para copiar en un nivel superior</li>
+		<li><strong>move ARCHIVO.EXTENSION | CARPETA </strong> mueve el archivo a la carpeta o ruta indicada. Usar ../ para mover a un nivel superior</li>
+        <li><strong>history</strong> muestra los últimos comandos ejecutados junto con un número que permite volver a repetir el comando</li>
+        <li><strong>reset</strong> resetea el HEAD actual al estado indicado</li>
+        <li><strong>clear</strong> limpia la consola</li>
+        <li><strong>exit</strong> cierra la consola</li>
+    </ol>
+</body>
+</html>

@@ -1,0 +1,17 @@
+#ignonra una carpeta
+readme
+
+#ignonra una subcarpeta
+readme/log
+
+#ignora un archivo
+readme.txt
+
+#ignora un tipo de archivo
+*.txt
+
+#ignora todos los archivos con ese nombre
+log.*
+
+#exceptúa el archivo con ese nombre
+!readme.txt

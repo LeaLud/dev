@@ -1,0 +1,10 @@
+/*reset*/
+*{font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+h1{color:#333;font-size: 40px;}
+h2{color:#333;font-size: 30px;}
+h3{color:#333;font-size: 20px;}
+
+/*classes*/
+.button-goback{border:none;background-color: #ccc;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;float: right;}
+.text-underline{text-decoration:underline;}

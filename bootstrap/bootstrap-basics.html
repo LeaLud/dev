@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+	
+	<link rel="stylesheet" href="../style/style.css">
+	<link rel="shortcut icon" href="favicon.png" />
+    <title>Bootstrap básico</title>
+  </head>
+  <body>
+	<button class="button-goback" onclick="history.back()">Go Back</button>
+	<div class="container py-5">
+		<h1>Bootstrap básico</h1>
+		<hr/>
+		<h2>Puntos de quiebre (breakpoints)</h2>
+		<table class="table text-center">
+			<tr>
+				<th>Extra small (auto)</p></th>
+				<th>Small (sm)</p></th>
+				<th>Medium (md)</p></th>
+				<th>Large (lg)</p></th>
+				<th>Extra large (xl)</p></th>
+			</tr>
+			<tr>
+				<td><code><576px</code></p></td>
+				<td><code>≥576px</code></p></td>
+				<td><code>≥768px</code></p></td>
+				<td><code>≥992px</code></p></td>
+				<td><code>≥1200px</code></p></td>
+			</tr>
+			<tr>
+				<td><code>.col</code></p></td>
+				<td><code>.col-sm</code></p></td>
+				<td><code>.col-md</code></p></td>
+				<td><code>.col-lg</code></p></td>
+				<td><code>.col-xl</code></p></td>
+			</tr>
+		</table>
+		
+		<hr />
+		
+		<h2>Alineación de texto</h2>
+		<div class="alert alert-primary" role="alert">
+			Se aplica a cualquier elemento con texto.
+		</div>
+		<div class="row">
+			<div class="col-3 border">
+				<p class="font-weight-bold">Texto izquierda (por defecto)</p>
+				<p class="text-left"><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small></p>
+				<code>.text-left</code></p>
+			</div>
+			<div class="col-3 border">
+				<p class="font-weight-bold">Texto centro</p>
+				<p class="text-center"><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small></p>
+				<code>.text-center</code></p>
+			</div>
+			<div class="col-3 border">
+				<p class="font-weight-bold">Texto derecha</p>
+				<p class="text-right"><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small></p>
+				<code>.text-right</code></p>
+			</div>
+			<div class="col-3 border">
+				<p class="font-weight-bold">Texto justificado</p>
+				<p class="text-justify"><small>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</small></p>
+				<code>.text-justify</code></p>
+			</div>
+		</div>
+		
+		<hr />
+		
+		<h2>Alineación horizontal de columnas</h2>
+		<div class="alert alert-primary" role="alert">
+			Se aplica a las filas (<code>div class="row justify-content-start"</code>).
+		</div>
+		<div class="row justify-content-start">
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al comienzo de su contenedor</p>
+				<p><code>.justify-content-start</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al comienzo de su contenedor</p>
+				<p><code>.justify-content-start</code></p>
+			</div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al centro de su contenedor</p>
+				<p><code>.justify-content-center</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al centro de su contenedor</p>
+				<p><code>.justify-content-center</code></p>
+			</div>
+		</div>
+		<div class="row justify-content-end">
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al final de su contenedor</p>
+				<p><code>.justify-content-end</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al final de su contenedor</p>
+				<p><code>.justify-content-end</code></p>
+			</div>
+		</div>
+		<div class="row justify-content-around">
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al centro de su contenedor, distribuyendo el espacio restante a los lados y al centro</p>
+				<p><code>.justify-content-around</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al centro de su contenedor, distribuyendo el espacio restante a los lados y al centro</p>
+				<p><code>.justify-content-around</code></p>
+			</div>
+		</div>
+		<div class="row justify-content-between">
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al rededor del espacio restante</p>
+				<p><code>.justify-content-between</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columnas alineadas al rededor del espacio restante</p>
+				<p><code>.justify-content-between</code></p>
+			</div>
+		</div>
+		
+		<hr />
+		
+		<h2>Alineación vertical de columnas</h2>
+		<div class="alert alert-primary" role="alert">
+			Se aplica a las filas (<code>div class="row align-items-start"</code>).
+		</div>
+		<div class="row border align-items-end" style="height:200px;">
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada en la base de su contenedor</p>
+				<p><code>.align-items-end</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada en la base de su contenedor</p>
+				<p><code>.align-items-end</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada en la base de su contenedor</p>
+				<p><code>.align-items-end</code></p>
+			</div>
+		</div>
+		<div class="row border align-items-center" style="height:200px;">
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada en el centro de su contenedor</p>
+				<p><code>.align-items-center</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada en el centro de su contenedor</p>
+				<p><code>.align-items-center</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada en el centro de su contenedor</p>
+				<p><code>.align-items-center</code></p>
+			</div>
+		</div>
+		<div class="row border align-items-start" style="height:200px;">
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada al comienzo de su contenedor</p>
+				<p><code>.align-items-start</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada al comienzo de su contenedor</p>
+				<p><code>.align-items-start</code></p>
+			</div>
+			<div class="col-4 border bg-warning">
+				<p>Columna alineada al comienzo de su contenedor</p>
+				<p><code>.align-items-start</code></p>
+			</div>
+		</div>
+		
+		<hr />
+		
+		<h2>Alineación vertical independiente de columnas</h2>
+		<div class="alert alert-primary" role="alert">
+			Se aplica a las columnas (<code>div class="col align-self-center"</code>).
+		</div>
+		<div class="row border" style="height:300px;">
+			<div class="col-4 border bg-warning align-self-center">
+				<p>Columna alineada al centro de su contenedor</p>
+				<p><code>.align-self-center</code></p>
+			</div>
+			<div class="col-4 border bg-warning align-self-end">
+				<p>Columna alineada al final de su contenedor</p>
+				<p><code>.align-self-end</code></p>
+			</div>
+			<div class="col-4 border bg-warning align-self-start">
+				<p>Columna alineada al comienzo de su contenedor</p>
+				<p><code>.align-self-start</code></p>
+			</div>
+		</div>
+  </body>
+</html>

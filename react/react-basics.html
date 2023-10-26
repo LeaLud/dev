@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <title>Document</title>
+    <style>
+        #app{
+            overflow:hidden; 
+            width: 128px;
+            text-align: center;   
+        }
+        img{
+            border-radius: 50%;
+            filter:grayscale(1);
+        }
+        p{
+            display: block;
+        }
+        .actived{
+            filter: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="button-goback" onclick="history.back()">Go back</button>
+    <h1>Variables javascript!</h1>
+    <div id="app">
+        <script>
+            console.log(usuario);
+            console.log("HelloJS!");
+            console.log(typeof "HelloJS!");
+
+            varNumber = 6.5 * 45
+            console.log(varNumber)
+            console.log(typeof varNumber)
+
+        </script>
+    </div>
+    
+
+
+</body>
+</html>
