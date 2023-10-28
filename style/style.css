@@ -1,10 +1,24 @@
 /*reset*/
-*{font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+* {
+    font-family:'Courier New', Courier, monospace;
+}
+
+body{
+    background-color:#ccc;
+}
 
 h1{color:#333;font-size: 40px;}
 h2{color:#333;font-size: 30px;}
 h3{color:#333;font-size: 20px;}
 
+a{
+    color:blueviolet;
+}
+a:visited{
+    color:blueviolet;
+}
+
 /*classes*/
-.button-goback{border:none;background-color: #ccc;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;float: right;}
+.button-goback{border:none;background-color: #333;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;float: right;color:#fff;}
 .text-underline{text-decoration:underline;}
+.highlight-text{color:crimson;font-weight:bold;}

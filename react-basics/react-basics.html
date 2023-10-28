@@ -3,32 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body{
-          background-color:darkslategrey;
-          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-        .highlight-text{
-          color:aqua;
-        }
-        a{
-          color: aliceblue;
-        }
-      </style>
+    <link rel="stylesheet" href="../style/style.css" />
     <title>React basics</title>
 </head>
 <body>
+    <button class="button-goback" onClick="history.back()">Go back</button>
     <h1>React. Comenzando</h1>
     <h2>Programas necesarios</h2>
     <ul>
       <li><a href="https://nodejs.org/en" target="_blank">Node.js</a> para el desarrollo local</li>
-
-      <li><a href="https://nodejs.org/en" target="_blank">Next.js</a> es un framework de React. se ejecuta con <span class="highlight-text">npx create-next-app@latest</span>
-      </li>
-      <li><span class="highlight-text">npm start</span> inicia el servidor de desarrollo en <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a></li>
+      <li><a href="https://nextjs.org/" target="_blank">Next.js</a> es un framework de React. se ejecuta con <span class="highlight-text">npx create-next-app@latest</span></li>
+    </ul>
+    <h2>Comandos iniciales en consola</h2>
+    <ul>
+      <li><span class="highlight-text">npx create-react-app CARPETA</span> crea una app en la carpeta señalada</li>
+      <li><span class="highlight-text">npm start</span> inicia el servidor de desarrollo en <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>. Se debe ejecutar en la carpeta de la app</li>
       <li><span class="highlight-text">npm run build</span> agrupa la aplicación en archivos estáticos para producción</li>
       <li><span class="highlight-text">npm test</span> inicia el corredor de pruebas</li>
       <li><span class="highlight-text">npm run eject</span> Elimina esta herramienta y copia las dependencias de compilación, los archivos de configuración y los scripts en el directorio de la aplicación. Esta acción no puede ser revertida</li>
+    </ul>
+    <h2>Exportar e importar componentes</h2>
+    <ul>
+      <li><span class="highlight-text">export default NOMBRECOMPONENTE;</span>. Se agrega al final del archivo del componente que se quiera exportar</li>
+      <li><span class="highlight-text">import './ARCHIVO.EXTENSION';</span> o <span class="highlight-text">import COMPONENTENTE from './ARCHIVO.EXTENSION';</span> para incluir en un nuevo archivo</li>
+    </ul>
+    <h2>Varios</h2>
+    <ul>
+      <li><span class="highlight-text">npm</span> es el comando que instala paquetes y <span class="highlight-text">npx</span> los ejecuta desde una descarga temporal</li>
     </ul>
 </body>
 </html>
