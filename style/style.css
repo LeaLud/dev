@@ -4,7 +4,7 @@
 }
 
 body{
-    background-color:#ccc;
+    background-color:#ccc !important;
 }
 
 h1{color:#333;font-size: 40px;}
@@ -19,6 +19,21 @@ a:visited{
 }
 
 /*classes*/
-.button-goback{border:none;background-color: #333;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;float: right;color:#fff;}
+.button-goback{border:none;background-color: #333;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;position:absolute;right:15px;top:15px;color:#fff;}
 .text-underline{text-decoration:underline;}
 .highlight-text{color:crimson;font-weight:bold;}
+.text-indent-10{text-indent: 10px;display: block;}
+.text-indent-20{text-indent: 20px;display: block;}
+
+/*anidación de selectores en SCSS*/
+main{
+    p{
+        font-size:auto;
+    }
+    a{
+        font-size:auto;
+    }
+    li{
+        font-size:auto;
+    }
+}
