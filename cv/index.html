@@ -6,7 +6,8 @@
     <meta name="author" content="Leandro Ludueña" />
     <meta name="description" content="Currículom Vitae" />
     <meta name="keywords" content="Full stack web developer, react, bootstrap, html5, css3, JavaScript" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/style.css" media="all" />
+    <link rel="stylesheet" href="style/mobile.css" media="(max-width:575px)" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>Leandro Ludueña - Currículom Vitae</title>
@@ -14,43 +15,127 @@
 <body>
     <main>
         <header>
-            <ul class="nav justify-content-end sticky-top">
+            <ul class="nav justify-content-end sticky-top d-none">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Main</a>
+                  <a class="nav-link text-dark active" aria-current="page" href="#">Main</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Skills</a>
+                  <a class="nav-link text-dark" href="#">Skills</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Portfolio</a>
+                  <a class="nav-link text-dark" href="#">Portfolio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Contact</a>
+                  <a class="nav-link text-dark disabled" aria-disabled="true">Contact</a>
                 </li>
               </ul>
         </header>
-        <div class="container-fluid">
-            <div class="row bg-black py-5 px-3 mb-5">
-                <div id="profile-photo" class="col-12 col-md-3">
-                    <picture class="position-relative">
-                        <img class="position-absolute w-100" src="img/foto-cv.png" alt="Profile photo" />
-                    </picture>
-                </div>
-                <div id="personal-data" class="col-9 bg-black text-white">
-                    <div>
-                        <h1>Leandro Ludueña</h1>
+        <div id="cv-head" class="container-fluid">
+            <div class="container">
+                <div class="row pt-5 pb-4 px-3 mb-5">
+                    <div id="profile-photo" class="col-12 col-sm-3 position-relative">
+                        <picture class="position-absolute">
+                            <img src="img/foto-cv.png" alt="Profile photo" />
+                        </picture>
                     </div>
-                    <div>
-                        <h2>Fullstack web developer</h2>
-                    </div>
-                    <div>
-                        <p><i class="bi bi-envelope-at-fill"></i> <a class="text-white" href="mailto:leandro.f.luduena@gmail.com">leandro.f.luduena@gmail.com</a></p>
-                        <p><i class="bi bi-telephone-fill"></i> +39 328 771 0232</p>
-                        <p><i class="bi bi-skype"></i> leandro.luduena</p>
+                    <div id="personal-data" class="col-12 col-sm-9 text-white">
+                        <div>
+                            <h1 class="uppercase">Leandro Ludueña</h1>
+                        </div>
+                        <div>
+                            <h2>Front-end Web Developer</h2>
+                        </div>
+                        <div>
+                            <p><i class="bi bi-envelope-at-fill"></i> <a  href="mailto:leandro.f.luduena@gmail.com">leandro.f.luduena@gmail.com</a></p>
+                            <p><i class="bi bi-telephone-fill"></i><a href="tel:+39 328 771 0232">+39 328 771 0232</a></p>
+                            <p><i class="bi bi-skype"></i> <a href="skype:leandro.luduena?chat">leandro.luduena</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div id="cv-body" class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8">
+                    <h2 class="uppercase">Experiencia profesional</h2>
+                    <h3>CADENA 3 Argentina (2012 - actualidad)</h3>
+                    <ul>
+                        <li>Front-end web developer</li>
+                        <li>Web designer</li>
+                        <li>Senior Webmaster</li>
+                        <li>Redacción de contenidos para web</li>
+                    </ul>
+                    <h3>QUADOS S.A (2006 - 2012)</h3>
+                    <ul>
+                        <li>Junior Webmaster</li>
+                        <li>Soporte técnico vía e-mail</li>
+                        <li>Redacción de contenidos para web</li>
+                    </ul>
+                    <br />
+                    <h2 class="uppercase">Formación académica</h2>
+                    <h3>AES (2012)</h3>
+                    <ul>
+                        <li>Reparación, mantenimiento y actualización de PC</li>
+                    </ul>
+                    <h3>UTN. Fundación Proydesa (2010)</h3>
+                    <ul>
+                        <li>Administrador de Bases de Datos ORACLE 10g (Módulo II)</li>
+                    </ul>
+                    <h3>UTN. Fundación Proydesa (2009-2010)</h3>
+                    <ul>
+                        <li>Administrador de Bases de Datos ORACLE 10g (Módulo I)</li>
+                    </ul>
+                    <h3>CISE (Córdoba Integración en Servicios Educativos) (2008)</h3>
+                    <ul>
+                        <li>Capacitación en la especialidad de Diseño de Página Web</li>
+                    </ul>
+                    <h3>FUCE (Fundación Unión Centros Educativos)
+                        (2005-2006)</h3>
+                    <ul>
+                        <li>Operador Windows y Microsoft Office</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-4 text-center">
+                    <h2 class="uppercase">Skills</h2>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 99">
+                            </div>
+                            <h3 class="mt-2 mb-4">HTML5</h3>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 99"></div>
+                            <h3 class="mt-2 mb-4">CSS3</h3>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm-6">
+                            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 85">
+                            </div>
+                            <h3 class="mt-2 mb-4">Bootstrap 5</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-sm-6">
+                            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 2">
+                            </div>
+                            <h3 class="mt-2 mb-4">React</h3>
+                        </div>
+                        <div class="col-12 col-sm-6">
+                            <div role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 7"></div>
+                            <h3 class="mt-2 mb-4">JavaScript</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="container-fluid">
+            <div class="row">
+                <div class="col mt-5">
+                    <p class=" text-secondary text-opacity-50">&lt/&gt</p>
+                </div>
+            </div>
+        </footer>
     </main>
 </body>
 </html>
