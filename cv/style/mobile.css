@@ -1,0 +1,32 @@
+#cv-head{
+  background: #000;
+}
+
+#profile-photo picture{
+    height: auto;
+    margin-bottom: 40px;
+    position: unset !important;
+}
+
+#profile-photo picture img{
+  width: 100%;
+}
+
+#personal-data div:nth-child(1) h1 {
+    font-size: 2.6em;
+    text-align: center;
+  }
+  #personal-data div:nth-child(2) h2 {
+    font-size: 1.4em;
+    line-height: 30px;
+    text-align: center;
+  }
+  #personal-data div:nth-child(3) p {
+    font-size: 1.3em;
+    text-align: center;
+  }
+  div:nth-child(3) i{
+    text-align: center;
+    display: block;
+    margin: 20px 0 10px 0;
+}
