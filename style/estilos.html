@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" media="all" />
+    
+    <link rel="stylesheet" href="css-grid.css" medial="all" />
+    <link rel="stylesheet" href="flex-box.css" medial="all" />
+
+    <title>Estilos - CSS Grid y Flex Box</title>
+</head>
+<body>
+    <button class="button-goback" onClick="history.back()">Go back</button>
+    <main>
+        <h1>CSS</h1>
+        <h2>CSS Grid</h2>
+        <p>Recomendado para la maquetación de estructuras. Definiendo los contenedores, sus elementos y respectivos contenidos</p>
+        <div class="code-block">
+            .contenedor{<br />
+                display: grid;<br />
+            grid-template-columns |  grid-template-rows: 1fr auto 1fr auto<br />
+            }<br /><br />
+            .elemento{<br />
+                display: grid;<br />
+                grid-template-columns |  grid-template-rows: repeat(3, 1fr);<br />
+                height: 100%;<br />
+            }
+        </div>
+        <div id="css-grid" class="wrap">
+            <div class="box-wrap">
+                <div class="box-wrap-1">
+                    <div class="box">
+                        <h2>Box 1</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 2</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                </div>
+                <div class="box-wrap-2">
+                    <div class="box">
+                        <h2>Box 3</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 4</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 5</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                </div>
+                <div class="box-wrap-3">
+                    <div class="box">
+                        <h2>Box 6</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 7</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box banner">
+                <h2>Banner</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+        </div>
+        <h2>Flex Box</h2>
+        <p>Recomendado para alinear elementos dentro de estructuras. Definiendo los contenedores, sus elementos y respectivos contenidos</p>
+        <div class="code-block">
+            .contenedor{<br />
+                display: flex;<br />
+                flex-direction: column |  row<br />
+                justify-content: space-between;<br />
+            }<br /><br />
+            .elemento{<br />
+                display: flex;<br />
+                flex-direction: column;<br />
+                justify-content: space-between;<br />
+                height: 100%;<br />
+            }<br />
+        </div>
+        <div id="flexbox" class="wrap">
+            <div class="box-wrap">
+                <div class="box-wrap-1">
+                    <div class="box">
+                        <h2>Box 1</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                </div>
+                <div class="box-wrap-2">
+                    <div class="box">
+                        <h2>Box 2</h2>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 3</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
+                    </div>
+                </div>
+                <div class="box-wrap-3">
+                    <div class="box">
+                        <h2>Box 4</h2>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 5</h2>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 6</h2>
+                        <p>Contenido</p>
+                    </div>
+                    <div class="box">
+                        <h2>Box 7</h2>
+                        <p>Contenido</p>
+                    </div>
+                </div>
+            </div>
+            <div class="box banner">
+                <h2>Banner</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -5,10 +5,10 @@ readme
 readme/log
 
 #ignora un archivo
-readme.txt
+readme.md
 
 #ignora un tipo de archivo
-*.txt
+*.md
 
 #ignora todos los archivos con ese nombre
 log.*

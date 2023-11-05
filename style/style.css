@@ -1,10 +1,11 @@
 /*reset*/
 * {
     font-family:'Courier New', Courier, monospace;
+    box-sizing: border-box;
 }
 
 body{
-    background-color:#ccc !important;
+    background-color:darkgray !important;
 }
 
 h1{color:#333;font-size: 40px;}
@@ -12,18 +13,19 @@ h2{color:#333;font-size: 30px;}
 h3{color:#333;font-size: 20px;}
 
 a{
-    color:blueviolet;
+    color:purple;
 }
 a:visited{
-    color:blueviolet;
+    color:purple;
 }
 
 /*classes*/
 .button-goback{border:none;background-color: #333;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;position:absolute;right:15px;top:15px;color:#fff;}
 .text-underline{text-decoration:underline;}
-.highlight-text{color:crimson;font-weight:bold;}
+.highlight-text{color:purple;font-weight:bold;}
 .text-indent-10{text-indent: 10px;display: block;}
 .text-indent-20{text-indent: 20px;display: block;}
+.code-block{border:1px solid purple; border-left:6px solid purple; padding: 1.8em 1em; margin: 12px auto 24px auto; background-color: bisque;border-radius: 0 4px 4px 0;width: 98%;}
 
 /*anidación de selectores en SCSS*/
 main{

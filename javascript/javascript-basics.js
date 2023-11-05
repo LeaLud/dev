@@ -1,28 +1,38 @@
-/*------------------IMPRIMIR UN VALOR------------------*/
+let pija = 2
+pija = pija * 3 + " final"
+
+
+let stringer = 2+2
+console.log(pija)
+
+
+
+
+// IMPRIMIR UN VALOR
 console.log('Hello world!!')
 console.log(9 * 5)
 
-/*------------------DEFINIR UNA CONSTANTE (VARIABLE ESTÁTICA)------------------*/
+// DEFINIR UNA CONSTANTE (VARIABLE ESTÁTICA)
 const apellido = 'Ludueña'
 const varFinJS = '***************Fin del archivo JS***************'
 
-/*------------------DEFINIR UNA VARIABLE DINÁMICA------------------*/
+// DEFINIR UNA VARIABLE DINÁMICA
 let nombre = 'Leandro'
 
-/*------------------IMPRIMIR LOS VALORES DE LAS VARIABLES------------------*/
+// IMPRIMIR LOS VALORES DE LAS VARIABLES
 console.log(nombre)
 console.log(apellido)
 console.log(nombre, apellido)
 console.log(nombre + apellido)
 
-/*------------------TIPOS DE DATOS PRIMITIVOS------------------*/
-// Strings, cadenas de texto
+// TIPOS DE DATOS PRIMITIVOS
+//  Strings, cadenas de texto
 let string = "Esto es un string"
 
-// Numbers, números
+//  Numbers, números
 let number = 9
 
-// Booleanos, verdadero o falso
+//  Booleanos, verdadero o falso
 let boolean = false
 boolean = true
 
@@ -30,7 +40,7 @@ console.log(string)
 console.log(number)
 console.log(boolean)
 
-// Null, valor nulo
+//  Null, valor nulo
 string = null
 number = null
 boolean = null
@@ -39,17 +49,17 @@ console.log(string)
 console.log(number)
 console.log(boolean)
 
-// Undefined, valor no definido, viene por defecto al no definir una variable
+//  Undefined, valor no definido, viene por defecto al no definir una variable
 let undefinedVar
 
 console.log(undefinedVar)
 
-/*------------------VER EL TIPO DE DATO DE UNA VARIABLE------------------*/
+// VER EL TIPO DE DATO DE UNA VARIABLE
 console.log(typeof string)
 console.log(typeof number)
 console.log(typeof boolean)
 
-/*------------------OPERACIONES CON VARIABLES------------------*/
+// OPERACIONES CON VARIABLES
 valor1 = 90
 valor2 = 120
 
@@ -60,7 +70,7 @@ const suma = (valor1, valor2) => {
 const sumaVariables = (suma(valor1, valor2))
 console.log(sumaVariables)
 
-/*------------------FUNCTION EXPRESSION------------------*/
+// FUNCTION EXPRESSION
 const promedio = (valor1, valor2, valor3, valor4) => {
     console.log('los valores de la función son', valor3, valor2, valor4, valor1)
     return valor1 + valor2 + valor3 / valor4
@@ -71,7 +81,7 @@ const resultadoPromedio = (promedio(1000, 400, 500, 3))
 console.log('el promedio es', resultadoPromedio)
 
 
-/*------------------FUNCTION DECLARATION------------------*/
+// FUNCTION DECLARATION
 function myFunction(){
     return 'String desde función'
 }
@@ -80,50 +90,50 @@ varFun = myFunction()
 
 console.log(varFun, myFunction())
 
-/*------------------IMPRIMIR VARIABLES EN MAYÚSCULAS------------------*/
-/*------------------Se debe volver a definir una variable a la cual se le asignará el Uppercase sobre la variable a modificar------------------*/
+// IMPRIMIR VARIABLES EN MAYÚSCULAS
+// Se debe volver a definir una variable a la cual se le asignará el Uppercase sobre la variable a modificar
 const apellidoMayuscula = apellido.toUpperCase()
 console.log(apellidoMayuscula)
 
-/*------------------ARRAY, LISTA DE VALORES-----------------*/
+// ARRAY, LISTA DE VALORES-----------------*/
 const myList = ['Leandro', 'empleado', 'Argentina', 37, 'Leandro']
 
 console.log(myList)
 console.log(myList[0])
 console.log(myList[2])
 
-/*------------------AGREGAR VALORES AL ARRAY-----------------*/
+// AGREGAR VALORES AL ARRAY-----------------*/
 myList.push(9)
 myList.push('Italia')
 myList.push(22)
 
-/*------------------CONCATENAR VALORES A UN ARRAY LISTA------------------*/
+// CONCATENAR VALORES A UN ARRAY LISTA
 const list2Array = myList.concat(500).concat('Primer Mundo')
 
 console.log(list2Array)
 
-/*------------------SET, LISTA DE VALORES SIN REPETIDOS------------------*/
+// SET, LISTA DE VALORES SIN REPETIDOS
 const mySet = new Set(['Leandro', 'interestelar', 'Argentina', 37, 'Leandro'])
 
 console.log(mySet)
 
-/*------------------AGREGAR VALORES AL SET-----------------*/
+// AGREGAR VALORES AL SET-----------------*/
 mySet.add('Ludueña')
 
 console.log(mySet)
 
-/*------------------MAP, LISTA DE CLAVE/VALOR------------------*/
+// MAP, LISTA DE CLAVE/VALOR
 const myMap = new Map ([['Leandro', 37], ['Federico', 38], ['Ludueña', 39]])
 
 console.log(myMap)
 console.log(myMap.get('Federico'))
 
-/*------------------AGREGAR VALORES AL MAP-----------------*/
+// AGREGAR VALORES AL MAP-----------------*/
 myMap.set('Clave', 1)
 
 console.log(myMap)
 
-/*------------------OBJETOS------------------*/
+// OBJETOS
 const usuario = {
     nombre: 'Leandro',
     apellido: 'Ludueña',
@@ -137,7 +147,7 @@ console.log(usuario.disponibilidad)
 console.log(usuario.ocupación[1])
 console.log(typeof usuario)
 
-/*------------------CONTROL DE FLUJO, CONDICIONES------------------*/
+// CONTROL DE FLUJO, CONDICIONES
 let elNumero = 12
 let occupation = true
 
@@ -152,7 +162,7 @@ else{
     console.log('no se imprime')
 }
 
-/*------------------BUCLES, SE APLICAN SOBRE OBJETOS------------------*/
+// BUCLES, SE APLICAN SOBRE OBJETOS
 for (const valor of myList){
     console.log(valor, 'Mi lista')
 }
@@ -177,7 +187,7 @@ const contador = myList.length
 console.log(contador, 'Longitud del contador')
 
 
-/*------------------CLASES------------------*/
+// CLASES
 class MyClass {
     constructor(nombre, edad){
         this.nombre = nombre
@@ -192,7 +202,7 @@ console.log(clase.nombre)
 console.log(clase.edad)
 console.log(clase.nombre, 'y', clase.edad)
 
-/*------------------ENUM------------------*/
+// ENUM
 const MyEnum = {
     HTML: 'html',
     CSS: 'css',
@@ -208,5 +218,5 @@ console.log(myEnum.REACT)
 console.log(myEnum.CSS, myEnum.JSCRIPT)
 
 
-/*------------------FIN ARCHIVO------------------*/
+// FIN ARCHIVO
 console.log(varFinJS)

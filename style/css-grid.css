@@ -1,0 +1,72 @@
+/*CSS Grid*/
+#css-grid.wrap{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin-bottom: 40px;
+}
+#css-grid.wrap .box-wrap{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+#css-grid.wrap .box-wrap>div{
+    display: grid;
+    gap: 10px;
+    height: 100%;
+}
+#css-grid.wrap .box-wrap-1{
+    grid-template-rows: 1fr 1fr;
+}
+#css-grid.wrap .box-wrap-2{
+    grid-template-rows: repeat(3, 1fr);
+}
+#css-grid.wrap .box-wrap-3{
+    grid-template-rows: 1fr 2fr;
+}
+#css-grid.wrap .box{
+    display: grid;
+    grid-template-rows: 1fr auto 1fr auto;
+}
+#css-grid.wrap .banner{
+   display: grid;
+   grid-template-rows: auto 1fr 1fr auto;
+}
+
+/*CSS General*/
+.wrap{
+    width: 98%;
+    height: 400px;
+    margin: auto;
+    gap: 10px;
+}
+.box-wrap{
+    gap: 10px;
+}
+.box{
+    border:1px solid thistle;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.box:nth-child(odd){
+    background: url(../img/paisaje1.jpg) no-repeat;
+    background-size: cover;
+}
+.box:nth-child(even){
+    background: url(../img/paisaje2.jpg) no-repeat;
+    background-size: cover;
+}
+.box h2, .box p{
+    color:black;
+    text-shadow: 1px 1px white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.box h2{
+    font-size: large;
+    font-weight: bold;
+}
+.box p{
+    font-size: small;
+    font-weight: 100;
+}
