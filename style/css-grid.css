@@ -7,10 +7,13 @@
 #css-grid.wrap .box-wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+
+    /*Medida responsive: repite 3 veces, ancho automático con una medida mínima y máxima--
+    grid-template-columns: repeat(3, auto-fit, minmax 100px 1fr);*/
 }
 #css-grid.wrap .box-wrap>div{
     display: grid;
-    gap: 10px;
+    grid-gap: 10px;
     height: 100%;
 }
 #css-grid.wrap .box-wrap-1{
@@ -28,7 +31,8 @@
 }
 #css-grid.wrap .banner{
    display: grid;
-   grid-template-rows: auto 1fr 1fr auto;
+   grid-template-rows: 1fr 1fr;
+   align-items: center;
 }
 
 /*CSS General*/
@@ -36,10 +40,10 @@
     width: 98%;
     height: 400px;
     margin: auto;
-    gap: 10px;
+    grid-gap: 10px;
 }
 .box-wrap{
-    gap: 10px;
+    grid-gap: 10px;
 }
 .box{
     border:1px solid thistle;

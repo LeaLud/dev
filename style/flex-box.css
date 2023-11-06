@@ -26,7 +26,8 @@
     /*para centrar el contenido*/
     display: flex;
     flex-direction:column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: baseline;
 }
 
 /*CSS General*/
