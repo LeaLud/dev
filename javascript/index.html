@@ -25,9 +25,15 @@
                     console.log(variable)<br />
                 </div>
             </li>
-            <li>Impresión de valores concatenados. Los "espacios" se deben agregar como strings
+            <li>Impresión de valores y variables concatenados. Los "espacios" se deben agregar como strings
                 <div class="code-block">
                     console.log("Hola Mundo " + 4 + variable)<br />
+                </div>
+                <div class="code-block">
+                    let myVar1 = "Hello "<br />
+                    let myVar2 ="World"<br /><br />
+                    myVar1 += myVar2<br /><br />
+                    console.log(myVar1)
                 </div>
             </li>
         </ol>
@@ -68,18 +74,16 @@
                 <ol>
                     <li><p>Incrementando y reduciendo en 1 una variable numérica</p>
                         <div class="code-block">
-                            varNum++
-                        </div>
-                        <div class="code-block">
-                            varNum--
+                            varNum ++<br />
+                            varNum --
                         </div>
                     </li>
-                    <li><p>Incrementando y reduciendo una variable numérica y reasigándole el nuevo valor</p>
+                    <li><p>Operando con variables numérica y reasigándole el nuevo valor</p>
                         <div class="code-block">
-                            varNum+=5
-                        </div>
-                        <div class="code-block">
-                            varNum-=5
+                            varNum += 5<br />
+                            varNum -= 5<br />
+                            varNum *= 5<br />
+                            varNum /= 5
                         </div>
                     </li>
                 </ol>
@@ -115,6 +119,84 @@
                 </div>
             </li>
         </ol>
+        <h2>Obtener la longitud de un string con la propiedad <span class="highlight-text">length</span></h2>
+        <div class="code-block">
+            let myVar = "Resumen JavaScript"<br /><br />
+            console.log(myVar.length)<br />
+        </div>
+        <h2><span class="highlight-text">Arrays</span> y <span class="highlight-text">Arrays anidados</span></h2>
+        <ol>
+            <li><p>Definir un array</p>
+                <div class="code-block">
+                    let myArray = ["Leandro", 37, 1986]<br />
+                    let myArray2 = ["Federico", 9, 1986]<br />
+                    let myArray3 = [["Leandro", 37, 1986], ["Federico, 9 , 1986"]]<br />
+                    let myArray3 = [["Leandro", 37, 1986], myArray2]<br /><br />
+                    console.log(myArray3[1][2])
+                </div>
+            </li>
+            <li><p>Modificar el valor de un array</p>
+                <div class="code-block">
+                    let myArray = ["Leandro", 37, 1986]<br /><br />
+                    myArray[1] = 38<br />
+                </div>
+            </li>
+            <li><p>Agregar un valor al comienzo de un array</hp>
+                <div class="code-block">
+                    let myArray = ["Leandro", 37, 1986]<br /><br />
+                    myArray.unshift("Enero")<br />
+                </div>
+            </li>
+            <li><p>Agregar un valor al final de un array</hp>
+                <div class="code-block">
+                    let myArray = ["Leandro", 37, 1986]<br /><br />
+                    myArray.push("Enero")<br />
+                </div>
+            </li>
+            <li><p>Quitar el primer valor de un array</hp>
+                <div class="code-block">
+                    let myArray = ["Leandro", 37, 1986]<br /><br />
+                    myArray.shift()<br />
+                </div>
+            </li>
+            <li><p>Quitar el último valor de un array</hp>
+                <div class="code-block">
+                    let myArray = ["Leandro", 37, 1986]<br /><br />
+                    myArray.pop()<br />
+                </div>
+            </li>
+        </ol>
+        <h2>Funciones</h2>
+        <ol>
+            <li><p>Definir una función</p>
+                <div class="code-block">
+                    function myFunction() {<br />
+                        let myArray = ["Leandro", 37, "Enero", 1986];<br />
+                        console.log(myArray[2])<br />
+                    }<br /><br />
+                    myFunction()
+                </div>
+            </li>
+        </ol>
+        <h2>Argumentos</h2>
+        <ol>
+            <li><p>Definir un argumento</p>
+                <div class="code-block">
+                    function myAverage(val1, val2, val3, val4, val5) {<br />
+                        let suma = val1 + val2 + val3 + val4 + val5<br />
+                        let average = suma / 5<br />
+                        console.log("El promedio de " + suma + " es " + average)<br />
+                    }<br /><br />
+                    myAverage(5, 10, 15, 20 ,10)
+                </div>
+            </li>
+        </ol>
+
+
+
+
+
+
         <h2>Secuencias de escape</h2>
         <ol>
             <li><span class="highlight-text">\'</span> Comilla simple</li>

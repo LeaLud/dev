@@ -1,13 +1,3 @@
-let pija = 2
-pija = pija * 3 + " final"
-
-
-let stringer = 2+2
-console.log(pija)
-
-
-
-
 // IMPRIMIR UN VALOR
 console.log('Hello world!!')
 console.log(9 * 5)
@@ -217,6 +207,17 @@ console.log(myEnum.HTML)
 console.log(myEnum.REACT)
 console.log(myEnum.CSS, myEnum.JSCRIPT)
 
-
 // FIN ARCHIVO
 console.log(varFinJS)
+
+
+//Pruebas JavaScript
+
+function myAverage(val1, val2, val3, val4, val5) {
+    let suma = val1 + val2 + val3 + val4 + val5
+    let average = suma / 5
+    console.log("El promedio de " + suma + " es " + average)
+}
+
+myAverage(5, 10, 15, 20 ,10)
+myAverage(34, 27, 5, 7 ,9)
