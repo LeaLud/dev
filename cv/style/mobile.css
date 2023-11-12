@@ -7,7 +7,7 @@ main{
 }
 
 #profile-photo {
-  width: 50%;
+  max-width: 308px;
   margin: auto;
 }
 
@@ -19,6 +19,10 @@ main{
 
 #profile-photo picture img{
   width: 100%;
+}
+
+#personal-data {
+  
 }
 
 #personal-data div:nth-child(1) h1 {
@@ -41,6 +45,6 @@ main{
 }
 
 [role="progressbar"] {
-  width: 75%;
+  width: 65%;
   margin: auto;
 }
