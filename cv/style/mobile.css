@@ -6,6 +6,11 @@ main{
   background: #000;
 }
 
+#profile-photo {
+  width: 50%;
+  margin: auto;
+}
+
 #profile-photo picture{
     height: auto;
     margin-bottom: 40px;

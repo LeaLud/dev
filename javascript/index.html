@@ -13,27 +13,31 @@
         <h1>JavaScript</h1>
         <p>Es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
         <ul>
-            <li>No re quiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan</li>
-            <li><a href="javascript-basics.js" target="_blank">Archivo vinculoado ↗</a></li>
+            <li>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan</li>
+            <li><a href="javascript-basics.js" target="_blank">Archivo vinculado ↗</a></li>
         </ul>
         <h2>Impresión de datos</h2>
         <ol>
             <li>
                 <div class="code-block">
-                    console.log("Hola Mundo")<br />
-                    console.log(4)<br />
-                    console.log(variable)<br />
+console.log("Hola Mundo")
+console.log(4)
+console.log(myVar)
                 </div>
             </li>
             <li>Impresión de valores y variables concatenados. Los "espacios" se deben agregar como strings
                 <div class="code-block">
-                    console.log("Hola Mundo " + 4 + variable)<br />
+myVar = ", aquí estoy!"
+
+console.log("Hola Mundo " + 4 + myVar)
                 </div>
                 <div class="code-block">
-                    let myVar1 = "Hello "<br />
-                    let myVar2 ="World"<br /><br />
-                    myVar1 += myVar2<br /><br />
-                    console.log(myVar1)
+let myVar1 = "Hello "
+let myVar2 = "World"
+
+myVar1 += myVar2
+
+console.log(myVar1)
                 </div>
             </li>
         </ol>
@@ -42,13 +46,13 @@
             <li>
                 <p></p>Definiendo una variable estática
                 <div class="code-block">
-                    const myVar = "Esta es una variable que no puede cambiar su valor"
+const myVar = "Esta es una variable que no puede cambiar su valor"
                 </div>
             </li>
             <li>
                 <p>Definiendo una variable dinámica</p>
                 <div class="code-block">
-                    let myVar = "Esta es una variable que puede cambiar su valor"
+let myVar = "Esta es una variable que puede cambiar su valor"
                 </div>
             </li>
         </ol>
@@ -57,33 +61,33 @@
             <li>
                 <p><span class="highlight-text">String</span>. Cadena de caracteres</p>
                 <div class="code-block">
-                    let string = "Esto es una cadena de caracteres"
+let varString = "Esto es una cadena de caracteres"
                 </div>
                 <div class="code-block">
-                    let string = "Cadena de caracteres con \"comillas\""
+let varString = "Cadena de caracteres con \"comillas\""
                 </div>
                 <div class="code-block">
-                    let string = 'Otra forma de indicar strings "comillas" dobles'
+let varString = 'Otra forma de indicar strings "comillas" dobles'
                 </div>
             </li>
             <li>
                 <p><span class="highlight-text">Number</span>. Números</p>
                 <div class="code-block">
-                    let string = 4
+let varNum = 4
                 </div>
                 <ol>
                     <li><p>Incrementando y reduciendo en 1 una variable numérica</p>
                         <div class="code-block">
-                            varNum ++<br />
-                            varNum --
+varNum ++
+varNum --
                         </div>
                     </li>
                     <li><p>Operando con variables numérica y reasigándole el nuevo valor</p>
                         <div class="code-block">
-                            varNum += 5<br />
-                            varNum -= 5<br />
-                            varNum *= 5<br />
-                            varNum /= 5
+varNum += 5
+varNum -= 5
+varNum *= 5
+varNum /= 5
                         </div>
                     </li>
                 </ol>
@@ -91,78 +95,98 @@
             <li>
                 <p><span class="highlight-text">Boolean</span>. Boleano, verdadero o falso</p>
                 <div class="code-block">
-                    let string = true | false
+let string = true | false
                 </div>
             </li>
             <li>
                 <p><span class="highlight-text">Null</span>. Valor nulo</p>
                 <div class="code-block">
-                    let string = null
+let string = null
                 </div>
             </li>
             <li>
                 <p><span class="highlight-text">Undefined</span>. Valor no definido. viene por defecto</p>
                 <div class="code-block">
-                    let string = undefined
+let string = undefined
                 </div>
             </li>
             <li>
                 <p><span class="highlight-text">Object</span>.</p>
                 <div class="code-block">
-                    let string = 
+let string = 
                 </div>
             </li>
             <li>
                 <p><span class="highlight-text">Symbol</span>.</p>
                 <div class="code-block">
-                    let string = 
+let string = 
                 </div>
             </li>
         </ol>
+        <h2>Operadores</h2>
+        <div class="code-block">
+Igualdad ==
+Igualdad estricta ===
+Desigualdad !=
+Desigualdad estricta !==
+Mayor o igual >=
+Menor o igual <=
+AND &&
+OR ||
+NOT !
+        </div>
         <h2>Obtener la longitud de un string con la propiedad <span class="highlight-text">length</span></h2>
         <div class="code-block">
-            let myVar = "Resumen JavaScript"<br /><br />
-            console.log(myVar.length)<br />
+let myVar = "Resumen JavaScript"
+
+console.log(myVar.length)
         </div>
         <h2><span class="highlight-text">Arrays</span> y <span class="highlight-text">Arrays anidados</span></h2>
         <ol>
             <li><p>Definir un array</p>
                 <div class="code-block">
-                    let myArray = ["Leandro", 37, 1986]<br />
-                    let myArray2 = ["Federico", 9, 1986]<br />
-                    let myArray3 = [["Leandro", 37, 1986], ["Federico, 9 , 1986"]]<br />
-                    let myArray3 = [["Leandro", 37, 1986], myArray2]<br /><br />
-                    console.log(myArray3[1][2])
+let myArray = ["Leandro", 37, 1986]
+let myArray2 = ["Federico", 9, 1986]
+let myArray3 = [["Leandro", 37, 1986], myArray2]
+
+console.log(myArray3[1][2])
+
+console.log(JSON.stringify(myArray3[1][2]))
                 </div>
             </li>
             <li><p>Modificar el valor de un array</p>
                 <div class="code-block">
-                    let myArray = ["Leandro", 37, 1986]<br /><br />
-                    myArray[1] = 38<br />
+let myArray = ["Leandro", 37, 1986]
+
+myArray[1] = 38
                 </div>
             </li>
             <li><p>Agregar un valor al comienzo de un array</hp>
                 <div class="code-block">
-                    let myArray = ["Leandro", 37, 1986]<br /><br />
-                    myArray.unshift("Enero")<br />
+let myArray = ["Leandro", 37, 1986]
+
+myArray.unshift("Enero")
                 </div>
             </li>
             <li><p>Agregar un valor al final de un array</hp>
                 <div class="code-block">
-                    let myArray = ["Leandro", 37, 1986]<br /><br />
-                    myArray.push("Enero")<br />
+let myArray = ["Leandro", 37, 1986]
+
+myArray.push("Enero")
                 </div>
             </li>
             <li><p>Quitar el primer valor de un array</hp>
                 <div class="code-block">
-                    let myArray = ["Leandro", 37, 1986]<br /><br />
-                    myArray.shift()<br />
+let myArray = ["Leandro", 37, 1986]
+
+myArray.shift()
                 </div>
             </li>
             <li><p>Quitar el último valor de un array</hp>
                 <div class="code-block">
-                    let myArray = ["Leandro", 37, 1986]<br /><br />
-                    myArray.pop()<br />
+let myArray = ["Leandro", 37, 1986]
+
+myArray.pop()
                 </div>
             </li>
         </ol>
@@ -170,32 +194,93 @@
         <ol>
             <li><p>Definir una función</p>
                 <div class="code-block">
-                    function myFunction() {<br />
-                        let myArray = ["Leandro", 37, "Enero", 1986];<br />
-                        console.log(myArray[2])<br />
-                    }<br /><br />
-                    myFunction()
+function myFunction() {
+    let myArray = ["Leandro", 37, "Enero", 1986];
+    console.log(myArray[2])
+}
+
+myFunction()
                 </div>
             </li>
         </ol>
         <h2>Argumentos</h2>
-        <ol>
-            <li><p>Definir un argumento</p>
-                <div class="code-block">
-                    function myAverage(val1, val2, val3, val4, val5) {<br />
-                        let suma = val1 + val2 + val3 + val4 + val5<br />
-                        let average = suma / 5<br />
-                        console.log("El promedio de " + suma + " es " + average)<br />
-                    }<br /><br />
-                    myAverage(5, 10, 15, 20 ,10)
-                </div>
-            </li>
-        </ol>
+        <div class="code-block">
+function myAverage(val1, val2, val3, val4, val5) {
+    let suma = val1 + val2 + val3 + val4 + val5
+    let average = suma / 5
+    console.log("El promedio de " + suma + " es " + average)
+}
 
+myAverage(5, 10, 15, 20 ,10)
+        </div>
+        <h2>Return</h2>
+        <div class="code-block">
+function operacionMat(val1, val2) {
+    let operSuma = val1 + val2;
 
+    return "El resultado es " + operSuma;
+}
 
+let resultadoFinal = operacionMat(50, 30);
+console.log(resultadoFinal)
+        </div>
+        <h2>Condicionales</h2>
+        <div class="code-block">
+if (5 < 2 && 1 == 1) {
+    console.log("Verdadero")
+} else if (5 < 8 && 3 == 1) {
+    console.log("Falso")
+}else {
+    console.log("Ni uno ni otro")
+}
+        </div>
+        <h2>Switch</h2>
+        <div class="code-block">
+function switchValue(value) {
+    let response
+    switch(value) {
+        case 1:
+        response = "Value 1"
+        break;
+        case 2:
+        response = "Value 2"
+        break;
+        case 3:
+        response = "Value 3"
+        break;
+        case 4:
+        response = "Value 4"
+        break;
+        case 5:
+        response = "Value 5"
+    }
+    return response
+}
 
+console.log(switchValue(5));
+console.log(switchValue(2));
+console.log(switchValue(3));
+console.log(switchValue(4));
+console.log(switchValue(1));
+        </div>
+        <div class="code-block">
+let value = "Valor 3"
 
+switch(value) {
+    case "Valor 1":
+        console.log("Se muestra el valor 1")
+        break;
+    case "Valor 2":
+        console.log("Se muestra el valor 2")
+        break;
+    case "Valor 3":
+        console.log("Se muestra el valor 3")
+        break;
+    case "Valor 4":
+        console.log("Se muestra el valor 4")
+        break;
+}
+        </div>
 
         <h2>Secuencias de escape</h2>
         <ol>

@@ -4185,10 +4185,6 @@ tbody.collapse.show {
   color: #040505;
 }
 
-.pre{
-  white-space: pre;
-}
-
 @keyframes progress-bar-stripes {
   from {
     background-position: 1rem 0;
@@ -4871,28 +4867,26 @@ button.close {
   }
 }
 
+/*Fix error Carrusel
 .carousel-item-next,
 .active.carousel-item-right {
   transform: translateX(100%);
-}
-@supports (transform-style: preserve-3d) {
-  .carousel-item-next,
-  .active.carousel-item-right {
+
+  @supports (transform-style: preserve-3d) {
     transform: translate3d(100%, 0, 0);
   }
 }
 
+
 .carousel-item-prev,
 .active.carousel-item-left {
   transform: translateX(-100%);
-}
-@supports (transform-style: preserve-3d) {
-  .carousel-item-prev,
-  .active.carousel-item-left {
+
+  @supports (transform-style: preserve-3d) {
     transform: translate3d(-100%, 0, 0);
   }
 }
-
+*/
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;

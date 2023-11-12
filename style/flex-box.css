@@ -1,52 +1,53 @@
 /*CSS Grid*/
-#flexbox.wrap{
+#flexbox{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 98%;
+    margin: auto;
+}
+#flexbox .wrap{
     display: flex;
     gap: 10px;
 }
-#flexbox.wrap .box-wrap{
+#flexbox .wrap-1{
     display: flex;
-    flex-wrap: wrap;
+    width: 30%;
+    order: 2;
+}
+#flexbox .wrap-2{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     width: 70%;
 }
-#flexbox.wrap .box-wrap>div{
+#flexbox .wrap-3{
     display: flex;
-    flex-direction: column;
-    width: calc(33.33% - 7px);
     gap: 10px;
+    width: 100%;
+    order: 2;
 }
-#flexbox.wrap .box{
+#flexbox .wrap-4{
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    order: 1;
+}
+#flexbox .box{
+    width: 100%;
     height: 100%;
-}
-#flexbox.wrap .banner{
-    width: 30%;
-
-    /*para centrar el contenido*/
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: baseline;
 }
 
 /*CSS General*/
-.wrap{
-    width: 98%;
-    height: 400px;
-    margin: auto;
-}
-.box{
+#flexbox .box{
     border:1px solid thistle;
     border-radius: 4px;
     padding: 10px;
-    text-align: center;
-}
-.box:nth-child(odd){
     background: url(../img/paisaje1.jpg) no-repeat;
     background-size: cover;
+    min-height: 200px;
 }
-.box:nth-child(even){
+#flexbox .wrap-1 .box{
     background: url(../img/paisaje2.jpg) no-repeat;
     background-size: cover;
 }

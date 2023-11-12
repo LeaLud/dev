@@ -28,55 +28,47 @@
             }
         </div>
         <div id="css-grid" class="wrap">
-            <div class="box-wrap">
-                <div class="box-wrap-1">
-                    <div class="box">
-                        <h2>Box 1</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                    <div class="box">
-                        <h2>Box 2</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                </div>
-                <div class="box-wrap-2">
-                    <div class="box">
-                        <h2>Box 3</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                    <div class="box">
-                        <h2>Box 4</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                    <div class="box">
-                        <h2>Box 5</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                </div>
-                <div class="box-wrap-3">
-                    <div class="box">
-                        <h2>Box 6</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                    <div class="box">
-                        <h2>Box 7</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
-                </div>
+            <div class="box">
+                <h2>Box 1</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+            <div class="box">
+                <h2>Box 2</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+            <div class="box">
+                <h2>Box 3</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+            <div class="box">
+                <h2>Box 4</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+            <div class="box">
+                <h2>Box 5</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+            <div class="box">
+                <h2>Box 6</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
+            </div>
+            <div class="box">
+                <h2>Box 7</h2>
+                <p>Contenido</p>
+                <p>Contenido</p>
+                <p>Contenido</p>
             </div>
             <div class="box banner">
                 <h2>Banner</h2>
@@ -88,30 +80,32 @@
         <div class="code-block">
             .contenedor{<br />
                 display: flex;<br />
-                flex-direction: column |  row<br />
+                flex-direction: column | column-reverse | row | row-reverse<br />
                 justify-content: space-between;<br />
             }<br /><br />
             .elemento{<br />
                 display: flex;<br />
-                flex-direction: column;<br />
+                flex-direction: column | column-reverse | row | row-reverse<br />
                 justify-content: space-between;<br />
                 width: calc(33.33% - 7px);<br />
                 height: 100%;<br />
             }<br />
         </div>
-        <div id="flexbox" class="wrap">
-            <div class="box-wrap">
-                <div class="box-wrap-1">
-                    <div class="box">
-                        <h2>Box 1</h2>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                        <p>Contenido</p>
-                    </div>
+        <div id="flexbox">
+            <div class="wrap-1">
+                <div class="box">
+                    <h2>Box 1</h2>
+                    <p>Contenido</p>
+                    <p>Contenido</p>
+                    <p>Contenido</p>
                 </div>
-                <div class="box-wrap-2">
+            </div>
+            <div class="wrap-2">
+                <div class="wrap-3">
                     <div class="box">
                         <h2>Box 2</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
                         <p>Contenido</p>
                     </div>
                     <div class="box">
@@ -120,32 +114,49 @@
                         <p>Contenido</p>
                         <p>Contenido</p>
                     </div>
-                </div>
-                <div class="box-wrap-3">
                     <div class="box">
                         <h2>Box 4</h2>
                         <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
                     </div>
+                </div>
+                <div class="wrap-4">
                     <div class="box">
                         <h2>Box 5</h2>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
                         <p>Contenido</p>
                     </div>
                     <div class="box">
                         <h2>Box 6</h2>
                         <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
                     </div>
                     <div class="box">
                         <h2>Box 7</h2>
                         <p>Contenido</p>
+                        <p>Contenido</p>
+                        <p>Contenido</p>
                     </div>
                 </div>
             </div>
-            <div class="box banner">
-                <h2>Banner</h2>
-                <p>Contenido</p>
-                <p>Contenido</p>
-                <p>Contenido</p>
-            </div>
+        </div>
+        <h2>Posicionando el contenido</h2>
+        <div class="code-block">
+            .contenedor{<br />
+                display: grid | flex;<br />
+            }<br /><br />
+            .contenedor .elemento{<br />
+                display: grid | flex;<br />
+                place-content: center end;<br />
+                align-content:center;<br />
+                justify-content: end;<br />
+                place-items: center end;<br />
+                align-items: center;<br />
+                justify-items:end;<br />
+            }
         </div>
     </main>
 </body>
