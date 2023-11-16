@@ -213,29 +213,34 @@ console.log(varFinJS)
 
 //Pruebas JavaScript
 
-function switchValue(value) {
-    let response
-    switch(value) {
-        case 1:
-        response = "Value 1"
-        break;
-        case 2:
-        response = "Value 2"
-        break;
-        case 3:
-        response = "Value 3"
-        break;
-        case 4:
-        response = "Value 4"
-        break;
-        case 5:
-        response = "Value 5"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function myFunction(dato) {
+    let datos = {
+        "Nombre": "Leandro",
+        "Apellido": "Ludeña",
+        "Edad": 37,
+        "Ocupación actual": "Web developer"
     }
-    return response
+
+    return datos[dato]
 }
 
-console.log(switchValue(5));
-console.log(switchValue(2));
-console.log(switchValue(3));
-console.log(switchValue(4));
-console.log(switchValue(1));
+console.log(myFunction("Ocupación actual"))

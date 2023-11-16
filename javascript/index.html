@@ -22,15 +22,24 @@
                 <div class="code-block">
 console.log("Hola Mundo")
 console.log(4)
+                </div>
+            </li>
+            <li>
+                <div class="code-block">
+var myVar = "Este es el valor de la variable"
+
 console.log(myVar)
                 </div>
             </li>
             <li>Impresión de valores y variables concatenados. Los "espacios" se deben agregar como strings
                 <div class="code-block">
-myVar = ", aquí estoy!"
-
+let myVar = ", aquí estoy!"
 console.log("Hola Mundo " + 4 + myVar)
                 </div>
+                <div class="code-block">
+let num = 9
+console.log(Math.sqrt(num))
+                 </div>
                 <div class="code-block">
 let myVar1 = "Hello "
 let myVar2 = "World"
@@ -82,7 +91,7 @@ varNum ++
 varNum --
                         </div>
                     </li>
-                    <li><p>Operando con variables numérica y reasigándole el nuevo valor</p>
+                    <li><p>Operando con variables numérica y reasignándole el nuevo valor</p>
                         <div class="code-block">
 varNum += 5
 varNum -= 5
@@ -96,6 +105,16 @@ varNum /= 5
                 <p><span class="highlight-text">Boolean</span>. Boleano, verdadero o falso</p>
                 <div class="code-block">
 let string = true | false
+
+function myFunction (a, b) {
+    if (a < b) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+console.log(myFunction(6, 5));
                 </div>
             </li>
             <li>
@@ -202,6 +221,22 @@ function myFunction() {
 myFunction()
                 </div>
             </li>
+            <li>
+                <div class="code-block">
+function myFunction(dato) {
+    let datos = {
+        "Nombre": "Leandro",
+        "Apellido": "Ludeña",
+        "Edad": 37,
+        "Ocupación actual": "Web developer"
+    }
+
+    return datos[dato]
+}
+
+console.log(myFunction("Ocupación actual"))
+                </div>
+            </li>
         </ol>
         <h2>Argumentos</h2>
         <div class="code-block">
@@ -237,24 +272,25 @@ if (5 < 2 && 1 == 1) {
         <h2>Switch</h2>
         <div class="code-block">
 function switchValue(value) {
-    let response
+    let myVar
     switch(value) {
         case 1:
-        response = "Value 1"
-        break;
+            myVar = "Value 1"
+            break;
         case 2:
-        response = "Value 2"
-        break;
         case 3:
-        response = "Value 3"
-        break;
+            myVar = "Value 2 y 3"
+            break;
         case 4:
-        response = "Value 4"
-        break;
         case 5:
-        response = "Value 5"
+        case 6:
+            myVar = "Value 4, 5 y 6"
+            break;
+        default:
+            myVar = "Valor por defecto si no se cumple ninguna otra condición"
+            break;
     }
-    return response
+    return myVar
 }
 
 console.log(switchValue(5));
@@ -264,9 +300,9 @@ console.log(switchValue(4));
 console.log(switchValue(1));
         </div>
         <div class="code-block">
-let value = "Valor 3"
+let myVar = "Valor 3"
 
-switch(value) {
+switch(myVar) {
     case "Valor 1":
         console.log("Se muestra el valor 1")
         break;
@@ -279,8 +315,199 @@ switch(value) {
     case "Valor 4":
         console.log("Se muestra el valor 4")
         break;
+    default:
+        console.log("Valor por defecto si no se cumple ninguna otra condición")
+        break;
 }
         </div>
+        <h2>Objetos</h2>
+        <ol>
+            <li><p>Definiendo un objeto e imprimiendo su contenido</p>
+                <div class="code-block">
+let varObject = {
+    "Nombre": "Leandro",
+    "Oficio actual": "Web developer",
+    "Edad": 37 + " años",
+    "Color": ["Blanco", "Azul", "Violeta"]
+}
+
+console.log(varObject.Nombre)
+console.log(varObject.Edad)
+console.log(varObject["Oficio actual"])
+console.log(varObject.Color[0])
+console.log(varObject["Color"][2])
+                </div>
+                <div class="code-block">
+let varObject = {
+    1: "valor 1",
+    2: "valor 2",
+    3: "valor 3",
+    4: ["valor 4", "Valor 5"]
+}
+
+console.log(varObject[4][0])
+console.log(varObject[1])
+                </div>
+            </li>
+            <li><p>Agregando un valor a un elemento del objeto</p>
+                <div class="code-block">
+let varObject = {
+    "Nombre": "Leandro",
+    "Oficio actual": "Web developer",
+    "Edad": 37 + " años",
+    "Color": ["Blanco", "Azul", "Violeta"]
+}
+                    
+varObject.Color.push("Verde")
+
+console.log(varObject.Color[3])              
+                </div>
+                <div class="code-block">
+let varObject = {
+    1: "valor 1",
+    2: "valor 2",
+    3: "valor 3",
+    4: ["valor 4", "Valor 5"]
+}
+
+varObject[4].push("Valor 6")
+
+console.log(varObject[4])
+                </div>
+            </li>
+            <li><p>Agregando un elemento al objeto</p>
+                <div class="code-block">
+let varObject = {   
+    "Nombre": "Leandro",
+    "Oficio actual": "Web developer",
+    "Edad": 37 + " años",
+    "Color": ["Blanco", "Azul", "Violeta"]
+}
+
+varObject.Altura = [1.79 + "cm", 1.8 + "cm"]
+varObject["Peso"] = 79 + "kg"
+
+console.log(varObject.Peso)
+console.log(varObject.Altura[1])
+                </div>
+                <div class="code-block">
+let varObject = {
+    1: "valor 1",
+    2: "valor 2",
+    3: "valor 3",
+    4: ["valor 4", "Valor 5"]
+}
+
+varObject[5] = ["Valor 6", "Valor 7"]
+varObject[6] = "Valor 8"
+
+console.log(varObject[5][1])
+                </div>
+            </li>
+            <li><p>Eliminando un elemento al objeto</p>
+                <div class="code-block">
+let varObject = {   
+    "Nombre": "Leandro",
+    "Oficio actual": "Web developer",
+    "Edad": 37 + " años",
+    "Color": ["Blanco", "Azul", "Violeta"]
+}
+
+delete varObject.Nombre
+delete varObject["Oficio actual"]
+delete varObject["Color"]
+console.log(varObject)
+                </div>
+                <div class="code-block">
+let varObject = {
+    1: "valor 1",
+    2: "valor 2",
+    3: "valor 3",
+    4: ["valor 4", "Valor 5"]
+}
+
+delete varObject[2]
+delete varObject[4][0]
+
+console.log(varObject)
+                </div>
+            </li>
+            <li><p>Cambiando el valor de un elemento</p>
+                <div class="code-block">
+let varObject = {
+    "Nombre": "Leandro",
+    "Oficio actual": "Web developer",
+    "Edad": 37 + " años",
+    "Color": ["Blanco", "Azul", "Violeta"]
+}
+
+varObject[0] = "Federico"
+varObject.Color[2] = "Fucsia"
+
+console.log(varObject[0])
+console.log(varObject.Color[2])                
+                </div>
+                <div class="code-block">
+let varObject = {
+    1: "valor 1",
+    2: "valor 2",
+    3: "valor 3",
+    4: ["valor 4", "Valor 5"]
+}
+
+varObject[3] = "valor 88"
+
+console.log(varObject[4])
+
+varObject[4][0] = 'valor 44'
+
+console.log(varObject[4][0])
+                </div>
+            </li>
+            <li><p>Reasignando valores a un elemento del objeto</p>
+                <div class="code-block">
+let varObject = {   
+    "Nombre": "Leandro",
+    "Oficio actual": "Web developer",
+    "Edad": 37 + " años",
+    "Color": ["Blanco", "Azul", "Violeta"]
+}
+
+varObject.Color = ["Verde", "Dorado", "Plateado"]
+
+console.log(varObject.Color)             
+                </div>
+                <div class="code-block">
+let varObject = {
+    1: "valor 1",
+    2: "valor 2",
+    3: "valor 3",
+    4: ["valor 4", "Valor 5"]
+}
+
+console.log(varObject[4])
+
+varObject[4] = ["Valor 1500", "Valor 85,6", 45]
+
+console.log(varObject[4])
+                </div>
+            </li>
+        </ol>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <h2>Secuencias de escape</h2>
         <ol>

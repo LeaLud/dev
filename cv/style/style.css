@@ -88,6 +88,9 @@ footer p {
 .uppercase {
   text-transform: uppercase;
 }
+.carousel button{
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
 /*Progress bar*/
 @keyframes progress {
@@ -109,13 +112,14 @@ footer p {
   --secondary: #adf;
   --size: 300px;
   animation: progress 2s 0.5s forwards;
-  width: 100%;
+  width: 85%;
   aspect-ratio: 1;
   border-radius: 50%;
   position: relative;
   overflow: hidden;
   display: grid;
   place-items: center;
+  margin: auto;
 }
 
 [role=progressbar]::before {
@@ -136,6 +140,6 @@ footer p {
   counter-reset: percentage var(--value);
   content: counter(percentage) "%";
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   color: var(--primary);
 }
