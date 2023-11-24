@@ -225,22 +225,21 @@ console.log(varFinJS)
 
 
 
-
-
-
-
-
-
-
-function myFunction(dato) {
-    let datos = {
-        "Nombre": "Leandro",
-        "Apellido": "Ludeña",
-        "Edad": 37,
-        "Ocupación actual": "Web developer"
+let varObject = {
+    Nombre: "Leandro",
+    'Oficio actual': "Web developer",
+    Oficio_anterior: "Redactor web",
+    Características: {
+        Altura: 1.78 + "cm",
+        Peso: 80 + "Kg",
+        Edad: 37 + " años"
     }
 
-    return datos[dato]
 }
 
-console.log(myFunction("Ocupación actual"))
+console.log(varObject.Nombre)
+console.log(varObject['Oficio actual'])
+console.log(varObject.Oficio_anterior)
+console.log(varObject.Características)
+console.log(varObject.Características.Altura)
+                

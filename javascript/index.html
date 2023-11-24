@@ -13,8 +13,12 @@
         <h1>JavaScript</h1>
         <p>Es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
         <ul>
-            <li>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan</li>
-            <li><a href="javascript-basics.js" target="_blank">Archivo vinculado ↗</a></li>
+            <li>
+                <p>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan</p>
+            </li>
+            <li>
+                <a href="javascript-basics.js" target="_blank">Archivo vinculado ↗</a>
+            </li>
         </ul>
         <h2>Impresión de datos</h2>
         <ol>
@@ -31,15 +35,12 @@ var myVar = "Este es el valor de la variable"
 console.log(myVar)
                 </div>
             </li>
-            <li>Impresión de valores y variables concatenados. Los "espacios" se deben agregar como strings
+            <li>
+                <p>Impresión de valores y variables concatenados. Los "espacios" se deben agregar como strings</p>
                 <div class="code-block">
 let myVar = ", aquí estoy!"
 console.log("Hola Mundo " + 4 + myVar)
                 </div>
-                <div class="code-block">
-let num = 9
-console.log(Math.sqrt(num))
-                 </div>
                 <div class="code-block">
 let myVar1 = "Hello "
 let myVar2 = "World"
@@ -49,11 +50,29 @@ myVar1 += myVar2
 console.log(myVar1)
                 </div>
             </li>
+            <li>
+                <p>Calculando la raíz cuadrada</p>
+                <div class="code-block">
+let num = 9
+
+console.log(Math.sqrt(num))
+                </div>
+            </li>
+            <li>
+                <p>Convirtiendo un objeto o valor de JavaScript en una cadena de texto JSON</p>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+
+console.log(myArray)
+
+console.log(JSON.stringify(myArray))
+                </div>
+            </li>
         </ol>
         <h2>Variables</h2>
         <ol>
             <li>
-                <p></p>Definiendo una variable estática
+                <p>Definiendo una variable estática</p>
                 <div class="code-block">
 const myVar = "Esta es una variable que no puede cambiar su valor"
                 </div>
@@ -85,13 +104,15 @@ let varString = 'Otra forma de indicar strings "comillas" dobles'
 let varNum = 4
                 </div>
                 <ol>
-                    <li><p>Incrementando y reduciendo en 1 una variable numérica</p>
+                    <li>
+                        <p>Incrementando y reduciendo en 1 una variable numérica</p>
                         <div class="code-block">
 varNum ++
 varNum --
                         </div>
                     </li>
-                    <li><p>Operando con variables numérica y reasignándole el nuevo valor</p>
+                    <li>
+                        <p>Operando con variables numérica y reasignándole el nuevo valor</p>
                         <div class="code-block">
 varNum += 5
 varNum -= 5
@@ -104,7 +125,7 @@ varNum /= 5
             <li>
                 <p><span class="highlight-text">Boolean</span>. Boleano, verdadero o falso</p>
                 <div class="code-block">
-let string = true | false
+let myVar = true | false
 
 function myFunction (a, b) {
     if (a < b) {
@@ -120,25 +141,35 @@ console.log(myFunction(6, 5));
             <li>
                 <p><span class="highlight-text">Null</span>. Valor nulo</p>
                 <div class="code-block">
-let string = null
+let myVar = null
                 </div>
             </li>
             <li>
-                <p><span class="highlight-text">Undefined</span>. Valor no definido. viene por defecto</p>
+                <p><span class="highlight-text">Undefined</span>. Valor no definido. Viene por defecto</p>
                 <div class="code-block">
-let string = undefined
+let myVar = undefined
                 </div>
             </li>
             <li>
-                <p><span class="highlight-text">Object</span>.</p>
+                <p><a class="highlight-text" href="#objetos">Object</a></p>
                 <div class="code-block">
-let string = 
+let miObjeto = {
+    nombre: 'Leandro',
+    apellido: 'Ludueña',
+    edad: 37,
+    ocupación: ['web design', 'bartender', 'developer'],
+    disponibilidad: true
+}
+
+console.log(miObjeto)
+console.log(miObjeto.nombre)
+console.log(miObjeto.ocupación[0])
                 </div>
             </li>
             <li>
-                <p><span class="highlight-text">Symbol</span>.</p>
+                <p><span class="highlight-text">Symbol</span></p>
                 <div class="code-block">
-let string = 
+let myVar = 
                 </div>
             </li>
         </ol>
@@ -154,90 +185,13 @@ AND &&
 OR ||
 NOT !
         </div>
-        <h2>Obtener la longitud de un string con la propiedad <span class="highlight-text">length</span></h2>
+        <h2>Propiedad length</h2>
+        <p>Obteniendo la longitud de un string</p>
         <div class="code-block">
 let myVar = "Resumen JavaScript"
 
 console.log(myVar.length)
         </div>
-        <h2><span class="highlight-text">Arrays</span> y <span class="highlight-text">Arrays anidados</span></h2>
-        <ol>
-            <li><p>Definir un array</p>
-                <div class="code-block">
-let myArray = ["Leandro", 37, 1986]
-let myArray2 = ["Federico", 9, 1986]
-let myArray3 = [["Leandro", 37, 1986], myArray2]
-
-console.log(myArray3[1][2])
-
-console.log(JSON.stringify(myArray3[1][2]))
-                </div>
-            </li>
-            <li><p>Modificar el valor de un array</p>
-                <div class="code-block">
-let myArray = ["Leandro", 37, 1986]
-
-myArray[1] = 38
-                </div>
-            </li>
-            <li><p>Agregar un valor al comienzo de un array</hp>
-                <div class="code-block">
-let myArray = ["Leandro", 37, 1986]
-
-myArray.unshift("Enero")
-                </div>
-            </li>
-            <li><p>Agregar un valor al final de un array</hp>
-                <div class="code-block">
-let myArray = ["Leandro", 37, 1986]
-
-myArray.push("Enero")
-                </div>
-            </li>
-            <li><p>Quitar el primer valor de un array</hp>
-                <div class="code-block">
-let myArray = ["Leandro", 37, 1986]
-
-myArray.shift()
-                </div>
-            </li>
-            <li><p>Quitar el último valor de un array</hp>
-                <div class="code-block">
-let myArray = ["Leandro", 37, 1986]
-
-myArray.pop()
-                </div>
-            </li>
-        </ol>
-        <h2>Funciones</h2>
-        <ol>
-            <li><p>Definir una función</p>
-                <div class="code-block">
-function myFunction() {
-    let myArray = ["Leandro", 37, "Enero", 1986];
-    console.log(myArray[2])
-}
-
-myFunction()
-                </div>
-            </li>
-            <li>
-                <div class="code-block">
-function myFunction(dato) {
-    let datos = {
-        "Nombre": "Leandro",
-        "Apellido": "Ludeña",
-        "Edad": 37,
-        "Ocupación actual": "Web developer"
-    }
-
-    return datos[dato]
-}
-
-console.log(myFunction("Ocupación actual"))
-                </div>
-            </li>
-        </ol>
         <h2>Argumentos</h2>
         <div class="code-block">
 function myAverage(val1, val2, val3, val4, val5) {
@@ -259,6 +213,67 @@ function operacionMat(val1, val2) {
 let resultadoFinal = operacionMat(50, 30);
 console.log(resultadoFinal)
         </div>
+        <h2>Funciones</h2>
+        <ol>
+            <li>
+                <p>Es un conjunto de instrucciones que realiza una tarea o calcula un valor</p>
+            </li>
+            <li>
+                <p>Se define entre llaves {}</p>
+            </li>
+            <li>
+                <p>Definiendo una función</p>
+                <div class="code-block">
+function myFunction() {
+    let myArray = ["Leandro", 37, "Enero", 1986];
+    console.log(myArray[2])
+}
+
+myFunction()
+
+console.log(myFunction())
+                </div>
+            </li>
+            <li>
+                <div class="code-block">
+function myFunction(dato) {
+    let datos = {
+        "Nombre": "Leandro",
+        "Apellido": "Ludeña",
+        "Edad": 37,
+        "Ocupación actual": "Web developer"
+    }
+
+    return datos[dato]
+}
+
+console.log(myFunction("Ocupación actual"))
+                </div>
+            </li>
+            <li>
+                <p>Verificar si existe o no una propiedad en un objeto</p>
+                <div class="code-block">
+function funcVerificar(object, prop) {
+    if (object.hasOwnProperty(prop)) {
+        return true
+    } else {
+        return "El objeto " + object + " no posee la propiedad " + object[prop]
+    }
+}
+
+let myObject = {
+    Nombre: "Leandro",
+    Edad: 37,
+    Ocupación: "Web Developer"
+}
+
+console.log(funcVerificar(myObject, "Altura"))
+console.log(funcVerificar(myObject, "Edad"))
+console.log(funcVerificar(myObject, "Ocupación"))
+console.log(funcVerificar(myObject, "Peso"))
+                </div>
+            </li>
+        </ol>
         <h2>Condicionales</h2>
         <div class="code-block">
 if (5 < 2 && 1 == 1) {
@@ -300,7 +315,7 @@ console.log(switchValue(4));
 console.log(switchValue(1));
         </div>
         <div class="code-block">
-let myVar = "Valor 3"
+let myVar = "Valor 4"
 
 switch(myVar) {
     case "Valor 1":
@@ -313,29 +328,97 @@ switch(myVar) {
         console.log("Se muestra el valor 3")
         break;
     case "Valor 4":
-        console.log("Se muestra el valor 4")
+    case "Valor 5":
+        console.log("Se muestra el valor 4 o 5")
         break;
     default:
         console.log("Valor por defecto si no se cumple ninguna otra condición")
         break;
 }
         </div>
-        <h2>Objetos</h2>
+        <h2>Array</h2>
         <ol>
-            <li><p>Definiendo un objeto e imprimiendo su contenido</p>
+            <li>
+                <p>Array o arreglo es una agrupación de elementos en una misma variable</p>
+            </li>
+            <li>
+                <p>Cada elemento está ubicado con referencia a la posición que ocupa dentro del mismo.</p>
+            </li>
+            <li>
+                <p>Tanto la longitud como el tipo de los elementos de un array son variables</p>
+            </li>
+            <li>
+                <p>Se definen con corchetes []</p>
+            </li>
+            <li>
+                <p>Definiendo un array y un array anidado</p>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+let myArray2 = ["Federico", 9, 1986]
+let myArray3 = [["Leandro", 37, 1986], myArray2]
+
+console.log(myArray3[1][2])
+                </div>
+            </li>
+            <li>
+                <p>Modificando el valor de un array</p>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+
+myArray[1] = 38
+                </div>
+            </li>
+            <li>
+                <p>Agregando un valor al comienzo de un array</hp>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+
+myArray.unshift("Enero")
+                </div>
+            </li>
+            <li>
+                <p>Agregando un valor al final de un array</hp>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+
+myArray.push("Enero")
+                </div>
+            </li>
+            <li>
+                <p>Quitando el primer valor de un array</hp>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+
+myArray.shift()
+                </div>
+            </li>
+            <li>
+                <p>Quitando el último valor de un array</hp>
+                <div class="code-block">
+let myArray = ["Leandro", 37, 1986]
+
+myArray.pop()
+                </div>
+            </li>
+        </ol>
+        <h2><a name="objetos" class="anchor">Objetos</a></h2>
+        <ol>
+            <li>
+                <p>Es una agrupación de pares de datos relacionados</p>
+            </li>
+            <li>
+                <p>Se definen con llaves {}</p>
+            </li>
+            <li>
+                <p>Los elementos del objeto se deben definir con comillas cuando contienen espacios</p>
+            </li>
+            <li>
+                <p>Definiendo un objeto</p>
                 <div class="code-block">
 let varObject = {
     "Nombre": "Leandro",
-    "Oficio actual": "Web developer",
-    "Edad": 37 + " años",
-    "Color": ["Blanco", "Azul", "Violeta"]
+    Apellido: "Ludueña"
 }
-
-console.log(varObject.Nombre)
-console.log(varObject.Edad)
-console.log(varObject["Oficio actual"])
-console.log(varObject.Color[0])
-console.log(varObject["Color"][2])
                 </div>
                 <div class="code-block">
 let varObject = {
@@ -349,13 +432,58 @@ console.log(varObject[4][0])
 console.log(varObject[1])
                 </div>
             </li>
-            <li><p>Agregando un valor a un elemento del objeto</p>
+            <li>
+                <p>Imprimiendo valores de un objeto anidado con notación de punto (.)</p>
+                <div class="code-block">
+let varObject = {
+    Nombre: "Leandro",
+    "Oficio actual": "Web developer",
+    Oficio_anterior: "Redactor web",
+    Características: {
+        Altura: 1.78 + "cm",
+        Peso: 80 + "Kg",
+        Edad: 37 + " años"
+    }
+
+}
+
+console.log(varObject.Nombre)
+console.log(varObject["Oficio actual"])
+console.log(varObject.Oficio_anterior)
+console.log(varObject.Características)
+console.log(varObject.Características.Altura)
+                </div>
+            </li>
+            <li>
+                <p>Imprimiendo valores de un objeto anidado con notación de corchetes []</p>
+                <div class="code-block">
+let varObject = {
+    Nombre: "Leandro",
+    "Oficio actual": "Web developer",
+    Oficio_anterior: "Redactor web",
+    Características: {
+        Altura: 1.78 + "cm",
+        Peso: 80 + "Kg",
+        Edad: 37 + " años"
+    }
+
+}
+
+console.log(varObject["Nombre"])
+console.log(varObject["Oficio actual"])
+console.log(varObject["Oficio_anterior"])
+console.log(varObject["Características"])
+console.log(varObject["Características"]["Altura"])
+                </div>
+            </li>
+            <li>
+                <p>Agregando un valor a un elemento del objeto</p>
                 <div class="code-block">
 let varObject = {
     "Nombre": "Leandro",
     "Oficio actual": "Web developer",
     "Edad": 37 + " años",
-    "Color": ["Blanco", "Azul", "Violeta"]
+    Color: ["Blanco", "Azul", "Violeta"]
 }
                     
 varObject.Color.push("Verde")
@@ -375,7 +503,8 @@ varObject[4].push("Valor 6")
 console.log(varObject[4])
                 </div>
             </li>
-            <li><p>Agregando un elemento al objeto</p>
+            <li>
+                <p>Agregando un elemento al objeto</p>
                 <div class="code-block">
 let varObject = {   
     "Nombre": "Leandro",
@@ -404,7 +533,8 @@ varObject[6] = "Valor 8"
 console.log(varObject[5][1])
                 </div>
             </li>
-            <li><p>Eliminando un elemento al objeto</p>
+            <li>
+                <p>Eliminando un elemento al objeto</p>
                 <div class="code-block">
 let varObject = {   
     "Nombre": "Leandro",
@@ -432,7 +562,8 @@ delete varObject[4][0]
 console.log(varObject)
                 </div>
             </li>
-            <li><p>Cambiando el valor de un elemento</p>
+            <li>
+                <p>Cambiando el valor de un elemento</p>
                 <div class="code-block">
 let varObject = {
     "Nombre": "Leandro",
@@ -464,7 +595,8 @@ varObject[4][0] = 'valor 44'
 console.log(varObject[4][0])
                 </div>
             </li>
-            <li><p>Reasignando valores a un elemento del objeto</p>
+            <li>
+                <p>Reasignando valores a un elemento del objeto</p>
                 <div class="code-block">
 let varObject = {   
     "Nombre": "Leandro",
@@ -497,7 +629,12 @@ console.log(varObject[4])
 
 
 
+        <h2>Array con objetos</h2>
+        <div class="code-block">
+let viajeRoma[
 
+]            
+        </div>
 
 
 

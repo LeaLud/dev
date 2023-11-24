@@ -36,6 +36,11 @@
 #flexbox .box{
     width: 100%;
     height: 100%;
+
+    /*Alineando el texto*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 /*CSS General*/
