@@ -216,30 +216,13 @@ console.log(varFinJS)
 
 
 
+i = 0
+
+do {
+    console.log("Hello!")
+    i += 1
+} while (i < 55)
 
 
 
 
-
-
-
-
-
-let varObject = {
-    Nombre: "Leandro",
-    'Oficio actual': "Web developer",
-    Oficio_anterior: "Redactor web",
-    Características: {
-        Altura: 1.78 + "cm",
-        Peso: 80 + "Kg",
-        Edad: 37 + " años"
-    }
-
-}
-
-console.log(varObject.Nombre)
-console.log(varObject['Oficio actual'])
-console.log(varObject.Oficio_anterior)
-console.log(varObject.Características)
-console.log(varObject.Características.Altura)
-                

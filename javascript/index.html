@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css" media="all" />
     <script src="javascript-basics.js"></script>
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        .content{
+            height:2000px;
+            background-color:gray;
+        }
+        #return-to-top{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            text-decoration:none;
+            display:none;
+            z-index:1000;
+            border-radius: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            transition: all .4s;
+        }
+        #return-to-top span{
+            color:#fff;
+            font-size:26px;
+            font-weight: bold;
+            -webkit-transition:all .4s;
+            -moz-transition:all .4s;
+            transition:all .4s;
+            display:block;
+            padding: 5px 12.5px;        -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+        #return-to-top:hover{
+            background-color: rgba(0, 0, 0, .8);
+        }
+    </style>
+    <!--Go Top-->
+
     <title>JavaScript basics</title>
 </head>
 <body>
@@ -19,8 +62,65 @@
             <li>
                 <a href="javascript-basics.js" target="_blank">Archivo vinculado ↗</a>
             </li>
+            <li>
+                <a href="#impresion-de-datos">Impresión de datos</a>
+            </li>
+            <li>
+                <a href="#variables">Variables</a>
+            </li>
+            <li>
+                <a href="#tipos-de-datos">Tipos de datos</a>
+            </li>
+            <li>
+                <a href="#operadores">Operadores</a>
+            </li>
+            <li>
+                <a href="#secuencias-de-escape">Secuencias de escape</a></li>
+            <li>
+                <a href="#propiedad-length">Propiedad length</a>
+            </li>
+            <li>
+                <a href="#argumentos">Argumentos</a>
+            </li>
+            <li>
+                <a href="#return">Return</a>
+            </li>
+            <li>
+                <a href="#funciones">Funciones</a>
+            </li>
+            <li>
+                <a href="#condicionales">Condicionales</a>
+            </li>
+            <li>
+                <a href="#switch">Switch</a>
+            </li>
+            <li>
+                <a href="#array">Array</a>
+            </li>
+            <li>
+                <a href="#objetos">Objetos</a>
+            </li>
+            <li>
+                <a href="#array-con-objetos-anidados
+                ">Array con objetos anidados
+                </a>
+            </li>
+            <li>
+                <a href="#practica-javascript
+                ">Práctica JavaScript
+                </a>
+            </li>
+            <li>
+                <a href="#sentencia-while">Sentencia While</a>
+            </li>
+            <li>
+                <a href="#sentencia-for">Sentencia For</a>
+            </li>
+            <li>
+                <a href="#sentencia-do-while">Sentencia Do While</a>
+            </li>
         </ul>
-        <h2>Impresión de datos</h2>
+        <h2><a name="impresion-de-datos" class="anchor">Impresión de datos</a></h2>
         <ol>
             <li>
                 <div class="code-block">
@@ -69,7 +169,7 @@ console.log(JSON.stringify(myArray))
                 </div>
             </li>
         </ol>
-        <h2>Variables</h2>
+        <h2><a name="variables" class="anchor">Variables</a></h2>
         <ol>
             <li>
                 <p>Definiendo una variable estática</p>
@@ -84,7 +184,7 @@ let myVar = "Esta es una variable que puede cambiar su valor"
                 </div>
             </li>
         </ol>
-        <h2>Tipos de datos</h2>
+        <h2><a name="tipos-de-datos" class="anchor">Tipos de datos</a></h2>
         <ol>
             <li>
                 <p><span class="highlight-text">String</span>. Cadena de caracteres</p>
@@ -173,7 +273,7 @@ let myVar =
                 </div>
             </li>
         </ol>
-        <h2>Operadores</h2>
+        <h2><a name="operadores" class="anchor">Operadores</a></h2>
         <div class="code-block">
 Igualdad ==
 Igualdad estricta ===
@@ -185,14 +285,25 @@ AND &&
 OR ||
 NOT !
         </div>
-        <h2>Propiedad length</h2>
+        <h2><a name="secuencias-de-escape" class="anchor">Secuencias de escape</a></h2>
+        <ol>
+            <li><span class="highlight-text">\'</span> Comilla simple</li>
+            <li><span class="highlight-text">\"</span> Comilla doble</li>
+            <li><span class="highlight-text">\\</span> Barra invertida</li>
+            <li><span class="highlight-text">\n</span> Salto de línea</li>
+            <li><span class="highlight-text">\r</span> Retorno de carro</li>
+            <li><span class="highlight-text">\t</span> Tabulación</li>
+            <li><span class="highlight-text">\b</span> Retroceso</li>
+            <li><span class="highlight-text">\f</span> Salto de página</li>
+        </ol>
+        <h2><a name="propiedad-length" class="anchor">Propiedad length</a></h2>
         <p>Obteniendo la longitud de un string</p>
         <div class="code-block">
 let myVar = "Resumen JavaScript"
 
 console.log(myVar.length)
         </div>
-        <h2>Argumentos</h2>
+        <h2><a name="argumentos" class="anchor">Argumentos</a></h2>
         <div class="code-block">
 function myAverage(val1, val2, val3, val4, val5) {
     let suma = val1 + val2 + val3 + val4 + val5
@@ -202,7 +313,11 @@ function myAverage(val1, val2, val3, val4, val5) {
 
 myAverage(5, 10, 15, 20 ,10)
         </div>
-        <h2>Return</h2>
+        <h2><a name="return" class="anchor">Return</a></h2>
+        <ol>
+            <li><p>Es una palabra clave que llama al valor devuelto por una función</p></li>
+            <li><p>No imprime esos datos, por lo que se deben mostrar con el comando console.log</p></li>
+        </ol>
         <div class="code-block">
 function operacionMat(val1, val2) {
     let operSuma = val1 + val2;
@@ -213,7 +328,7 @@ function operacionMat(val1, val2) {
 let resultadoFinal = operacionMat(50, 30);
 console.log(resultadoFinal)
         </div>
-        <h2>Funciones</h2>
+        <h2><a name="funciones" class="anchor">Funciones</a></h2>
         <ol>
             <li>
                 <p>Es un conjunto de instrucciones que realiza una tarea o calcula un valor</p>
@@ -274,7 +389,7 @@ console.log(funcVerificar(myObject, "Peso"))
                 </div>
             </li>
         </ol>
-        <h2>Condicionales</h2>
+        <h2><a name="condicionales" class="anchor">Condicionales</a></h2>
         <div class="code-block">
 if (5 < 2 && 1 == 1) {
     console.log("Verdadero")
@@ -284,7 +399,7 @@ if (5 < 2 && 1 == 1) {
     console.log("Ni uno ni otro")
 }
         </div>
-        <h2>Switch</h2>
+        <h2><a name="switch" class="anchor">Switch</a></h2>
         <div class="code-block">
 function switchValue(value) {
     let myVar
@@ -336,7 +451,7 @@ switch(myVar) {
         break;
 }
         </div>
-        <h2>Array</h2>
+        <h2><a name="array" class="anchor">Array</a></h2>
         <ol>
             <li>
                 <p>Array o arreglo es una agrupación de elementos en una misma variable</p>
@@ -416,7 +531,7 @@ myArray.pop()
                 <p>Definiendo un objeto</p>
                 <div class="code-block">
 let varObject = {
-    "Nombre": "Leandro",
+    Nombre":"Leandro",
     Apellido: "Ludueña"
 }
                 </div>
@@ -480,9 +595,9 @@ console.log(varObject["Características"]["Altura"])
                 <p>Agregando un valor a un elemento del objeto</p>
                 <div class="code-block">
 let varObject = {
-    "Nombre": "Leandro",
+    Nombre: "Leandro",
     "Oficio actual": "Web developer",
-    "Edad": 37 + " años",
+    Edad: 37 + " años",
     Color: ["Blanco", "Azul", "Violeta"]
 }
                     
@@ -507,10 +622,10 @@ console.log(varObject[4])
                 <p>Agregando un elemento al objeto</p>
                 <div class="code-block">
 let varObject = {   
-    "Nombre": "Leandro",
+    Nombre: "Leandro",
     "Oficio actual": "Web developer",
-    "Edad": 37 + " años",
-    "Color": ["Blanco", "Azul", "Violeta"]
+    Edad: 37 + " años",
+    Color: ["Blanco", "Azul", "Violeta"]
 }
 
 varObject.Altura = [1.79 + "cm", 1.8 + "cm"]
@@ -537,15 +652,16 @@ console.log(varObject[5][1])
                 <p>Eliminando un elemento al objeto</p>
                 <div class="code-block">
 let varObject = {   
-    "Nombre": "Leandro",
+    Nombre: "Leandro",
     "Oficio actual": "Web developer",
-    "Edad": 37 + " años",
-    "Color": ["Blanco", "Azul", "Violeta"]
+    Edad: 37 + " años",
+    Color: ["Blanco", "Azul", "Violeta"]
 }
 
 delete varObject.Nombre
 delete varObject["Oficio actual"]
-delete varObject["Color"]
+delete varObject["Color"][0]
+
 console.log(varObject)
                 </div>
                 <div class="code-block">
@@ -566,10 +682,10 @@ console.log(varObject)
                 <p>Cambiando el valor de un elemento</p>
                 <div class="code-block">
 let varObject = {
-    "Nombre": "Leandro",
+    Nombre: "Leandro",
     "Oficio actual": "Web developer",
-    "Edad": 37 + " años",
-    "Color": ["Blanco", "Azul", "Violeta"]
+    Edad: 37 + " años",
+    Color: ["Blanco", "Azul", "Violeta"]
 }
 
 varObject[0] = "Federico"
@@ -599,10 +715,10 @@ console.log(varObject[4][0])
                 <p>Reasignando valores a un elemento del objeto</p>
                 <div class="code-block">
 let varObject = {   
-    "Nombre": "Leandro",
+    Nombre: "Leandro",
     "Oficio actual": "Web developer",
-    "Edad": 37 + " años",
-    "Color": ["Blanco", "Azul", "Violeta"]
+    Edad: 37 + " años",
+    Color: ["Blanco", "Azul", "Violeta"]
 }
 
 varObject.Color = ["Verde", "Dorado", "Plateado"]
@@ -625,38 +741,185 @@ console.log(varObject[4])
                 </div>
             </li>
         </ol>
-        </div>
-
-
-
-        <h2>Array con objetos</h2>
+        <h2><a name="array-con-objetos-anidados" class="anchor">Array con objetos anidados</a></h2>
         <div class="code-block">
-let viajeRoma[
+let myArray = [
+{
+    Nombre: "Leandro",
+    Apellido: "Ludueña",
+    Oficios: [
+        "Webmaster",
+        "Web developer",
+        "Bartender"
+    ]
+},
+{
+    Altura: 1.78 + "cm",
+    Peso: 80 + "kg",
+    Habilidades: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React"
+    ]
+}
+]
 
-]            
+console.log(myArray[0]["Oficios"])
+console.log(myArray[0].Oficios[1])
+
+console.log(myArray[1].Habilidades[3])
+console.log(myArray[1]["Habilidades"][2])
+        </div>
+        <h2><a name="practica-javascript" class="anchor">Práctica JavaScript</a></h2>
+        <ol>
+            <li><p>Definiendo un objeto "coleccionDeDiscos"</p></li>
+            <li><p>Creando una función "actualizarDiscos" para actualizar los álbumes de la colección</p></li>
+            <div class="code-block">
+var coleccionDeDiscos = {
+    7853: {
+        tituloDeAlbum: "Bee Gees Greatest",
+        artista: "Bee Gee",
+        canciones: ["Stayin' Alive"]
+    },
+    5439: {
+        tituloDeAlbum: "ABBA Gold"
+    }
+}
+
+function actualizarDiscos (discos, id, propiedad, valor) {
+    if (valor === "") {
+        delete discos[id][propiedad];
+}	else if (propiedad === "canciones") {
+        discos[id][propiedad] = discos[id][propiedad] || [];
+        discos[id][propiedad].push(valor);
+}	else {
+        discos[id][propiedad] = valor;
+    }
+}
+
+console.log(coleccionDeDiscos[5439].artista)
+
+actualizarDiscos(coleccionDeDiscos, 5439, "artista", "Los Redondos")
+
+console.log(coleccionDeDiscos[5439].artista)
+            </div>
+        </ol>
+        <h2><a name="sentencia-while" class="anchor">Sentencia While. Bucles</a></h2>
+        <div class="code-block">
+let i = 0
+
+while (i <= 3) {
+    console.log ("Hello World!")
+    i = i + 1
+}
+        </div>
+        <div class="code-block">
+let i = 0
+let myArray = []
+
+while (i <= 10) {
+    myArray.push(i)
+    i++
+}
+
+console.log(myArray)
+        </div>
+        <div class="code-block">
+let myArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+while (myArray.length > 4) {
+    myArray.pop()
+}
+
+console.log(myArray)
+        </div>
+        <h2><a name="sentencia-for" class="anchor">Sentencia For</a></h2>
+        <ol>
+            <li>
+                <p>Definir una variable</p>
+            </li>
+            <li>
+                <p>Definir una condición</p>
+            </li>
+            <li>
+                <p>Definir qué ocurre con la variable</p>
+                <div class="code-block">
+let myArray = []
+
+for (let i = 0; i < 10; i = i + 1) {
+    myArray.push(i)
+}
+
+console.log(myArray)
+                </div>
+                <div class="code-block">
+let myArray = []
+
+for (let i = 0; i < 10; i = i + 1) {
+    myArray.push(i)
+}
+
+console.log(myArray)
+console.log(myArray.length)
+
+for (let a = myArray.length; a <= 15; a = a + 1){
+    myArray.pop()
+}
+
+console.log(myArray)
+                </div>
+            </li>
+        </ol>
+        <h2><a name="sentencia-do-while" class="anchor">Sentencia Do While</a></h2>
+        <div class="code-block">
+let myArray = []
+
+for (let i = 0; i < 10; i = i + 1) {
+    myArray.push(i)
+}
+
+console.log(myArray)
+        </div>
+        <div class="code-block">
+let myArray = []
+
+for (let i = 0; i < 10; i = i + 1) {
+    myArray.push(i)
+}
+
+console.log(myArray)
+console.log(myArray.length)
+
+for (let a = myArray.length; a <= 15; a = a + 1){
+    myArray.pop()
+}
+
+console.log(myArray)
         </div>
 
 
+        
 
 
 
 
-
-
-
-
-
-        <h2>Secuencias de escape</h2>
-        <ol>
-            <li><span class="highlight-text">\'</span> Comilla simple</li>
-            <li><span class="highlight-text">\"</span> Comilla doble</li>
-            <li><span class="highlight-text">\\</span> Barra invertida</li>
-            <li><span class="highlight-text">\n</span> Salto de línea</li>
-            <li><span class="highlight-text">\r</span> Retorno de carro</li>
-            <li><span class="highlight-text">\t</span> Tabulación</li>
-            <li><span class="highlight-text">\b</span> Retroceso</li>
-            <li><span class="highlight-text">\f</span> Salto de página</li>
-        </ol>
+        <a href="javascript:" id="return-to-top"><span>></span></a>
+			<script>
+			// ===== Scroll to Top ==== 
+			$(window).scroll(function() {
+				if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+					$('#return-to-top').fadeIn(200);    // Fade in the arrow
+				} else {
+					$('#return-to-top').fadeOut(200);   // Else fade out the arrow
+				}
+			});
+			$('#return-to-top').click(function() {      // When arrow is clicked
+				$('body,html').animate({
+					scrollTop : 0                       // Scroll to top of body
+				}, 50);
+			});
+			</script>
     </main>
 </body>
 </html>
