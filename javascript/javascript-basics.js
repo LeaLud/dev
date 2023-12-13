@@ -216,13 +216,21 @@ console.log(varFinJS)
 
 
 
-i = 0
-
-do {
-    console.log("Hello!")
-    i += 1
-} while (i < 55)
 
 
 
 
+
+
+
+
+
+
+
+
+function myFunct (...myVar) {
+    console.log(myVar)
+}
+
+myFunct(85, 40, 70)
+myFunct([1, 2], [3, 2, 1], [4, 3])

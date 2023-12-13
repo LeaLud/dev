@@ -57,7 +57,7 @@
         <p>Es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
         <ul>
             <li>
-                <p>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan</p>
+                <p>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan.</p>
             </li>
             <li>
                 <a href="javascript-basics.js" target="_blank">Archivo vinculado ↗</a>
@@ -70,6 +70,15 @@
             </li>
             <li>
                 <a href="#tipos-de-datos">Tipos de datos</a>
+            </li>
+            <li>
+                <a href="#fraccion-aleatoria">Generando una fracción aleatoria</a>
+            </li>
+            <li>
+                <a href="#entero-aleatorio">Generando un número entero aleatorio</a>
+            </li>
+            <li>
+                <a href="#string-a-number">Convirtiendo un string numérico a un number entero</a>
             </li>
             <li>
                 <a href="#operadores">Operadores</a>
@@ -89,7 +98,13 @@
                 <a href="#funciones">Funciones</a>
             </li>
             <li>
+                <a href="#funciones-flecha">Funciones flecha</a>
+            </li>
+            <li>
                 <a href="#condicionales">Condicionales</a>
+            </li>
+            <li>
+                <a href="#condicional-ternario">Condicional ternario</a>
             </li>
             <li>
                 <a href="#switch">Switch</a>
@@ -119,6 +134,9 @@
             <li>
                 <a href="#sentencia-do-while">Sentencia Do While</a>
             </li>
+            <li>
+                <a href="#operador-rest">Operador Rest</a>
+            </li>
         </ul>
         <h2><a name="impresion-de-datos" class="anchor">Impresión de datos</a></h2>
         <ol>
@@ -126,6 +144,7 @@
                 <div class="code-block">
 console.log("Hola Mundo")
 console.log(4)
+console.log(new Date())
                 </div>
             </li>
             <li>
@@ -174,7 +193,7 @@ console.log(JSON.stringify(myArray))
             <li>
                 <p>Definiendo una variable estática</p>
                 <div class="code-block">
-const myVar = "Esta es una variable que no puede cambiar su valor"
+const MY_VAR = "Esta es una variable que no puede cambiar su valor. Al nombre se lo define en mayúsculas."
                 </div>
             </li>
             <li>
@@ -270,6 +289,40 @@ console.log(miObjeto.ocupación[0])
                 <p><span class="highlight-text">Symbol</span></p>
                 <div class="code-block">
 let myVar = 
+                </div>
+            </li>
+        </ol>
+        <h2><a name="fraccion-aleatoria" class="anchor">Generando una fracción aleatoria</a></h2>
+        <div class="code-block">
+let myVar = Math.random()
+
+console.log(myVar)
+        </div>
+        <h2><a name="entero-aleatorio" class="anchor">Generando un número entero aleatorio</a></h2>
+        <ol>
+            <li>Multiplicar por un número entero, el cual no estará incluido en el resultado aleatorio</li>
+        </ol>
+        <div class="code-block">
+let myVar = Math.floor(Math.random() * 20)
+
+console.log(myVar)
+        </div>
+        <h2><a name="string-a-number" class="anchor">String a Number</a></h2>
+        <ol>
+            <li>
+                <p>Convirtiendo un string numérico a un number entero</p>
+                <div class="code-block">
+console.log(parseInt("4886"))
+                </div>
+            </li>
+            <li>Convirtiendo un string binario a un number entero
+                <div class="code-block">
+console.log(parseInt("101101", 2))
+                </div>
+            </li>
+            <li>Convirtiendo un string hexadecimal a un number entero
+                <div class="code-block">
+console.log(parseInt("3E0A", 16))
                 </div>
             </li>
         </ol>
@@ -389,6 +442,36 @@ console.log(funcVerificar(myObject, "Peso"))
                 </div>
             </li>
         </ol>
+        <h2><a name="funciones-flecha" class="anchor">Funciones flecha</a></h2>
+        <ol>
+            <li>
+                <p>Son funciones abreviadas y anónimas (sin nombre) que se utilizan en variables</p>
+            </li>
+            <li>
+                <p>La palabra clave <span class="highlight-text">function</span> se elimina</p>
+            </li>
+            <li>
+                <p>Las llaves se eliminan cuando la función tiene una sola línea</p>
+            </li>
+            <li>
+                <p>La palabra clave <span class="highlight-text">return</span> se reemplaza por <span class="highlight-text">=></span></p>
+            </li>
+            <li>
+                <p>Se escribe toda la función en una sola línea</p>
+            </li>
+        </ol>
+        <div class="code-block">
+let myVar = function(b) {
+    return 10 + b
+}
+
+console.log(myVar(50))
+        </div>
+        <div class="code-block">
+let myVar = (b) => 10 + b
+
+console.log(myVar(50))
+        </div>
         <h2><a name="condicionales" class="anchor">Condicionales</a></h2>
         <div class="code-block">
 if (5 < 2 && 1 == 1) {
@@ -398,6 +481,28 @@ if (5 < 2 && 1 == 1) {
 }else {
     console.log("Ni uno ni otro")
 }
+        </div>
+        <h2><a name="condicional-ternario" class="anchor">Condicional ternario</a></h2>
+        <p>Escribiendo una sentencia condicional normal en una condicional ternaria</p>
+        <div class="code-block">
+a = 9
+b = 13
+
+if (a > b) {
+    console.log(a + " es mayor")
+} else if (a == b) {
+    console.log("Los valores son iguales")
+} else {
+    console.log(a + " es menor")
+}
+        </div>
+        <div class="code-block">
+a = 9
+b = 13
+
+console.log(a > b ? a + " es mayor"
+: a == b ? "Los valores son iguales"
+: a + " es menor")
         </div>
         <h2><a name="switch" class="anchor">Switch</a></h2>
         <div class="code-block">
@@ -740,6 +845,12 @@ varObject[4] = ["Valor 1500", "Valor 85,6", 45]
 console.log(varObject[4])
                 </div>
             </li>
+            <li>
+                <p>Conegelando un objecto para evitar su modificación</p>
+                <div class="code-block">
+Object.freeze(objeto)
+                </div>
+            </li>
         </ol>
         <h2><a name="array-con-objetos-anidados" class="anchor">Array con objetos anidados</a></h2>
         <div class="code-block">
@@ -873,29 +984,21 @@ console.log(myArray)
         </ol>
         <h2><a name="sentencia-do-while" class="anchor">Sentencia Do While</a></h2>
         <div class="code-block">
-let myArray = []
+i = 0
 
-for (let i = 0; i < 10; i = i + 1) {
-    myArray.push(i)
-}
-
-console.log(myArray)
+do {
+    console.log(i)
+    i += 1
+} while (i <= 5)            
         </div>
+        <h2><a name="operador-rest" class="anchor">Operador Rest</a></h2>
         <div class="code-block">
-let myArray = []
-
-for (let i = 0; i < 10; i = i + 1) {
-    myArray.push(i)
+function myFunct (...myVar) {
+    console.log(myVar)
 }
 
-console.log(myArray)
-console.log(myArray.length)
-
-for (let a = myArray.length; a <= 15; a = a + 1){
-    myArray.pop()
-}
-
-console.log(myArray)
+myFunct(85, 40, 70)
+myFunct([1, 2], [3, 2, 1], [4, 3])
         </div>
 
 
