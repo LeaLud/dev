@@ -224,13 +224,40 @@ console.log(varFinJS)
 
 
 
+let varString = "Esto es una cadena de caracteres"
+
+console.log(typeof varString)
 
 
 
 
-function myFunct (...myVar) {
-    console.log(myVar)
+
+class Mascota {
+    constructor(nombre, edad) {
+        this._nombre = nombre
+        this._edad = edad
+    }
+
+    get nombre() {
+        console.log("Getter")
+        return this._nombre
+    }
+
+    set nombre(nuevoNombre) {
+        console.log("Setter")
+        this._nombre = nuevoNombre
+    }
 }
 
-myFunct(85, 40, 70)
-myFunct([1, 2], [3, 2, 1], [4, 3])
+const Mascota3 = new Mascota("Federico", 40)
+
+console.log(Mascota3.nombre)
+
+Mascota3.nombre = "India"
+
+console.log(Mascota3)
+
+
+let myVar = false
+
+console.log(typeof myVar)

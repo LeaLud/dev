@@ -55,15 +55,18 @@
         <button class="button-goback" onClick="history.back()">Go back</button>
         <h1>JavaScript</h1>
         <p>Es un lenguaje de programación interpretado, dialecto del estándar ECMAScript. Se define como orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico.</p>
-        <ul>
-            <li>
-                <p>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan.</p>
-            </li>
+        <p>No requiere ningún tipo de instalación, ya que la mayoría de los navegadores web lo incorporan.</p>
+
+        <h2>Índice</h2>
+        <ol>
             <li>
                 <a href="javascript-basics.js" target="_blank">Archivo vinculado ↗</a>
             </li>
             <li>
                 <a href="#impresion-de-datos">Impresión de datos</a>
+            </li>
+            <li>
+                <a href="#plantilla-literal">Plantilla literal</a>
             </li>
             <li>
                 <a href="#variables">Variables</a>
@@ -99,6 +102,9 @@
             </li>
             <li>
                 <a href="#funciones-flecha">Funciones flecha</a>
+            </li>
+            <li>
+                <a href="#metodo">Método</a>
             </li>
             <li>
                 <a href="#condicionales">Condicionales</a>
@@ -137,7 +143,19 @@
             <li>
                 <a href="#operador-rest">Operador Rest</a>
             </li>
-        </ul>
+            <li>
+                <a href="#operador-spread">Operador Spread</a>
+            </li>
+            <li>
+                <a href="#sintaxis-desestructuracion">Sintaxis de desestructuración</a>
+            </li>
+            <li>
+                <a href="#clases">Clases</a>
+            </li>
+            <li>
+                <a href="#getters-setters">Getters y setters</a>
+            </li>
+        </ol>
         <h2><a name="impresion-de-datos" class="anchor">Impresión de datos</a></h2>
         <ol>
             <li>
@@ -188,6 +206,18 @@ console.log(JSON.stringify(myArray))
                 </div>
             </li>
         </ol>
+        <h2><a name="plantilla-literal" class="anchor">Plantilla literal</a></h2>
+        <ol>
+            <li>
+                <p>Permite imprimir cadenas de caracteres y objetos en una misma línea comprendida entre acentos invertidos ``</p>
+                <div class="code-block">
+let varHtml = "Hello"
+let myArray = [1, 2, 5, 7]
+
+console.log(`${varHtml} world!!! ${JSON.stringify(myArray)}`)
+                </div>
+            </li>
+        </ol>
         <h2><a name="variables" class="anchor">Variables</a></h2>
         <ol>
             <li>
@@ -205,6 +235,22 @@ let myVar = "Esta es una variable que puede cambiar su valor"
         </ol>
         <h2><a name="tipos-de-datos" class="anchor">Tipos de datos</a></h2>
         <ol>
+            <li>
+                <p><span class="highlight-text">typeof</span>. Mostrando el tipo de dato que contiene una variable</p>
+        <div class="code-block">
+let myVar = "Esto es una cadena de caracteres"
+
+console.log(typeof myVar)
+
+let myVar = 6
+
+console.log(typeof myVar)
+
+let myVar = false
+
+console.log(typeof myVar)
+        </div>
+            </li>
             <li>
                 <p><span class="highlight-text">String</span>. Cadena de caracteres</p>
                 <div class="code-block">
@@ -458,20 +504,54 @@ console.log(funcVerificar(myObject, "Peso"))
             </li>
             <li>
                 <p>Se escribe toda la función en una sola línea</p>
-            </li>
-        </ol>
-        <div class="code-block">
-let myVar = function(b) {
+                <div class="code-block">
+function myFunction(b) {
     return 10 + b
 }
 
-console.log(myVar(50))
+console.log(myFunction(50))
         </div>
         <div class="code-block">
 let myVar = (b) => 10 + b
 
 console.log(myVar(50))
-        </div>
+                </div>
+            </li>
+            <li>
+                <p>Creando un objeto con una función flecha</p>
+                <div class="code-block">
+let crearUsuario = (Nombre, Oficio, Edad) => ({Nombre, Oficio, Edad})
+
+console.log(crearUsuario("Leandro", "Webmaster", 37))
+                </div>
+            </li>
+        </ol>
+        <h2><a name="metodo" class="anchor">Método</a></h2>
+        <ol>
+            <li>
+                <p>Es una función definida como valor de una propiedad</p>
+                <div class="code-block">
+let usuarios = {
+    Nombre: "Leandro",
+    Información: function() {
+        return `El nombre de usuario es ${this.Nombre}`
+    }
+}
+
+console.log(usuarios.Información())
+                </div>
+                <div class="code-block">
+let usuarios = {
+    Nombre: "Federico",
+    Información() {
+        return `El nombre de usuario es ${this.Nombre}`
+    }
+}
+
+console.log(usuarios2.Información())
+                </div>
+            </li>
+        </ol>
         <h2><a name="condicionales" class="anchor">Condicionales</a></h2>
         <div class="code-block">
 if (5 < 2 && 1 == 1) {
@@ -992,19 +1072,124 @@ do {
 } while (i <= 5)            
         </div>
         <h2><a name="operador-rest" class="anchor">Operador Rest</a></h2>
-        <div class="code-block">
+        <ol>
+            <li>
+                <p>A través de una variable, toma cualquier cantidad de argumentos para una función sin tener que declararlos uno a uno</p>
+                <div class="code-block">
 function myFunct (...myVar) {
     console.log(myVar)
 }
 
 myFunct(85, 40, 70)
 myFunct([1, 2], [3, 2, 1], [4, 3])
+                </div>
+            </li>
+        </ol>
+        <h2><a name="operador-spread" class="anchor">Operador Spread</a></h2>
+        <ol>
+            <li>
+                <p>Imprime cualquier cantidad de argumentos de una función sin tener que declararlos uno a uno</p>
+                <div class="code-block">
+    const operadorSpread = [1, 2, 3]
+    
+    function sumar(x, y, z) {
+        return x + y + z
+    }
+    
+    console.log(sumar(operadorSpread[0], operadorSpread[1], operadorSpread[2]))
+    console.log(sumar(...operadorSpread))
+                </div>
+            </li>
+        </ol>
+        <h2><a name="sintaxis-desestructuracion" class="anchor">Sintaxis de desestructuración</a></h2>
+        <ol>
+            <li>
+                <p>Crea variables a partir de las propiedades de un objeto</p>
+                <div class="code-block">
+const USUARIO = {
+    Nombre: "Leandro",
+    Oficio: "Webmaster",
+    Edad: 37
+}
+
+const {Nombre, Oficio, Edad} = USUARIO
+
+console.log(Nombre)
+console.log(Oficio)
+console.log(Edad)
+                </div>
+            </li>
+            <li>
+                <p>Aplicando la sintaxis sobre un objeto anidado</p>
+                <div class="code-block">
+const USUARIO = {
+    Nombre: "Leandro",
+    Oficio: "Webmaster",
+    Edad: 37,
+    "Otra info": {
+        Altura: 1.70 + " cm",
+        Peso: 79 + " kg"
+    }
+}
+
+const {"Otra info": {Altura, Peso}} = USUARIO
+
+console.log(Altura)
+console.log(Peso)
+                </div>
+            </li>
+        </ol>
+        <h2><a name="clases" class="anchor">Clases</a></h2>
+        <div class="code-block">
+class Mascota {
+    constructor(nombre, edad) {
+        this.nombre = nombre
+        this.edad = edad
+    }
+}
+
+let mascota1 = new Mascota("India", 12)
+let mascota2 = new Mascota("Leandro", 37)
+
+console.log(mascota1.nombre)
+console.log(mascota1.edad)
+
+console.log(mascota2.nombre)
+console.log(mascota2.edad)
         </div>
+        <h2><a name="getters-setters" class="anchor">Getters y setters</a></h2>
+        <ol>
+            <li>Son métodos para obtener y modificar indirectamente datos de propiedades de objetos que no deberían ser modificadas</li>
+            <li>Estas propiedades, por convención, se señalan con un guión bajo "_" delante del nombre</li>
+            <li><span class="highlight-text">Get</span> extrae los datos de una propiedad</li>
+            <li><span class="highlight-text">Set</span> crea una nueva propiedad con los datos extraídos</li>
+        </ol>
+        <div class="code-block">
+class Mascota {
+    constructor(nombre, edad) {
+        this._nombre = nombre
+        this._edad = edad
+    }
 
+    get nombre() {
+        console.log("Getter")
+        return this._nombre
+    }
 
-        
+    set nombre(nuevoNombre) {
+        console.log("Setter")
+        this._nombre = nuevoNombre
+    }
+}
 
+const Mascota3 = new Mascota("Federico", 40)
 
+console.log(Mascota3.nombre)
+
+Mascota3.nombre = "India"
+
+console.log(Mascota3)
+        </div>
 
 
         <a href="javascript:" id="return-to-top"><span>></span></a>

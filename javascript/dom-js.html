@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" media="all" />
+    
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+        }
+        .content{
+            height:2000px;
+            background-color:gray;
+        }
+        #return-to-top{
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            text-decoration:none;
+            display:none;
+            z-index:1000;
+            border-radius: 100%;
+            background-color: rgba(0, 0, 0, .4);
+            transition: all .4s;
+        }
+        #return-to-top span{
+            color:#fff;
+            font-size:26px;
+            font-weight: bold;
+            -webkit-transition:all .4s;
+            -moz-transition:all .4s;
+            transition:all .4s;
+            display:block;
+            padding: 5px 12.5px;        -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -o-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+        }
+        #return-to-top:hover{
+            background-color: rgba(0, 0, 0, .8);
+        }
+    </style>
+    <!--Go Top-->
+
+    <title>Manipulando el DOM con JavaScript</title>
+</head>
+<body>
+    <main>
+        <button class="button-goback" onClick="history.back()">Go back</button>
+        <h1>DOM</h1>
+        <p>Es un modelo de objetos del documento <span class="highlight-text">(Document Object Model)</span>. Representa la estructura jerárquica de los distintos elementos que componen un documento HTML.</p>
+        <ul>
+            <li>
+                <a href="#nodo">Nodo</a>
+            </li>
+            <li>
+                <a href="#accediendo-a-elementos-dom">Accediendo a elementos del DOM</a>
+            </li>
+        </ul>
+        <h2><a name="nodo" class="anchor">Nodo</a></h2>
+        <p>Es un punto específico del diagrama o árbol de nodos del DOM. Se reconocen como nodos:</p>
+        <ol>
+            <li>
+                <p>El documento <span class="highlight-text">&lthtml&gt&lt/html&gt</span> (nodo raíz)</p>
+            </li>
+            <li>
+                <p>Elementos HTML (etiquetas)</p>
+            </li>
+            <li>
+                <p>Textos</p>
+            </li>
+            <li>
+                <p>Comentarios</p>
+            </li>
+        </ol>
+        <h2><a name="accediendo-a-elementos-dom" class="anchor">Accediendo a elementos del DOM</a></h2>
+        <ol id="lista">
+            <li>
+                <p>Accediendo por ID del elemento</p>
+                <div class="code-block">
+const varID = document.getElementById("lista")
+
+console.log(varID)
+console.log(varID.innerHTML)
+console.log(varID.innerText)
+console.log(varID.tagName)
+                </div>
+            </li>
+            <li>
+                <p>Accediendo por clase del elemento</p>
+                <div class="code-block">
+const varClass = document.getElementsByClassName("elemento-lista")
+
+console.log(varClass)
+console.log(varClass[0])
+console.log(varClass[0].id)
+console.log(varClass[0].className)
+                </div>
+            </li>
+            <li>
+                <p>Accediendo por elemento HTML</p>
+                <div class="code-block">
+const listTags = document.getElementsByTagName("ul")
+
+console.log(listTags)
+                </div>
+            </li>
+            <li>
+                <p>Accediendo por selector CSS</p>
+                <div class="code-block">
+const varSelector = document.querySelector(".code-block")
+
+console.log(varSelector)
+                </div>
+                <div class="code-block">
+const varSelector = document.querySelector("#return-to-top")
+
+console.log(varSelector)
+                </div>
+                <div class="code-block">
+const varSelector = document.querySelector("li p")
+
+console.log(varSelector)
+                </div>
+            </li>
+        </ol>
+        <a href="javascript:" id="return-to-top"><span>></span></a>
+			<script>
+			// ===== Scroll to Top ==== 
+			$(window).scroll(function() {
+				if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+					$('#return-to-top').fadeIn(200);    // Fade in the arrow
+				} else {
+					$('#return-to-top').fadeOut(200);   // Else fade out the arrow
+				}
+			});
+			$('#return-to-top').click(function() {      // When arrow is clicked
+				$('body,html').animate({
+					scrollTop : 0                       // Scroll to top of body
+				}, 50);
+			});
+			</script>
+    </main>
+    <script src="javascript-dom.js"></script>
+</body>
+</html>
