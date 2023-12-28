@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css" media="all" />
-    
 
     <!--Go Top-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -62,6 +61,30 @@
             <li>
                 <a href="#accediendo-a-elementos-dom">Accediendo a elementos del DOM</a>
             </li>
+            <li>
+                <a href="#asignando-estilos">Asignando estilos</a>
+            </li>
+            <li>
+                <a href="#manipulando-los-atributos">Manipulando los atributos de un elemento</a>
+            </li>
+            <li>
+                <a href="#manipulando-clases">Manipulando clases</a>
+            </li>
+            <li>
+                <a href="#creando-elementos">Creando elementos</a>
+            </li>
+            <li>
+                <a href="#remover-elemento">Removiendo un elemento</a>
+            </li>
+            <li>
+                <a href="#manipulando-html">Manipulando HTML</a>
+            </li>
+            <li>
+                <a href="#manipulando-texto">Manipulando texto</a>
+            </li>
+            <li>
+                <a href="#recorriendo-el-dom">Recorriendo elementos del DOM</a>
+            </li>
         </ul>
         <h2><a name="nodo" class="anchor">Nodo</a></h2>
         <p>Es un punto específico del diagrama o árbol de nodos del DOM. Se reconocen como nodos:</p>
@@ -89,6 +112,7 @@ const varID = document.getElementById("lista")
 console.log(varID)
 console.log(varID.innerHTML)
 console.log(varID.innerText)
+console.log(varID.textcontent)
 console.log(varID.tagName)
                 </div>
             </li>
@@ -128,8 +152,216 @@ const varSelector = document.querySelector("li p")
 
 console.log(varSelector)
                 </div>
+                <div class="code-block">
+const varSelector = document.querySelector("li p span:not(.highlight-text)")
+
+console.log(varSelector)
+                </div>
+                <div class="code-block">
+const varSelector = document.querySelectorAll("li p span:not(.highlight-text)")
+
+console.log(varSelector)
+                </div>
             </li>
         </ol>
+        <h2><a name="asignando-estilos" class="anchor">Asignando estilos</a></h2>
+        <ol>
+            <li>
+                <p>Accediendo a los estilos del  elemento</p>
+                <div class="code-block">
+console.log(document.querySelector(".boton").style)
+                </div>
+            </li>
+            <li>
+                <p>Asignando estilos al elemento</p>
+                <div class="code-block">
+document.querySelector(".boton").style.fontSize = "16px"
+
+document.querySelector(".boton").style.padding = "10px"
+
+document.querySelector(".boton").style.color = "red"
+                </div>
+            </li>
+        </ol>
+        <h2><a name="manipulando-los-atributos" class="anchor">Manipulando los atributos de un elemento</a></h2>
+        <ol>
+            <li>
+                <p>Accediendo al atributo</p>
+                <div class="code-block">
+console.log(document.getElementsByTagName("a")[0].getAttribute("href"))
+                </div>
+            </li>
+            <li>
+                <p>Quitando un atributo</p>
+                <div class="code-block">
+document.getElementsByTagName("a")[0].removeAttribute("href")
+                </div>
+                <p>Asignando / reasignando un valor al atributo</p>
+                <div class="code-block">
+document.getElementsByTagName("a")[0].setAttribute("href", "https://www.youtube.com/")
+                </div>
+            </li>
+        </ol>  
+        <h2><a name="manipulando-clases" class="anchor">Manipulando clases</a></h2>
+        <ol>
+            <li>
+                <p>Accediendo a las clases de un elemento</p>
+                <div class="code-block">
+console.log(document.querySelector(".ejemplo").classList)
+                </div>
+                <div class="code-block">
+console.log(document.getElementById("boton-ejemplo").classList)
+                </div>
+            </li>
+            <li>
+                <p>Agregando clases. Deben estar definidas en <span class="highlight-text">&ltstyle&gt&lt/style&gt</span></p>
+                <div class="code-block">
+document.querySelector(".ejemplo").classList.add("subrayado", "italic")
+                </div>
+            </li>
+            <li>
+                <p>Verificando la existencia de una clase</p>
+                <div class="code-block">
+console.log(document.querySelector(".ejemplo").classList.contains("subrayado"))
+                </div>
+                <div class="code-block">
+console.log(document.querySelector(".ejemplo").classList.contains("ejemplo"))
+                </div>
+            </li>
+            <li>
+                <p>Removiendo una clase</p>
+                <div class="code-block">
+document.querySelector(".ejemplo").classList.remove("ejemplo", "subrayado")
+                </div>
+            </li>
+        </ol>
+        <h2><a name="creando-elementos" class="anchor">Creando elementos</a></h2>
+        <ol>
+            <li>
+                <p>Agregando varios nodos hijos con la función <span class="highlight-text">append()</span></p>
+                <div class="code-block">
+let nuevoElemento = document.createElement("li")
+let nuevoElemento2 = document.createElement("li")
+
+
+nuevoElemento.innerText = "Línea 6"
+nuevoElemento2.innerHTML = "&ltstrong&gtLínea 7&lt/strong&gt"
+
+document.getElementById("lista-ejemplo").append(nuevoElemento, nuevoElemento2)
+                </div>
+            </li>
+            <li>
+                <p>Agregando un nodo hijo a la vez con la función <span class="highlight-text">appendChild()</span></p>
+                <div class="code-block">
+let nuevoElemento = document.createElement("li")
+
+nuevoElemento.innerText = "Línea 6"
+
+document.getElementById("lista-ejemplo").appendChild(nuevoElemento)
+                </div>
+            </li>
+        </ol>
+        <h2><a name="remover-elemento" class="anchor">Removiendo un elemento</a></h2>
+        <div class="code-block">
+document.getElementById("boton-ejemplo").remove()
+        </div>
+        <h2><a name="manipulando-html" class="anchor">Manipulando HTML</a></h2>
+        <ol>
+            <li>
+                <p>Accediendo al HTML</p>
+                <div class="code-block">
+console.log(document.getElementById("lista-ejemplo").innerHTML)
+                </div>
+            </li>
+            <li>
+                <p>Asignando / reasignando contenido HTML</p>
+                <div class="code-block">
+document.getElementById("lista-ejemplo").innerHTML = "&ltol&gt&ltli&gtun item&lt/li&gt&ltli&gtdos items&lt/li&gt&lt/ol&gt"
+                </div>
+            </li>
+        </ol>
+        <h2><a name="manipulando-texto" class="anchor">Manipulando texto</a></h2>
+        <ol>
+            <li>
+                <p>Accediendo al texto</p>
+                <div class="code-block">
+console.log(document.getElementById("boton-ejemplo").innerText)
+                </div>
+            </li>
+            <li>
+                <p>Asignando / reasignando texto</p>
+                <div class="code-block">
+document.getElementById("boton-ejemplo").innerText = "Nuevo botón"
+                </div>
+            </li>
+        </ol>
+        <h2><a name="recorriendo-el-dom" class="anchor">Recorriendo el DOM</a></h2>
+        <ol>
+            <li>
+                <p>Recorriendo elementos y nodos padres</p>
+                <div class="code-block">
+console.log(document.getElementById("lista-ejemplo").parentElement)
+
+console.log(document.getElementById("lista-ejemplo").parentNode)
+
+console.log(document.getElementById("lista-ejemplo").parentNode.parentElement)
+                </div>
+            </li>
+            <li>
+                <p>Recorriendo elementos y nodos hijos</p>
+                <div class="code-block">
+console.log(document.getElementById("lista-ejemplo").children)
+
+console.log(document.getElementById('lista-ejemplo').lastElementChild)
+
+console.log(document.getElementById('lista-ejemplo').firstChild)
+                </div>
+            </li>
+            <li>
+                <p>Recorriendo elementos y nodos hermanos</p>
+                <div class="code-block">
+console.log(document.getElementById("parrafo-ejemplo").previusElementSibling)
+
+console.log(document.getElementById("boton-ejemplo").previusSibling)
+
+console.log(document.getElementById("parrafo-ejemplo").nextElementSibling)
+
+console.log(document.getElementById("boton-ejemplo").nextSibling)
+
+console.log(document.getElementById('parrafo-ejemplo').lastElementChild)
+
+console.log(document.getElementById('boton-ejemplo').firstChild)
+                </div>
+            </li>
+        </ol>
+        <h2><a name="eventos-del-dom" class="anchor">Eventos del DOM</a></h2>
+        <ol>
+            <li></li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+
+        <div id="elementos-ejemplo">
+            <h2>Elementos de ejemplo</h2>
+            <p id="parrafo-ejemplo" class="ejemplo">Párrafo de ejemplo</p>
+            <button id="boton-ejemplo" class="boton">Botón de ejemplo</button>
+            <ul id="lista-ejemplo" class="ejemplo">
+                <li>Línea 1</li>
+                <li>Línea 2</li>
+                <li>Línea 3</li>
+                <li>Línea 4</li>
+                <li>Línea 5</li>
+            </ul>
+        </div>
         <a href="javascript:" id="return-to-top"><span>></span></a>
 			<script>
 			// ===== Scroll to Top ==== 
