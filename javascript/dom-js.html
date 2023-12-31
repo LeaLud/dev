@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="../style/style.css" media="all" />
+
+    <!--Copy to clipboard-->
+    <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v2.0.11/dist/clipboard.min.js"></script>
 
     <!--Go Top-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -84,6 +87,18 @@
             </li>
             <li>
                 <a href="#recorriendo-el-dom">Recorriendo elementos del DOM</a>
+            </li>
+            <li>
+                <a href="#eventos-html">Eventos HTML</a>
+            </li>
+            <li>
+                <a href="#event-listener">eventListener</a>
+            </li>
+            <li>
+                <a href="practicos-dom/practico-1.html" target="_blank">Práctico N° 1 - Color aleatorio</a>
+            </li>
+            <li>
+                <a href="practicos-dom/practico-2.html" target="_blank">Práctico N° 2 - Colores RGB</a>
             </li>
         </ul>
         <h2><a name="nodo" class="anchor">Nodo</a></h2>
@@ -334,27 +349,63 @@ console.log(document.getElementById('boton-ejemplo').firstChild)
                 </div>
             </li>
         </ol>
-        <h2><a name="eventos-del-dom" class="anchor">Eventos del DOM</a></h2>
+        <h2><a name="eventos-html" class="anchor">Eventos HTML</a></h2>
+        <p>Evento <span class="highlight-text"  onclick="mostrarMensaje('Parámetro')">onclick</span> en el HTML</p>
+        <div class="code-block">
+&ltp onclick="mostrarMensaje()"&gt&lt/p&gt
+&ltp onclick="mostrarMensaje('Enviando un parámetro')"&gt&lt/p&gt
+        </div>
+        <p>Función en JavaScript</span></p>
+        <div class="code-block">
+function mostrarMensaje() {
+    console.log('Este mensaje se muestra por el clic')
+}
+
+function mostrarMensaje(valor) {
+    console.log('Pasando ' + valor + ' como parámetro de la función')
+}
+        </div>
+        <h2><a name="event-listener" class="anchor">eventListener</a></h2>
         <ol>
-            <li></li>
+            <li>
+                <p>Creando un <span class="highlight-text">eventListener</span> para mostrar el texto de un elemento a través de su ID</p>
+                <div class="code-block">
+let varBoton = document.getElementById('boton-ejemplo');
+                </div>
+                <div class="code-block">
+function myEvent(parametro){
+    console.log(parametro.target.innerText)
+}
+                </div>
+                <div class="code-block">
+varBoton.addEventListener('click', myEvent)
+                </div>
+            </li>
+            <li>
+                <p>Creando un <span class="highlight-text">eventListener</span> para mostrar el texto de cada elemento a través de su clase o elemento HTML</p>
+                <div class="code-block">
+let varLista = document.getElementsByClassName('lista');
+
+let varLista = document.getElementsByTagName('li');
+                </div>
+                <div class="code-block">
+function myEvent(parametro){
+    console.log(parametro.target.innerText)
+}
+                </div>
+                <div class="code-block">
+for (let elementosLista of varLista) {
+    elementosLista.add.eventListener('click', myEvent)
+}
+                </div>
+            </li>
         </ol>
-
-
-
-
-
-
-
-
-
-
-
-
         <div id="elementos-ejemplo">
             <h2>Elementos de ejemplo</h2>
-            <p id="parrafo-ejemplo" class="ejemplo">Párrafo de ejemplo</p>
+            <h3 id="titulo-ejemplo" class="titulo">Título de ejemplo</h3>
+            <p id="parrafo-ejemplo" class="parrafo">Párrafo de ejemplo</p>
             <button id="boton-ejemplo" class="boton">Botón de ejemplo</button>
-            <ul id="lista-ejemplo" class="ejemplo">
+            <ul id="lista-ejemplo" class="lista">
                 <li>Línea 1</li>
                 <li>Línea 2</li>
                 <li>Línea 3</li>
