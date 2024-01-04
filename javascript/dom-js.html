@@ -100,6 +100,15 @@
             <li>
                 <a href="practicos-dom/practico-2.html" target="_blank">Práctico N° 2 - Colores RGB</a>
             </li>
+            <li>
+                <a href="practicos-dom/practico-3.html" target="_blank">Práctico N° 3 - Citas aleatorias</a>
+            </li>
+            <li>
+                <a href="practicos-dom/practico-4.html" target="_blank">Práctico N° 4 - Cronómetro</a>
+            </li>
+            <li>
+                <a href="practicos-dom/practico-5.html" target="_blank">Práctico N° 5 - Lista de tareas</a>
+            </li>
         </ul>
         <h2><a name="nodo" class="anchor">Nodo</a></h2>
         <p>Es un punto específico del diagrama o árbol de nodos del DOM. Se reconocen como nodos:</p>
@@ -366,9 +375,11 @@ function mostrarMensaje(valor) {
 }
         </div>
         <h2><a name="event-listener" class="anchor">eventListener</a></h2>
+        <p>Consiste en detectar una determinada interacción sobre un elemento para ejecutar una función
+        </p>
         <ol>
             <li>
-                <p>Creando un <span class="highlight-text">eventListener</span> para mostrar el texto de un elemento a través de su ID</p>
+                <p>Creando un <span class="highlight-text">eventListener</span> para mostrar el texto de un elemento a través de su ID cuando se le hace clic</p>
                 <div class="code-block">
 let varBoton = document.getElementById('boton-ejemplo');
                 </div>
@@ -395,7 +406,7 @@ function myEvent(parametro){
                 </div>
                 <div class="code-block">
 for (let elementosLista of varLista) {
-    elementosLista.add.eventListener('click', myEvent)
+    elementosLista.addEventListener('click', myEvent)
 }
                 </div>
             </li>

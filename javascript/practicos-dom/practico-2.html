@@ -9,20 +9,19 @@
 </head>
 <body>
     <main>
-        <div class="box">
-            <label for="red">Rojo</label>
-            <input id="red" type="range" min="0" max="255" value="75" step="1" />
-            <p id="red-text" class="text"></p>
-        </div>
-        <div class="box">
-            <label for="green">Verde</label>
-            <input id="green" type="range" min="0" max="255" value="150" step="1" />
-            <p id="green-text" class="text"></p>
-        </div>
-        <div class="box">
-            <label for="blue">Azul</label>
-            <input id="blue" type="range" min="0" max="255" value="200" step="1" />
-            <p id="blue-text" class="text"></p>
+        <div class="wrap">
+            <div class="box">
+                <label for="red-input">Rojo (<span id="red-text" class="text"></span>)</label>
+                <input id="red-input" type="range" min="0" max="255" value="50" step="1" />
+            </div>
+            <div class="box">
+                <label for="green-input">Verde (<span id="green-text" class="text"></span>)</label>
+                <input id="green-input" type="range" min="0" max="255" value="100" step="1" />
+            </div>
+            <div class="box">
+                <label for="blue-input">Azul (<span id="blue-text" class="text"></span>)</label>
+                <input id="blue-input" type="range" min="0" max="255" value="150" step="1" />
+            </div>
         </div>
     </main>
     <script src=js/practico-2.js></script>

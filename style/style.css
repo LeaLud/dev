@@ -35,15 +35,16 @@ a.anchor{
 .text-indent-20{text-indent: 20px;display: block;}
 .code-block{border:1px solid purple; border-left:6px solid purple; padding: 1.8em 1em; margin: 12px auto 24px auto; background-color: bisque;border-radius: 0 4px 4px 0;width: 98%; white-space: pre;}
 
-/*anidación de selectores en SCSS*/
+/*anidación de selectores en SCSS
 main{
     p{
-        font-size:auto;
+        font-size: 1em;
     }
     a{
-        font-size:auto;
+        font-size: 1em;
     }
     li{
-        font-size:auto;
+        font-size:1em;
     }
 }
+*/

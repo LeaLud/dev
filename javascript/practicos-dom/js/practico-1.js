@@ -36,5 +36,8 @@ function functRandomColor () {
     document.querySelector('main').style.backgroundColor = randomColor;
 }
 
+//Ejecutando la función para que se defina un color aleatorio al cargar la página
+functRandomColor ()
+
 //Asociando el evento de clic al botón
 varButton.addEventListener('click', functRandomColor)
