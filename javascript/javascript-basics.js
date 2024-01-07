@@ -210,9 +210,25 @@ console.log(myEnum.CSS, myEnum.JSCRIPT)
 // FIN ARCHIVO
 console.log(varFinJS)
 
+//Alertas
+function myAlert() {
+    alert('Mensaje de alerta');
+    alert('Otro mensaje');
+    alert('Último mensaje');
+}
 
-//Pruebas JavaScript
+function myConfirm() {
+    confirm('Mensaje de confirmación')
+    confirm('Mensaje de confirmación 2')
+}
 
+function myPrompt() {
+    prompt('Mensaje Prompt')
+}
+
+function newWindow() {
+    window.open("javascript-basics.js", "page-name", "width=400, height=300,top=100,left=100");
+}
 
 
 

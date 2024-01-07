@@ -4,72 +4,115 @@
     box-sizing: border-box;
 }
 main{
-    height: 100vh;
+    background-color: silver;
+    width: 100%;
+    min-height: 100vh;
     margin: 0 !important;
-    background-color: black !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 }
 .wrap{
-    background-color: black;
-    width: 50%;
-    height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 .box{
-    padding: 10px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    padding: 20px;
+    width: 70%;
+}
+#light-dark-icons{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+#new-task-input{
+    padding: 12px 10px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-family: JosefinSans;
+    width: 100%;
+}
+#task-list{
+    width: 100%;
+    padding: 0 !important;
+}
+.task{
+    display: grid;
+    grid-template-columns: 10fr 1fr 1fr;
+    background-color: cornflowerblue;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 15px;
+    user-select: none;
+}
+.task p{
+    line-height: 32px;
+    text-transform: none;
+}
+.task .icon{
+    display: grid;
+    justify-content: end;
+}
+.done-task{
+    background-color: black;
+}
+.done-task p{
+    text-decoration: line-through;
+    font-style: oblique;
+}
+.title, .subtitle{
+    text-align: center;
+}
+h1{
+    font-family: JosefinSans;
+    font-size: 40px !important;
+    font-weight: 200 !important;
+    text-transform: uppercase;
+    color: darkslategray !important;
 }
 p{
-    text-align: center;
-    font-size: 200px;
-    font-family: DS-DIGI;
-    color: white;
-    text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
-}
-button{
-    padding: 10px;
-    margin: 0 20px;
-    border: 1px solid #444;
-    border-radius: 50px;
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    box-shadow: inset 2px 2px 2px 2px rgba(255, 255, 255, .9);
-    transition: all .2s;
-    user-select: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: JosefinSans;
     text-transform: uppercase;
+    color: darkslategray;
+    margin: 0 !important;
 }
-.play-bg{
-    background-color: rgba(173, 255, 47, 8);
+#button-add-task{
+    background-color: cornflowerblue;
+    border: 0;
+    border-radius: 60px;
+    margin-top: 20px;
 }
-.pause-bg{
-    background-color: rgba(218, 165, 32, 8);
+@font-face{
+    font-family: JosefinSans;
+    src: url(../fonts/JosefinSans-VariableFont_wght.ttf);
 }
-.stop-bg{
-    background-color: rgba(255, 99, 71, .8);
+svg{
+    cursor: pointer;
 }
-button.play-bg:active{
-    background-color: rgba(173, 255, 47, .6);
-    box-shadow: inset 2px 2px 2px 2px rgba(255, 255, 255, .2);
+
+/*Dark theme styles*/
+.dark main{
+    background-color: #111b21;
 }
-button.pause-bg:active{
-    background-color: rgba(218, 165, 32, .6);
-    box-shadow: inset 2px 2px 2px 2px rgba(255, 255, 255, .2);
+.dark main h1{
+    color: gray !important;
 }
-button.stop-bg:active{
-    background-color: rgba(255, 99, 71, .6);
-    box-shadow: inset 2px 2px 2px 2px rgba(255, 255, 255, .2);
+.dark main p{
+    color: gray;
 }
-@font-face {
-    font-family: DS-DIGI;
-    src: url(../fonts/DS-DIGI.TTF);
+.dark main .task{
+    background-color: chartreuse;
+}
+.dark main .task p{
+    color: #111b21;
+}
+.dark #button-add-task{
+    background-color: chartreuse;
 }

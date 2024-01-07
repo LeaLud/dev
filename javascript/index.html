@@ -92,6 +92,9 @@
                 <a href="#propiedad-length">Propiedad length</a>
             </li>
             <li>
+                <a href="#alertas">Alertas</a>
+            </li>
+            <li>
                 <a href="#argumentos">Argumentos</a>
             </li>
             <li>
@@ -438,6 +441,60 @@ function operacionMat(val1, val2) {
 let resultadoFinal = operacionMat(50, 30);
 console.log(resultadoFinal)
         </div>
+        <h2><a name="alertas" class="anchor">Alertas</a></h2>
+        <ol>
+            <li>
+                <p>Mensaje de alerta</p>
+                <button type="button" onclick="myAlert()">Alerta</button>
+                <div class="code-block">
+&ltbutton type="button" onclick="myAlert()"&gt
+                </div>
+                <div class="code-block">
+function myAlert() {
+    alert('Mensaje de alerta');
+    alert('Otro mensaje');
+    alert('Último mensaje');
+}
+                </div>
+            </li>
+            <li>
+                <p>Mensaje de confirmación</p>
+                <button type="button" onclick="myConfirm()">Confirmación</button>
+                <div class="code-block">
+&ltbutton type="button" onclick="myConfirm()"&gt
+                </div>
+                <div class="code-block">
+function myConfirm() {
+    confirm('Mensaje de confirmación')
+    confirm('Mensaje de confirmación 2')
+}
+                </div>
+            </li>
+            <li>
+                <p>Mensaje Prompt</p>
+                <button type="button" onclick="myPrompt()">Prompt</button>
+                <div class="code-block">
+&ltbutton type="button" onclick="myPrompt()"&gt
+                </div>
+                <div class="code-block">
+function myPrompt() {
+    prompt('Mensaje Prompt');
+}
+                </div>
+            </li>
+            <li>
+                <p>Abriendo página en nueva ventana</p>
+                <button type="button" onclick="newWindow()">Nueva ventana</button>
+                <div class="code-block">
+&ltbutton type="button" onclick="newWindow()"&gt
+                </div>
+                <div class="code-block">
+function newWindow() {
+    window.open("javascript-basics.js", "page-name", "width=400, height=300,top=100,left=100");
+}
+                </div>
+            </li>
+        </ol>
         <h2><a name="funciones" class="anchor">Funciones</a></h2>
         <ol>
             <li>
