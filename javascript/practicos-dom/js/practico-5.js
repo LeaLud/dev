@@ -1,7 +1,7 @@
 //Definiendo cada elemento através de su ID
 const lightDarkButton = document.getElementById('light-dark-icons');
 const mainContainer = document.querySelector('main');
-const newTaskInput = document.getElementById('new-task-input');
+const taskInput = document.getElementById('task-input');
 const buttonAddTask = document.getElementById('button-add-task');
 const taskList = document.getElementById('task-list');
 
@@ -9,7 +9,7 @@ const taskList = document.getElementById('task-list');
 let themeStatus = 'light';
 
 //Definiendo el placeholder del input
-newTaskInput.placeholder = 'Introducir nueva tarea';
+taskInput.placeholder = 'Introducir nueva tarea';
 
 //Controlando los estados del tema y sus respectivas características
 function switchThemeColor() {
@@ -33,14 +33,10 @@ function switchThemeColor() {
 //Asociando el evento de clic y la función al icono de cambio de tema
 lightDarkButton.addEventListener('click', switchThemeColor);
 
-//Creando los contenedores de los iconos
-let icon1 = document.createElement('div');
-let icon2 = document.createElement('div');
-
 //Añadiendo nueva tarea
 function addTask() {
-    //Comprobando la existencia de contenido en el input para crear un nuevo elemento de lista solo si contiene algún valor
-    if (newTaskInput.value) {
+    //Comprobando si existe contenido en el input para crear un nuevo elemento de lista
+    if (taskInput.value) {
         let newTask = document.createElement('li');
 
         //Asociándole la clase al nuevo elemento lista
@@ -50,7 +46,7 @@ function addTask() {
         let newTaskText = document.createElement('p');
 
         //Actualizando el texto del nuevo elemento párrafo con el valor ingresado por el usuario
-        newTaskText.textContent = newTaskInput.value;
+        newTaskText.textContent = taskInput.value;
 
         //Asociando al elemento lista el elemento párrafo con el valor ingresado por el usuario
         newTask.appendChild(newTaskText);
@@ -59,22 +55,27 @@ function addTask() {
         taskList.appendChild(newTask);
 
         //Eliminando del input el valor ya cargado
-        newTaskInput.value = '';
+        taskInput.value = '';
 
-        
+        //Creando los contenedores de los iconos
+        let icon1 = document.createElement('div');
+        let icon2 = document.createElement('div');
 
         //Asociando la clase correspondiente a los contenedores
         icon1.classList.add('icon');
         icon2.classList.add('icon');
+
+        //Eventos para los estados de los íconos
+        icon1.addEventListener('click', completeTask);
+        icon2.addEventListener('click', dropTask);
 
         //Asociando los contenedores de íconos a la lista de tareas
         newTask.appendChild(icon1);
         newTask.appendChild(icon2);
 
         //Creando los iconos de completado y eliminar
-        icon1.innerHTML = `<svg id="doneTaskIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="darkslategray" class="bi bi-check2-square" viewBox="0 0 16 16">
-        <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
-        <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+        icon1.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
         </svg>`;
 
         icon2.innerHTML = `<svg id="dropTaskIcon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="darkslategray" class="bi bi-trash" viewBox="0 0 16 16">
@@ -85,9 +86,53 @@ function addTask() {
     } else (alert('No se ha introducido algún valor'))
 }
 
-function doneTask(tarea) {
-    tarea.classList.toggle('done-task');
+let doneTaskIcon = document.getElementById('done-task-icon');
+
+//Definiendo una variable para identificar el estado de reposo de las tareas
+let taskStatus = 'neutral';
+
+function completeTask(e) {
+
+    //Obteniendo el nodo padre del nodo padre del objeto al que se le aplicó la acción
+    let currentTask = e.target.parentNode.parentNode;
+
+    //Si el estado de la tarea es el de reposo, se lo pasa a estado chequeado
+    if (taskStatus === 'neutral') { 
+        currentTask.classList.toggle('done-task');
+        e.target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2-square" viewBox="0 0 16 16">
+        <path d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5z"/>
+        <path d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0"/>
+        </svg>`;
+
+    taskStatus = 'checked';
+    } else {
+        currentTask.classList.remove('done-task');
+        //Si el estado de la tarea es chequeado, se lo vuelve al estado de reposo
+        e.target.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-square" viewBox="0 0 16 16">
+        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+        </svg>`;
+
+        taskStatus = 'neutral';
+    }
 }
 
+//Identificando la tecla que pulsa el usuario
+function userKeyDown(e) {
+    if (e.key === 'Enter') {
+        addTask();
+    }
+}
 
+//Seleccionando el elemento li que se eliminará al ejecutar la función
+function dropTask(e) {
+
+    //Obteniendo el nodo padre del nodo padre del objeto al que se le aplicó la acción
+    let currentTask = e.target.parentNode.parentNode;
+    currentTask.remove();
+}
+
+//Definiendo un evento para agregar la tarea al hacer clic sobre el botón +
 buttonAddTask.addEventListener('click', addTask);
+
+//Definiendo un evento para agregar la tarea al presionar Enter
+taskInput.addEventListener('keydown', userKeyDown)

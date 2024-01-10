@@ -220,8 +220,17 @@ console.log(document.getElementsByTagName("a")[0].getAttribute("href"))
                 <div class="code-block">
 document.getElementsByTagName("a")[0].removeAttribute("href")
                 </div>
+            </li>
+            <li>
                 <p>Asignando / reasignando un valor al atributo</p>
                 <div class="code-block">
+document.getElementsByTagName("a")[0].setAttribute("href", "https://www.youtube.com/")
+                </div>
+            </li>
+            <li>
+                <p>Agregando el atributo hidden a un elemento para ocultarlo</p>
+                <button type="button" id="cambiar-atributo">Cambiar atributo</button>
+                <div class="code-block" id="code-block">
 document.getElementsByTagName("a")[0].setAttribute("href", "https://www.youtube.com/")
                 </div>
             </li>
@@ -241,6 +250,18 @@ console.log(document.getElementById("boton-ejemplo").classList)
                 <p>Agregando clases. Deben estar definidas en <span class="highlight-text">&ltstyle&gt&lt/style&gt</span></p>
                 <div class="code-block">
 document.querySelector(".ejemplo").classList.add("subrayado", "italic")
+                </div>
+            </li>   
+            <li>
+                <p>Intercambiando entre clases</p>
+                <p class="" id="p-toggle-classes">Párrafo de prueba</p>
+                <button type="button" id="toggle-classes">Cambiar clase</button>
+                <div class="code-block">
+function toggleClasses() {
+    document.getElementById('p-toggle-classes').classList.toggle('highlight-text');
+}
+
+document.getElementById('toggle-classes').addEventListener('click', toggleClasses)
                 </div>
             </li>
             <li>
