@@ -74,6 +74,9 @@ main{
 .title, .subtitle{
     text-align: center;
 }
+.icon svg{
+    user-select: none;
+}
 h1{
     font-family: JosefinSans;
     font-size: 40px !important;
