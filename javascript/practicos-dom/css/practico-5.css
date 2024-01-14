@@ -25,7 +25,7 @@ main{
 #light-dark-icons{
     width: 24px;
     height: 24px;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
 }
@@ -42,7 +42,7 @@ main{
 }
 .task{
     display: grid;
-    grid-template-columns: 10fr 1fr 1fr;
+    grid-template-columns: 16fr 1fr 1fr;
     background-color: cornflowerblue;
     padding: 10px;
     border-radius: 4px;
@@ -51,6 +51,16 @@ main{
     align-items: center;
     margin-bottom: 15px;
     user-select: none;
+}
+@media screen and (max-width: 1200px){
+    .task{
+        grid-template-columns: 10fr 1fr 1fr;
+    }
+}
+@media screen and (max-width: 900px){
+    .task{
+        grid-template-columns: 8fr 1fr 1fr;
+    }
 }
 .task p{
     line-height: 32px;

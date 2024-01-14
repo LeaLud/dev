@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Git basics</title>
 </head>
 <body>
@@ -110,6 +113,7 @@
         <li><strong>mkdir CARPETA</strong> crea una carpeta</li>
         <li><strong>rm ARCHIVO.EXTENSION</strong> borra un archivo o carpeta</li>
         <li><strong>rmdir CARPETA</strong> borra una carpeta</li>
+        <li><strong>rm -r CARPETA</strong> borra una carpeta</li>
 		<li><strong>mv ARCHIVO.EXTENSION NUEVOARCHIVO.EXTENSION | CARPETA NUEVACARPETA | ARCHIVO.EXTENSION RUTA | CARPETA RUTA</strong> mueve o cambia el nombre al archivo o carpeta</li>
 		<li><strong>copy ARCHIVO.EXTENSION | CARPETA </strong> copia el archivo a la carpeta o ruta indicada. Usar ../ para copiar en un nivel superior</li>
 		<li><strong>move ARCHIVO.EXTENSION | CARPETA </strong> mueve el archivo a la carpeta o ruta indicada. Usar ../ para mover a un nivel superior</li>
@@ -118,5 +122,21 @@
         <li><strong>clear</strong> limpia la consola</li>
         <li><strong>exit</strong> cierra la consola</li>
     </ol>
+    <a href="javascript:" id="return-to-top"><span>></span></a>
+    <script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 50);
+    });
+    </script>
 </body>
 </html>

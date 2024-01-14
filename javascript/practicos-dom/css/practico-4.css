@@ -29,8 +29,8 @@ main{
 }
 p{
     text-align: center;
-    font-size: 200px;
-    font-family: DS-DIGI;
+    font-size: 100px;
+    font-family: DigitalNumbers-Regular;
     color: white;
     text-shadow: 0 0 5px lime, 0 0 10px lime, 0 0 15px lime, 0 0 20px lime;
 }
@@ -71,5 +71,17 @@ button.stop-bg:active{
 }
 @font-face {
     font-family: DS-DIGI;
-    src: url(../fonts/DS-DIGI.TTF);
+    src: url('../fonts/DS-DIGI.TTF');
 }
+@font-face {
+    font-family: DigitalNumbers-Regular;
+    src: url('../fonts/DigitalNumbers-Regular.woff');
+}
+@font-face {
+    font-family: digital-dismay-regular;
+    src: url('../fonts/digital-dismay.regular.otf');
+}
+
+
+
+

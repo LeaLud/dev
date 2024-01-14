@@ -33,7 +33,7 @@ function switchThemeColor() {
 //Asociando el evento de clic y la función al icono de cambio de tema
 lightDarkButton.addEventListener('click', switchThemeColor);
 
-//Añadiendo nueva tarea
+//Añadiendo una nueva tarea
 function addTask() {
     //Comprobando si existe contenido en el input para crear un nuevo elemento de lista
     if (taskInput.value) {
@@ -82,14 +82,19 @@ function addTask() {
         <path class="icon2path" d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
         <path class="icon2path" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
         </svg>`;
-        
-    } else (alert('No se ha introducido algún valor'))
+    } else {
+        alert('No se ha introducido algún valor')
+    }
+
+    if (taskList.children.length != 0) {
+        taskList.previousElementSibling.innerHTML = '<p>Lista de tareas</p>';
+    }
 }
 
 let doneTaskIcon = document.getElementById('done-task-icon');
 
 function completeTask(e) {
-
+    
     //Obteniendo el nodo padre del nodo padre del objeto al que se le aplicó la acción de click
     let currentTask = e.target.parentNode.parentNode;
 
@@ -124,14 +129,16 @@ function dropTask(e) {
     let currentTask = e.target;
 
     if (currentTask.classList.value === 'icon') {
-        currentTask = e.target.parentNode;
-        currentTask.remove();
+
     } else if (currentTask.id === 'dropTaskIcon') {
         currentTask = e.target.parentNode.parentNode;
         currentTask.remove();
     } else if (currentTask.classList.value === 'icon2path') {
         currentTask = e.target.parentNode.parentNode.parentNode;
         currentTask.remove();
+    }
+    if (taskList.children.length === 0) {
+        taskList.previousElementSibling.innerHTML = '';
     }
 }
 
@@ -140,3 +147,15 @@ buttonAddTask.addEventListener('click', addTask);
 
 //Definiendo un evento para agregar la tarea al presionar Enter
 taskInput.addEventListener('keydown', userKeyDown);
+
+//
+function probando () {
+    if (taskList.children.length === 0) {
+        taskList.previousElementSibling.innerText = '';
+        console.log(taskList.children.length);
+    } else {
+        taskList.previousElementSibling.innerText = '';
+        console.log(taskList.children.length);
+    }
+}
+

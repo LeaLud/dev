@@ -229,10 +229,3 @@ function myPrompt() {
 function newWindow() {
     window.open("javascript-basics.js", "page-name", "width=400, height=300,top=100,left=100");
 }
-
-
-
-
-
-
-

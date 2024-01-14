@@ -35,6 +35,37 @@ a.anchor{
 .text-indent-20{text-indent: 20px;display: block;}
 .code-block{border:1px solid purple; border-left:6px solid purple; padding: 1.8em 1em; margin: 12px auto 24px auto; background-color: bisque;border-radius: 0 4px 4px 0;width: 98%; white-space: pre;}
 
+/*Go Top*/
+#return-to-top{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    text-decoration:none;
+    display:none;
+    z-index:1000;
+    border-radius: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    transition: all .4s;
+}
+#return-to-top span{
+    color:#fff;
+    font-size:26px;
+    font-weight: bold;
+    -webkit-transition:all .4s;
+    -moz-transition:all .4s;
+    transition:all .4s;
+    display:block;
+    padding: 5px 12.5px;        -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+#return-to-top:hover{
+    background-color: rgba(0, 0, 0, .8);
+}
+/*Go Top*/
+
 /*anidación de selectores en SCSS
 main{
     p{

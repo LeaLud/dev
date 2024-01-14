@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css" media="all" />
-    <script src="javascript-basics.js"></script>
 
     <!--Go Top-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -16,34 +15,6 @@
         .content{
             height:2000px;
             background-color:gray;
-        }
-        #return-to-top{
-            position:fixed;
-            bottom:20px;
-            right:20px;
-            text-decoration:none;
-            display:none;
-            z-index:1000;
-            border-radius: 100%;
-            background-color: rgba(0, 0, 0, .4);
-            transition: all .4s;
-        }
-        #return-to-top span{
-            color:#fff;
-            font-size:26px;
-            font-weight: bold;
-            -webkit-transition:all .4s;
-            -moz-transition:all .4s;
-            transition:all .4s;
-            display:block;
-            padding: 5px 12.5px;        -webkit-transform: rotate(-90deg);
-            -moz-transform: rotate(-90deg);
-            -o-transform: rotate(-90deg);
-            -ms-transform: rotate(-90deg);
-            transform: rotate(-90deg);
-        }
-        #return-to-top:hover{
-            background-color: rgba(0, 0, 0, .8);
         }
     </style>
     <!--Go Top-->
@@ -130,8 +101,7 @@
                 </a>
             </li>
             <li>
-                <a href="#practica-javascript
-                ">Práctica JavaScript
+                <a href="#practica-javascript">Práctica JavaScript
                 </a>
             </li>
             <li>
@@ -157,6 +127,12 @@
             </li>
             <li>
                 <a href="#getters-setters">Getters y setters</a>
+            </li>
+            <li>
+                <a href="dom-js.html">DOM con Javascript</a>
+            </li>
+            <li>
+                <a href="practicas-js/practicas-js.html">Práctivas de Javascript</a>
             </li>
         </ol>
         <h2><a name="impresion-de-datos" class="anchor">Impresión de datos</a></h2>
@@ -1258,24 +1234,54 @@ Mascota3.nombre = "India"
 
 console.log(Mascota3.nombre)
         </div>
-
-
         <a href="javascript:" id="return-to-top"><span>></span></a>
-			<script>
-			// ===== Scroll to Top ==== 
-			$(window).scroll(function() {
-				if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
-					$('#return-to-top').fadeIn(200);    // Fade in the arrow
-				} else {
-					$('#return-to-top').fadeOut(200);   // Else fade out the arrow
-				}
-			});
-			$('#return-to-top').click(function() {      // When arrow is clicked
-				$('body,html').animate({
-					scrollTop : 0                       // Scroll to top of body
-				}, 50);
-			});
-			</script>
+        <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 50);
+        });
+        </script>
+
+        <div id="peperin">
+            <ul id="unas-pruebas" class="lista-pruebasss">
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+                <li class="elemento-lista"><p>gato</p></li>
+                <li class="elemento-lista"><p>perro</p></li>
+            </ul>
+        </div>
     </main>
+    <script src="javascript-basics.js"></script>
 </body>
 </html>

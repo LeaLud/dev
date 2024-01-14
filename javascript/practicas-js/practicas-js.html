@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../style/style.css" media="all" />
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>JavaScript basics</title>
+</head>
+<body>
+    <main>
+        <button class="button-goback" onClick="history.back()">Go back</button>
+        <h1>Prácticas JavaScript</h1>
+        <h2>Índice</h2>
+        <ol>
+            <li>
+                <a href="practica-1-serpiente.html" target="_blank">Práctica 1 - Juego de la serpiente</a>
+            </li>
+        </ol>
+        <a href="javascript:" id="return-to-top"><span>></span></a>
+        <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 50);
+        });
+        </script>
+    </main>
+</body>
+</html>

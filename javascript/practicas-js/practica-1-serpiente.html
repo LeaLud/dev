@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #board{
+            max-width: 50%;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+        }
+        #gameOver{
+            display: none;
+        }
+        #gameInfo{
+            display: flex;
+            justify-content: space-between;
+        }
+        .square{
+            aspect-ratio: 1;
+        }
+        .emptySquare{
+            background-color: gray;
+        }
+        .snakeSquare{
+            background-color: green;
+        }
+        .foodSquare{
+            background-color: aqua;
+        }
+    </style>
+    <title>Práctica 1 - Juego de la serpiente</title>
+</head>
+<body>
+    <main>
+        <section id="board">
+            
+        </section>
+        <div id="gameInfo">
+            <div class="score">Puntuación<nav></nav></div>
+            <button type="button" id="startButton">Comenzar</button>
+        </div>
+        <div id="gameOverMessage">
+            <p>Juego terminado</p>
+        </div>
+    </main>
+    <script href="js/practicas-js.js"></script>
+</body>
+</html>

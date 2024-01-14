@@ -1,0 +1,56 @@
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    main {
+        background-color: #111b21;
+        width: 100%;
+        min-height: 100vh;
+        padding:40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    section{
+        width: 50%;
+    }
+    details {
+        margin-bottom: 15px;
+    }
+    details p {
+        text-decoration: none;
+    }
+    details > summary:first-of-type {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+</style>
+<main>
+    <section>
+        <h1>Lista desplegable</h1>
+        <details open>
+            <summary>Título 1</summary>
+            <p>La solitaria adolescente Mia se engancha a la emoción de invocar espíritus utilizando una mano embalsamada, pero cuando se enfrenta a un alma que dice ser su madre muerta, desata una plaga de fuerzas sobrenaturales y se debate entre decidir en quién puede confiar: en los vivos o en los muertos.
+            </p>
+        </details>
+        <details>
+            <summary>Título 2</summary>
+            <p>La solitaria adolescente Mia se engancha a la emoción de invocar espíritus utilizando una mano embalsamada, pero cuando se enfrenta a un alma que dice ser su madre muerta, desata una plaga de fuerzas sobrenaturales y se debate entre decidir en quién puede confiar: en los vivos o en los muertos.
+            </p>
+        </details>
+        <details>
+            <summary>Título 3</summary>
+            <p>La solitaria adolescente Mia se engancha a la emoción de invocar espíritus utilizando una mano embalsamada, pero cuando se enfrenta a un alma que dice ser su madre muerta, desata una plaga de fuerzas sobrenaturales y se debate entre decidir en quién puede confiar: en los vivos o en los muertos.
+            </p>
+        </details>
+        <dialog open>
+            <h1>Título</h1>
+            <p>La solitaria adolescente Mia se engancha a la emoción de invocar espíritus utilizando una mano embalsamada, pero cuando se enfrenta a un alma que dice ser su madre muerta, desata una plaga de fuerzas sobrenaturales y se debate entre decidir en quién puede confiar: en los vivos o en los muertos.</p>
+        </dialog>
+    </section>
+</main>

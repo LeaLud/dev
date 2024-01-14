@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css-grid.css" medial="all" />
     <link rel="stylesheet" href="flex-box.css" medial="all" />
 
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>Estilos - CSS Grid y Flex Box</title>
 </head>
 <body>
@@ -161,5 +163,21 @@
 }
         </div>
     </main>
+    <a href="javascript:" id="return-to-top"><span>></span></a>
+    <script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 50);
+    });
+    </script>
 </body>
 </html>

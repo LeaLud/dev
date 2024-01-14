@@ -1,0 +1,121 @@
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+    }
+    form {
+        width: 50%;
+        margin: auto;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    form>input, button {
+        display: block;
+        margin: auto;
+        width: 25%;
+    }
+    form div:not(:last-child){
+        margin-bottom: 20px;
+    }
+    fieldset{ 
+        border-color:aqua;
+        margin-bottom: 20px;
+    }
+    label {
+        min-width: 200px;
+        display: inline-block;
+        text-align: right;
+    }
+    main {
+        background-color: #111b21;
+        width: 100%;
+        min-height: 100vh;
+        padding:40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    small{
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+</style>
+<main>
+    <form method="get/post" action="url">
+        <fieldset>
+            <legend>Información personal</legend>
+            <div>
+                <label for="form-name" name="name">Nombre</label>
+                <input type="text" id="form-name">
+            </div>
+            <div>
+                <label for="form-lastname" name="last-name">Apellido</label>
+                <input type="text" id="form-lastname">
+            </div>
+            <div>
+                <label>Fecha</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div>
+                <label>Hora</label>
+                <input type="time" id="time" name="time">
+            </div>
+            <div>
+                <label>Fecha y hora</label>
+                <input type="datetime-local" id="datetime-local" name="datetime-local">
+            </div>
+            <div>
+                <label>Fecha/hora</label>
+                <input type="datetime" id="datetime" name="datetime">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Información de contacto</legend>
+            <div>
+                <label>E-mail</label>
+                <input type="email" id="form-email" name="email" required>
+            </div>
+            <div>
+                <label>Teléfono</label>
+                <input type="tel" id="form-tel" name="tel" pattern="[351]{3} ?[0-9]{7}"> <small>Ej.: 351 5123456</small>
+            </div>
+            <div>
+                <label for="form-tel">Otro ejemplo de teléfono</label>
+                <input type="tel" id="form-tel" name="tel" pattern="[351]{3}" placeholder="351" style="width:30px;"> - <input type="tel" id="form-tel" name="tel" pattern="[0-9]{7}" style="width:120px;"> <small>Ej.: 351 5123456</small>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Otra información</legend>
+            <div>
+                <label>Género</label>
+                <input type="radio" value="masculino" name="genero" checked>
+                Masculino
+                <input type="radio" value="femenino" name="genero">
+                Femenino
+            </div>
+            <div>
+                <datalist id="rubro">
+                    <option>Deportes</option>
+                    <option>Cine</option>
+                    <option>Tecnología</option>
+                    <option>Turismo</option>
+                    <option>Cocina</option>
+                </datalist>
+                <label>Rubro</label>
+                <input list="rubro" name="rubro">
+            </div>
+        </fieldset>
+        <input type="submit" value="Enviar (input)">
+        <button>Enviar (button)</button> <!--Los botones dentro de la etiqueta <form></form> son de tipo submit por defecto-->
+    </form>
+</main>
+
+<!--
+Definiendo patrones para el input tel
+
+[] definen el número o rango de números permitidos
+{} definen la cantidad de dígitos permitidos
+? define un espacio opcional
+-->

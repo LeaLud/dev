@@ -88,3 +88,18 @@ function resetCronometro() {
 
 //Asociando un evento de clic al botón 'Stop' para detener y reiniciar el cronómetro
 stopButton.addEventListener('click', resetCronometro)
+
+//Detectando si el usuario presiona la tecla 'Enter
+function userKeyDown (e) {
+    if (e.key === 'Enter') {
+        activarPausarCronometro();
+    } else if (e.key === 'Escape') {
+        resetCronometro();
+    }
+ }
+
+ //Activando y pausando el cronómetro con la tecla 'Enter'
+ document.body.addEventListener('keydown', userKeyDown);
+
+ //Reseteando el cronómetro con la tecla 'Escape'
+ document.body.addEventListener('keydown', userKeyDown);
