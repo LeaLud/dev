@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" />
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>React basics</title>
+</head>
+<body>
+    <button class="button-goback" onClick="history.back()">Go back</button>
+    <h1>React</h1>
+    <h2>Programas necesarios</h2>
+    <ol>
+        <li><a href="https://nodejs.org/en" target="_blank">Node.js</a> para el desarrollo local</li>
+        <li><a href="https://nextjs.org/" target="_blank">Next.js</a> es un framework de React. Se ejecuta con el comando:      
+        <div class="code-block">
+npx create-next-app@latest
+      </div>
+      
+        </li>
+    </ol>
+    <h2>Comandos iniciales en consola</h2>
+    <ol>
+        <li><span class="highlight-text">npm start</span> inicia el servidor de desarrollo en <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>. Se debe ejecutar en la carpeta de la app</li>
+        <li><span class="highlight-text">npx create-react-app CARPETA</span> crea una app en la carpeta señalada</li>
+        <li><span class="highlight-text">npx create-react-app .</span> crea una app en la carpeta actual</li>
+        <li><span class="highlight-text">npm run build</span> agrupa la aplicación en archivos estáticos para producción</li>
+        <li><span class="highlight-text">npm test</span> inicia el corredor de pruebas</li>
+        <li><span class="highlight-text">npm run eject</span> Elimina esta herramienta y copia las dependencias de compilación, los archivos de configuración y los scripts en el directorio de la aplicación. Esta acción no puede ser revertida</li>
+    </ol>
+    <h2>Exportar un componente</h2>
+    <ol>
+        <li>
+            <p>Exportanción <span class="highlight-text">por defecto</span>. Se define al final del archivo del componente que se quiera exportar</p>
+            <div class="code-block">
+export default NOMBRECOMPONENTE
+            </div>
+        </li>
+        <li>
+            <p>Exportanción <span class="highlight-text">nombrada</span>. Exporta un determinado componente de un archivo de componentes. Se define al comienzo de la funcion del elemento a exportar</p>
+            <div class="code-block">
+export function Article() {
+    return (
+        ...
+    );
+}
+            </div>
+        </li>
+    </ol>
+    <h2>Importar un componente</h2>
+    <ol>
+        <li>
+            <p>Importando un componente <span class="highlight-text">exportado por defecto</span>. Se define en la parte superior del documento que importará el componente</p>
+            <div class="code-block">
+import NOMBRECOMPONENTE from './CARPETA/ARCHIVO.js';
+            </div>
+        </li>
+        <li>
+            <p>Importando un componente <span class="highlight-text">nombrado</span>. Se define en la parte superior del documento que importará el componente</p>
+            <div class="code-block">
+import {NOMBRECOMPONENTE} from './CARPETA/ARCHIVO.js';
+            </div>
+        </li>
+    </ol>
+    <h2>Importando la librería de React para su uso directo</h2>
+    <div class="code-block">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Mi primera página con React&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div id="app"&gt;&lt;/div&gt;
+    
+    &lt;script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin&gt;&lt;/script&gt;
+    &lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;
+    &lt;script&gt;
+    class HolaMundo extends React.Component{
+        
+        render() {
+        return React.createElement('p',{},'Hola mundo');
+        }
+    }
+
+    const domContainer = document.querySelector('#app');
+    const root = ReactDOM.createRoot(domContainer);
+    root.render(React.createElement(HolaMundo))
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+    </div>
+    <h2>Prácticas</h2>
+    <ol>
+        <li>
+            <p><a href="#" target="_blank">Contador de clics</a></p>
+        </li>
+    </ol>
+    <h2>Varios</h2>
+    <ol>
+        <li><span class="highlight-text">npm</span> es el comando que instala paquetes y <span class="highlight-text">npx</span> los ejecuta desde una descarga temporal</li>
+    </ol>
+    <a href="javascript:" id="return-to-top"><span>></span></a>
+    <script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 50);
+    });
+    </script>
+</body>
+</html>

@@ -12,7 +12,7 @@
         <ol>
             <li><a href="html/html.html">HTML</a></li>
             <li><a href="javascript/javascript.html">Javascript</a></li>
-            <li><a href="react-basics/react-basics.html">React</a></li>
+            <li><a href="react/react.html">React</a></li>
             <li><a href="git/git-basics.html">Git</a></li>
             <li><a href="style/estilos.html">Estilos</a></a></li>
             <li><a href="bootstrap/bootstrap-basics.html">Bootstrap</a></li>
@@ -70,6 +70,24 @@
             &lt/body&gt
         </div>
         <iframe style="width: 70%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/BA328RQa08M?si=L72teTthIHZbZylD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <a href="javascript:" id="return-to-top"><span>></span></a>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <a href="javascript:" id="return-to-top"><span>></span></a>
+        <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 50);
+        });
+        </script>
     </main>
 </body>
 </html>

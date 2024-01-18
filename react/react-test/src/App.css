@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 20px;
+}
+.App {
+    overflow: hidden;
+}
+section{
+    display: grid;
+    justify-items: center;
+    gap: 30px;
+    margin: 20px 0;
+}
+.title-center {
+    text-align: center;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.2em;
+}
+h3 {
+    font-size: .9em;
+}
+p {
+    font-size: .7em;
+}

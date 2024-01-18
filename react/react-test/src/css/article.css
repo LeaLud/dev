@@ -1,0 +1,19 @@
+.sectionWrap{
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    gap: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: ghostwhite;
+    width: 75%;
+}
+.textWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 8px 0 0 8px;
+}
