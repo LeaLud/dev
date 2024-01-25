@@ -1,5 +1,4 @@
 import './App.css';
-import './css/article.css'
 import {Article} from './components/article.jsx';
 
 function App() {

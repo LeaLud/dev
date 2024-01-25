@@ -1,0 +1,22 @@
+button {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #999;
+    background-color: #eee;
+    margin:5px auto;
+    width: 150px;
+    height: 45px;
+    font-size: 18px;
+}
+button:hover{
+    background-color: #ddd;
+}
+button:active{
+    background-color: #ccc;
+}
+.botonSumar{
+    background-color: lightblue;
+}
+.botonReinicia{
+    background-color: coral;
+}

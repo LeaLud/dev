@@ -1,4 +1,5 @@
-
+import React from "react";
+import '../css/article.css'
 
 export function Article(props) {
     return (
@@ -11,7 +12,7 @@ export function Article(props) {
         <div className='textWrap'>
             <div>
 				<h2 className='titulo'>{props.title}</h2>
-				<h3 className='subtitulo'>{props.subtitle}</h3>
+	        	<h3 className='subtitulo'>{props.subtitle}</h3>
             </div>
             <div>
 				<p>{props.description}</p>

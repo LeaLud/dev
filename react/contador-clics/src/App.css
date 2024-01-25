@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.App {
+    background-color: #111b21;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.contenedorContador {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.imagen-paisaje{
+    display: grid;
+    justify-items: center;
+}
