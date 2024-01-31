@@ -1,7 +1,7 @@
-import paisaje1 from './img/paisaje1.jpg';
 import './App.css';
 import Boton from './components/boton.jsx'
 import Contador from './components/contador.jsx';
+import Imagen from './components/imagen.jsx';
 import { useState } from 'react';
 
 function App() {
@@ -18,27 +18,18 @@ function App() {
 
     return (
         <div className="App">
-            <div className='imagen-paisaje'>
-                <img
-                    src= {paisaje1}
-                    alt='Paisaje'
-                >
-                </img>
-            </div> 
+            <Imagen></Imagen>
             <div className='contenedorContador'>
                 <Contador
-                    numClics = {numClics}
-                    />
+                    numClics = {numClics} />
                 <Boton
                     input = 'Contador'
                     botonSumar = {true}
-                    gestionarClic = {sumarClic}
-                />
+                    gestionarClic = {sumarClic} />
                 <Boton
                     input = 'Reiniciar'
                     botonSumar = {false}
-                    gestionarClic = {reiniciarContador}
-                />
+                    gestionarClic = {reiniciarContador} />
             </div>
         </div>
     );

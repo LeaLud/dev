@@ -78,6 +78,28 @@ import {NOMBRECOMPONENTE} from './CARPETA/ARCHIVO.js';
             </div>
         </li>
     </ol>
+    <h2>Estructura básica de un componente</h2>
+    <ol>
+        <li>
+            <div class="code-block">
+import React from "react"; <span class="highlight-text">//Importa los componentes de React</span>
+import '../css/imagen.css'; <span class="highlight-text">//Importa la hoja de estilo</span>
+import paisaje from '../img/paisaje1.jpg'; <span class="highlight-text">//Importa la imagen usada en el componente
+</span>
+    <span class="highlight-text">//Se crea una función que retorne el elemento a renderizar en App.js</span>
+    function Imagen () {
+    return (
+        &lt;picture className="imagen-paisaje"&gt;
+            &lt;img src={paisaje} alt="Paisaje" /&gt;
+        &lt;/picture&gt;
+        )
+    }
+
+    <span class="highlight-text">//Exporta el componente para su posterior importación en la App principal</span>
+    export default Imagen;
+            </div>
+        </li>
+    </ol>
     <h2>Importando la librería de React para su uso directo</h2>
     <div class="code-block">
 &lt;!DOCTYPE html&gt;
@@ -112,7 +134,10 @@ import {NOMBRECOMPONENTE} from './CARPETA/ARCHIVO.js';
     <h2>Prácticas</h2>
     <ol>
         <li>
-            <p><a href="#" target="_blank">Contador de clics</a></p>
+            <p><a href="react-test/public/index.html" target="_blank">Lista de artículos</a></p>
+        </li>
+        <li>
+            <p><a href="contador-clics/public/index.html" target="_blank">Contador de clics</a></p>
         </li>
     </ol>
     <h2>Varios</h2>

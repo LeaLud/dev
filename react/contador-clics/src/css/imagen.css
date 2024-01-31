@@ -1,0 +1,10 @@
+.imagen-paisaje {
+    display: grid;
+    justify-items: center;
+    user-select: none;
+    margin-top: 20px;
+}
+
+.imagen-paisaje img {
+    width: 20%;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" />
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Xampp</title>
+</head>
+<body>
+    <button class="button-goback" onClick="history.back()">Go back</button>
+    <h1>Xampp</h1>
+    <h2>Instalador</h2>
+    <ol>
+        <li><a href="https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.2.12/xampp-windows-x64-8.2.12-0-VS16-installer.exe" target="_blank">Xampp</a></li>
+    </ol>
+    <h2>Ejecutando el servidor local para WordPress</h2>
+    <ol>
+        <li>
+            Iniciar el módulo de <span class="highlight-text">Apache</span>
+        </li>
+        <li>
+            Iniciar el módulo de <span class="highlight-text">MySQL</span>
+        </li>
+    </ol>
+    <h2>Carpeta de desarrollo que despliega el contenido en el servidor local</h2>
+    <ol>
+        <li>
+            <span class="highlight-text">C:\xampp\htdocs</span>
+        </li>
+    </ol>
+    <a href="javascript:" id="return-to-top"><span>></span></a>
+    <script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 50);
+    });
+    </script>
+</body>
+</html>

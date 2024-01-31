@@ -8,15 +8,15 @@ button {
     height: 45px;
     font-size: 18px;
 }
-button:hover{
+button:hover {
     background-color: #ddd;
 }
-button:active{
+button:active {
     background-color: #ccc;
 }
-.botonSumar{
+.botonSumar {
     background-color: lightblue;
 }
-.botonReinicia{
+.botonReiniciar {
     background-color: coral;
 }

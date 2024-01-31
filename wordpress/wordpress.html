@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css" />
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>WordPress</title>
+</head>
+<body>
+    <button class="button-goback" onClick="history.back()">Go back</button>
+    <h1>WordPress</h1>
+    <h2>Instalador</h2>
+    <ol>
+        <li><a href="https://wordpress.org/latest.zip" target="_blank">WordPress</a>. Zip con todos los componentes del programa
+        </li>
+    </ol>
+    <h2>Instalación</h2>
+    <ol>
+        <li>
+            <p>Descomprimir el Zip dentro de la carpeta de desarrollo de <a href="../xampp/xampp.html" target="_blank">Xampp</a></p>
+        </li>
+        <li>
+            <p>Levantar los  módulos de <span class="highlight-text">Apache</span> y <span class="highlight-text">phpMyAdmin</span> en <a href="../xampp/xampp.html" target="_blank">Xampp</a></p>
+        </li>
+        <li>
+            <p>Abrir <span class="highlight-text">phpMyAdmin</span> y crear una <span class="highlight-text">base de datos</span></p>
+        </li>
+        <li>
+            <p>Ingresar al servidor de Xampp (<a href="http://localhost/" target="_blank">localhost</a>) y seleccionar la carpeta de WordPress para iniciar el paso-a-paso de la instalación</p>
+        </li>
+        <li>
+            <p>Indicar el nombre de la <span class="highlight-text">base de datos</span</p>
+        </li>
+        <li>
+            <p>El usuario es <span class="highlight-text">root</span></p>
+        </li>
+        <li>
+            <p>La contraseña puede quedar en blanco</p>
+        </li>
+    </ol>
+    <h2>Ajustes generales</h2>
+    <ol>
+        <li>
+            <p>Ajustes > Enlaces permanentes > Nombre de la entrada</p>
+        </li>
+    </ol>
+    <a href="javascript:" id="return-to-top"><span>></span></a>
+    <script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 50);
+    });
+    </script>
+</body>
+</html>
