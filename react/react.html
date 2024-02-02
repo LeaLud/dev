@@ -96,7 +96,11 @@ import paisaje from '../img/paisaje1.jpg'; <span class="highlight-text">//Import
 function Imagen ({<span class="highlight-text">altImagen</span>, <span class="highlight-text">tituloImagen</span>}) {
     return (
         &lt;picture className="imagen-paisaje"&gt;
-            &lt;img src={paisaje} alt={<span class="highlight-text">altImagen</span>} title={<span class="highlight-text">tituloImagen</span>} /&gt;
+            &lt;img
+                src={paisaje}
+                alt={<span class="highlight-text">altImagen</span>}
+                title={<span class="highlight-text">tituloImagen</span>}
+            /&gt;
         &lt;/picture&gt;
     )
 }
@@ -109,7 +113,11 @@ function Imagen ({<span class="highlight-text">altImagen</span>, <span class="hi
 function Imagen (<span class="highlight-text">props</span>) {
     return (
         &lt;picture className="imagen-paisaje"&gt;
-            &lt;img src={paisaje} alt={<span class="highlight-text">props.altImagen</span>} title={<span class="highlight-text">props.tituloImagen</span>} /&gt;
+            &lt;img
+                src={paisaje}
+                alt={<span class="highlight-text">props.altImagen</span>}
+                title={<span class="highlight-text">props.tituloImagen</span>}
+            /&gt;
         &lt;/picture&gt;
     )
 }
