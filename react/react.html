@@ -81,22 +81,41 @@ import {NOMBRECOMPONENTE} from './CARPETA/ARCHIVO.js';
     <h2>Estructura básica de un componente</h2>
     <ol>
         <li>
+            <p>Importando los elementos del componente</p>
             <div class="code-block">
 import React from "react"; <span class="highlight-text">//Importa los componentes de React</span>
-import '../css/imagen.css'; <span class="highlight-text">//Importa la hoja de estilo</span>
-import paisaje from '../img/paisaje1.jpg'; <span class="highlight-text">//Importa la imagen usada en el componente
-</span>
-    <span class="highlight-text">//Se crea una función que retorne el elemento a renderizar en App.js</span>
-    function Imagen () {
+import '../css/imagen.css'; <span class="highlight-text">//Importa la hoja de estilo de este componente</span>
+import paisaje from '../img/paisaje1.jpg'; <span class="highlight-text">//Importa la imagen usada en el componente</span>
+            </div>
+        </li>
+        <li>
+            <p>Se crea una función que retorne el elemento a renderizar en <span class="highlight-text">App.js</span></p>
+            <div class="code-block">
+<span class="highlight-text">//Definiendo las propiedades con la sintaxis de desestructuración</span>
+
+function Imagen ({<span class="highlight-text">altImagen</span>, <span class="highlight-text">tituloImagen</span>}) {
     return (
         &lt;picture className="imagen-paisaje"&gt;
-            &lt;img src={paisaje} alt="Paisaje" /&gt;
+            &lt;img src={paisaje} alt={<span class="highlight-text">altImagen</span>} title={<span class="highlight-text">tituloImagen</span>} /&gt;
         &lt;/picture&gt;
-        )
-    }
+    )
+}
+            </div>
+            <div class="code-block">
+<span class="highlight-text">//--------------------------------------</span>
 
-    <span class="highlight-text">//Exporta el componente para su posterior importación en la App principal</span>
-    export default Imagen;
+<span class="highlight-text">//Definiendo las propiedades con la sintaxis normal</span>
+
+function Imagen (<span class="highlight-text">props</span>) {
+    return (
+        &lt;picture className="imagen-paisaje"&gt;
+            &lt;img src={paisaje} alt={<span class="highlight-text">props.altImagen</span>} title={<span class="highlight-text">props.tituloImagen</span>} /&gt;
+        &lt;/picture&gt;
+    )
+}
+
+<span class="highlight-text">//Exporta el componente para su posterior importación en la App principal</span>
+export default Imagen;
             </div>
         </li>
     </ol>

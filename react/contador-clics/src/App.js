@@ -18,7 +18,9 @@ function App() {
 
     return (
         <div className="App">
-            <Imagen></Imagen>
+            <Imagen
+                altImagen = 'Alt de la imagen del paisaje'
+            />
             <div className='contenedorContador'>
                 <Contador
                     numClics = {numClics} />
