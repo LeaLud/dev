@@ -15,3 +15,5 @@ log.*
 
 #exceptúa el archivo con ese nombre
 !readme.txt
+
+react/practicas
