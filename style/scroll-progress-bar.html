@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="scroll-progress-bar.css" media="all" />
+
+    <!--Go Top-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Estilos - Barra de progreso del scroll</title>
+</head>
+<body>
+    <button class="button-goback" onClick="history.back()">Go back</button>
+    <main>
+		<div id="progress-bar">
+		</div>
+		<header>
+			<p>Scrollear hacia abajo y arriba para ver el progreso</p>
+		</header>
+		<section id="imageGallery">
+			<script>
+				const images = document.getElementById("imageGallery");
+				for (i = 0; i < 36; i += 1) {
+					var randomNum = Math.floor(Math.random()* 3 + 1);
+					var urlImage = `../img/paisaje${randomNum}.jpg`;
+					const newImage = document.createElement('img');
+					const srcImage = newImage.setAttribute('src', urlImage);
+					const altImage = newImage.setAttribute('alt', 'Paisajes');
+					console.log(newImage);
+					imageGallery.appendChild(newImage);
+				}
+			</script>
+		</section>
+	</main>
+	<a href="javascript:" id="return-to-top"><span>></span></a>
+    <script>
+    // ===== Scroll to Top ==== 
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+            $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+            $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+    });
+    $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+            scrollTop : 0                       // Scroll to top of body
+        }, 50);
+    });
+    </script>
+</body>
+</html>

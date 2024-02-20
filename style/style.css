@@ -28,7 +28,7 @@ a.anchor{
 }
 
 /*classes*/
-.button-goback{border:none;background-color: #333;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;position:absolute;right:15px;top:15px;color:#fff;}
+.button-goback{border:none;background-color: #333;border-radius: 30px;padding: 10px 15px;min-width:auto;cursor:pointer;position:absolute;right:15px;top:15px;color:#fff;z-index:9;}
 .text-underline{text-decoration:underline;}
 .highlight-text{color:purple;font-weight:bold;}
 .text-indent-10{text-indent: 10px;display: block;}

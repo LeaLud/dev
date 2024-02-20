@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Índice CSS - Hoja de estilos</title>
+</head>
+<body>
+    <main>
+		<a class="button-goback" onclick="history.back()">Go back</a>
+        <h1>CSS - Hoja de estilos</h1>
+		<p>CSS, en español «Hojas de estilo en cascada», es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado.</p>
+        <ol>
+            <li><a href="grid-flex.html">Grid y Flexbox</a></li>
+            <li><a href="scroll-progress-bar.html">Barra de progreso del scroll</a></li>
+		</ol>
+        <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 50);
+        });
+        </script>
+    </main>
+</body>
+</html>
