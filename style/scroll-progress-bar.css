@@ -46,7 +46,7 @@ section img {
 	animation-fill-mode: both;
 	animation-timeline: view();
 	animation-duration: 1s;
-	animation-range: entry 20% cover 40%;
+	animation-range: entry 20% cover 50%;
 }
 
 p {
@@ -61,7 +61,7 @@ p {
 	left: 0;
 	background-color: royalblue;
 	/*border-top: 4px dashed royalblue;*/
-	animation: progressBar linear both;
+	animation: progressBar auto linear;
 	animation-timeline: scroll(root block);
 	z-index: 2;
 }
