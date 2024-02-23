@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
 
     <!--Go Top-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -78,6 +78,10 @@ import {NOMBRECOMPONENTE} from './CARPETA/ARCHIVO.js';
             </div>
         </li>
     </ol>
+    <h2>Importar un hook</h2>
+    <div class="code-block">
+import {useState} from 'react';
+    </div>
     <h2>Estructura básica de un componente</h2>
     <ol>
         <li>
@@ -91,23 +95,6 @@ import paisaje from '../img/paisaje1.jpg'; <span class="highlight-text">//Import
         <li>
             <p>Se crea una función que retorne el elemento a renderizar en <span class="highlight-text">App.js</span></p>
             <div class="code-block">
-<span class="highlight-text">//Definiendo las propiedades con la sintaxis de desestructuración</span>
-
-function Imagen ({<span class="highlight-text">altImagen</span>, <span class="highlight-text">tituloImagen</span>}) {
-    return (
-        &lt;picture className="imagen-paisaje"&gt;
-            &lt;img
-                src={paisaje}
-                alt={<span class="highlight-text">altImagen</span>}
-                title={<span class="highlight-text">tituloImagen</span>}
-            /&gt;
-        &lt;/picture&gt;
-    )
-}
-            </div>
-            <div class="code-block">
-<span class="highlight-text">//--------------------------------------</span>
-
 <span class="highlight-text">//Definiendo las propiedades con la sintaxis normal</span>
 
 function Imagen (<span class="highlight-text">props</span>) {
@@ -117,6 +104,24 @@ function Imagen (<span class="highlight-text">props</span>) {
                 src={paisaje}
                 alt={<span class="highlight-text">props.altImagen</span>}
                 title={<span class="highlight-text">props.tituloImagen</span>}
+            /&gt;
+        &lt;/picture&gt;
+    )
+}
+
+<span class="highlight-text">//Exporta el componente para su posterior importación en la App principal</span>
+export default Imagen;
+            </div>
+            <div class="code-block">
+<span class="highlight-text">//Definiendo las propiedades con la sintaxis de desestructuración</span>
+
+function Imagen ({<span class="highlight-text">altImagen</span>, <span class="highlight-text">tituloImagen</span>}) {
+    return (
+        &lt;picture className="imagen-paisaje"&gt;
+            &lt;img
+                src={paisaje}
+                alt={<span class="highlight-text">altImagen</span>}
+                title={<span class="highlight-text">tituloImagen</span>}
             /&gt;
         &lt;/picture&gt;
     )
@@ -161,10 +166,13 @@ export default Imagen;
     <h2>Prácticas</h2>
     <ol>
         <li>
-            <p><a href="react-test/public/index.html" target="_blank">Lista de artículos</a></p>
+            <p><a href="practicas/public/index.html" target="_blank">Lista de artículos</a></p>
         </li>
         <li>
-            <p><a href="contador-clics/public/index.html" target="_blank">Contador de clics</a></p>
+            <p><a href="practicas/contador-clics/public/index.html" target="_blank">Contador de clics</a></p>
+        </li>
+        <li>
+            <p><a href="practicas/calculadora/public/index.html" target="_blank">Calculadora</a></p>
         </li>
     </ol>
     <h2>Varios</h2>
