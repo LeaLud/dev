@@ -229,3 +229,10 @@ function myPrompt() {
 function newWindow() {
     window.open("javascript-basics.js", "page-name", "width=400, height=300,top=100,left=100");
 }
+
+a = 9
+b = 13
+
+console.log(a > b ? a + " es mayor"
+: a == b ? "Los valores son iguales"
+: a + " es menor")

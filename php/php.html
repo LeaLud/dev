@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" media="all" />
+    <title>PHP - Hypertext Preprocessor</title>
+</head>
+<body>
+    <main>
+        <button class="button-goback" onClick="history.back()">Go back</button>
+        <h1>PHP - Hypertext Preprocessor</h1>
+        <p>PHP es un lenguaje de programación interpretado del lado del servidor y de uso general que se adapta especialmente al desarrollo web.</p>
+        <h2>Índice</h2>
+        <ol>
+            <li>
+                <a href="#impresion-datos">Impresión de datos</a>
+            </li>
+            <li>
+                <a href="#variables">Variables</a>
+            </li>
+            <li>
+                <a href="#includes">Inclusión de archivos</a>
+            </li>
+            <li>
+                <a href="#arrays">Arrays</a>
+            </li>
+            <li>
+                <a href="#condicionales">Condicionales</a>
+            </li>
+            <li>
+                <a href="#conectar-db">Conectar a la base de datos</a>
+            </li>
+            <li>
+                <a href="#desconectar-db">Cerrar conexión a la base de datos</a>
+            </li>
+            <li>
+                <a href="#obtener-datos">Obtener datos</a>
+            </li>
+            <li>
+                <a href="#do-while">Bucle do while datos</a>
+            </li>
+            <li>
+                <a href="#foreach">foreach</a>
+            </li>
+        </ol>
+        <h2><a name="impresion-datos" class="anchor">Impresión de datos</a></h2>
+        <ol>
+            <li>
+                <div class="code-block">
+&lt?php
+    <span class="highlight-text">print</span> "&lth2&gtHello World!&lt/h2&gt";
+?&gt
+                </div>
+                            
+            </li>
+            <li>
+                <p>La función <span class="highlight-text">echo</span> es más utilizada y permite imprimir varios valores simultáneamente</p>
+                <div class="code-block">
+&lt?php
+    <span class="highlight-text">echo</span> "&lth2&gtHello World!&lt/h2&gt", "&ltp&gtHello World!&lt/p&gt";
+?&gt
+                </div>
+            </li>
+        </ol>
+        <h2><a name="variables" class="anchor">Variables</a></h2>
+        <div class="code-block">
+&lt?php
+$myVar = "Esto es un string";
+
+$myNumVar = 8520;
+?&gt
+        </div>
+
+        <h2><a name="includes" class="anchor">Inclusión de archivos</a></h2>
+        <div class="code-block">
+&lt?php
+    include "ARCHIVO.php";
+    include "RUTA/ARCHIVO.php";
+?&gt
+        </div>
+        <h2><a name="arrays" class="anchor">Arrays</a></h2>
+        <div class="code-block">
+&lt?php
+$myArray = array("Leandro", 38, "Argentina", "Italiana");
+
+echo $myArray[2];
+?&gt
+        </div>
+        <h2><a name="condicionales" class="anchor">Condicionales</a></h2>
+        <div class="code-block">
+&lt?php
+$var1 = 34;
+    $var2 = 45;
+
+    if ($var1 &gt $var2) {
+        echo "$var1 es mayor";
+    } elseif ($var1 === $var2) {
+        echo "los valores son iguales";
+    } else {
+        echo "$var1 es menor que $var2";
+    }
+?&gt
+        </div>
+        <h2><a name="conectar-db" class="anchor">Conectar a la base de datos</a></h2>
+        <div class="code-block">
+&lt?php
+    $mysqli = <span class="highlight-text">new mysqli</span>("localhost", "root", "", "php_test");
+    if ($mysqli->connect_errno) {
+        echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    }
+    echo $mysqli->host_info . "\n";
+?&gt
+        </div>
+        <div class="code-block">
+&lt?php
+    $conn = <span class="highlight-text">mysqli_connect</span>("127.0.0.1", "root", "", "php_test");
+    if ($conn-&gtconnect_errno) {
+        echo "Fallo al conectar a MySQL: (" . $conn-&gtconnect_errno . ") " . $conn-&gtconnect_error;
+    }
+    echo $conn-&gthost_info . "\n";
+?&gt
+        </div>
+        <h2><a name="desconectar-db" class="anchor">Cerrar la conexión a la base de datos</a></h2>
+        <ol>
+            <li>
+                <div class="code-block">
+&lt?php
+    mysqli_close($mysqli);
+?&gt
+                </div>
+            </li>
+        </ol>
+        <h2><a name="obtener-datos" class="anchor">Obtener datos de la base de datos</a></h2>
+        <ol>
+            <li>
+                <p>Definiendo la <span class="highlight-text">consulta SQL</span> que recuperará los datos</p>
+                <div class="code-block">
+&lt?php
+    $resultado = <span class="highlight-text">mysqli_query</span>($mysqli, "select * from articulos");
+    if (!$resultado) {
+        die('Consulta no válida: ' . mysql_error());
+    }
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Bucle para obtener datos en serie</p>
+                <div class="code-block">
+&lt?php
+    while ($fila = <span class="highlight-text">mysqli_fetch_array</span>($resultado)) {
+        echo "&ltdiv style='border: 1px solid #333;'&gt".$fila["titulo"]."&lt/div&gt";
+    }
+?&gt
+                </div>
+                <div class="code-block">
+&lt?php
+    while ($fila = <span class="highlight-text">mysqli_fetch_assoc</span>($resultado)) {
+        echo "&ltdiv style='border: 1px solid #333;'&gt".$fila["titulo"]."&lt/div&gt";
+    }
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Función para obtener un determinado dato de la tabla</p>
+                <div class="code-block">
+&lt?php
+    $fila = <span class="highlight-text">mysqli_fetch_row</span>($resultado);
+
+    echo "&ltdiv&gt&ltp&gtTitular del día&lt/p&gt&lt/div&gt
+    &ltdiv&gt&ltp&gt.$fila[1].&lt/p&gt&lt/div&gt"
+?&gt
+                </div>
+            </li>
+        </ol>
+        <h2><a name="do-while" class="anchor">Bucle do while</a></h2>
+        <div class="code-block">
+&lt?php
+    $i = 0;
+    <span class="highlight-text">do</span> {
+        echo "
+            mostrando el valor de ".$i." 25 veces
+        ";
+        $i += 1;
+    }
+    <span class="highlight-text">while</span> ($i &lt 25);
+?&gt
+        </div>
+        <h2><a name="foreach" class="anchor">foreach</a></h2>
+        <p>Devolver datos por cada entrada de la fila</p>
+        <div class="code-block">
+&lt?php
+    <span class="highlight-text">foreach</span> ($row as $x) {
+        echo "
+        &ltpicture&gt
+            &lta href='".$x."' target='_blank'&gt&ltimg src='".$x."' alt='' /&gt&lt/a&gt
+        &lt/picture&gt
+        ";
+    }
+?&gt
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <a href="javascript:" id="return-to-top"><span>></span></a>
+        <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 50);
+        });
+        </script>
+    </main>
+    <script src="javascript-basics.js"></script>
+</body>
+</html>

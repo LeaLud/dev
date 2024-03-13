@@ -1,15 +1,15 @@
-//Deshabilitar totalmente el acceso a una carpeta desde .htaccess
+#Deshabilitar totalmente el acceso a una carpeta desde .htaccess
 deny from all
 
-//Habilitar IP
+#Habilitar IP
 deny from all
 allow from 10.0.0.1
 
-//Habilitar rango de IP
+#Habilitar rango de IP
 deny from all
 allow from 192.168.0.0/24
 
-//Wordpress
+#Wordpress
 # BEGIN WordPress
 
 RewriteEngine On
@@ -21,14 +21,14 @@ RewriteRule . /index.php [L]
 
 # END WordPress
 
-//Desactivar indice de archivos
+#Desactivar indice de archivos
 Options -Indexes
 
-//Redireccionar siempre a www
+#Redireccionar siempre a www
 RewriteCond %{HTTP_HOST} !^www\.
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^(.*)$ http:#www.%{HTTP_HOST}/$1 [R=301,L]
 
-//Comprimir archivos estaticos
+#Comprimir archivos estaticos
 <ifModule>
 mod_gzip_on Yes
 mod_gzip_dechunk Yes
@@ -40,17 +40,31 @@ mod_gzip_item_exclude mime ^image/.*
 mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
 </ifModule>
 
-//Regla .htaccess para comprimir datos de php
+#Regla .htaccess para comprimir datos de php
 php_value zlib.output_compression 16386
 
-//</ifModule>Regla .htaccess para cambiar archivo principal de nuestra carpeta
+#</ifModule>Regla .htaccess para cambiar archivo principal de nuestra carpeta
 DirectoryIndex inicio.html index.htm index.html index.php
 
-//Cambiar archivo 404 en .htaccess
+#Cambiar archivo 404 en .htaccess
 # Error Pages
 ErrorDocument 404 /404-error.html
 
-//Redireccionar url con .htaccess
+#Redireccionar url con .htaccess
 # 301, Permanent single page redirects
-redirect 301 /oldname.html http://www.domain.com/new-useful-name.html
-redirect 301 /blog/example.html http://www.domain.com/blog/new-name.html
+redirect 301 /oldname.html http:#www.domain.com/new-useful-name.html
+redirect 301 /blog/example.html http:#www.domain.com/blog/new-name.html
+
+#Mostrar errores
+php_value display_errors 1
+
+#Quitando extensión .php a los archivos
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+
+#Quitando extensión .php a los archivos - Otra opción
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]

@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../css/style.css" />
 
     <!--Go Top-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>React basics</title>
 </head>
 <body>
@@ -44,45 +44,8 @@ npx create-next-app@latest
             <span class="highlight-text">Ctrl+C</span> para cerrar el servidor de desarrollo
         </li>
     </ol>
-    <h2>Exportar un componente</h2>
-    <ol>
-        <li>
-            <p>Exportanción <span class="highlight-text">por defecto</span>. Se define al final del archivo del componente que se quiera exportar</p>
-            <div class="code-block">
-export default NOMBRECOMPONENTE
-            </div>
-        </li>
-        <li>
-            <p>Exportanción <span class="highlight-text">nombrada</span>. Exporta un determinado componente de un archivo de componentes. Se define al comienzo de la funcion del elemento a exportar</p>
-            <div class="code-block">
-export function Article() {
-    return (
-        ...
-    );
-}
-            </div>
-        </li>
-    </ol>
-    <h2>Importar un componente</h2>
-    <ol>
-        <li>
-            <p>Importando un componente <span class="highlight-text">exportado por defecto</span>. Se define en la parte superior del documento que importará el componente</p>
-            <div class="code-block">
-import NOMBRECOMPONENTE from './CARPETA/ARCHIVO.js';
-            </div>
-        </li>
-        <li>
-            <p>Importando un componente <span class="highlight-text">nombrado</span>. Se define en la parte superior del documento que importará el componente</p>
-            <div class="code-block">
-import {NOMBRECOMPONENTE} from './CARPETA/ARCHIVO.js';
-            </div>
-        </li>
-    </ol>
-    <h2>Importar un hook</h2>
-    <div class="code-block">
-import {useState} from 'react';
-    </div>
-    <h2>Estructura básica de un componente</h2>
+	<h2>Estructura básica de un componente</h2>
+    <p>Son funciones que se definen en archivos JSX independientes y que luego se llaman desde la App principal donde serán renderizados</p>
     <ol>
         <li>
             <p>Importando los elementos del componente</p>
@@ -93,7 +56,7 @@ import paisaje from '../img/paisaje1.jpg'; <span class="highlight-text">//Import
             </div>
         </li>
         <li>
-            <p>Se crea una función que retorne el elemento a renderizar en <span class="highlight-text">App.js</span></p>
+            <p>Se crea una función que retorne el elemento o estructura a renderizar en <span class="highlight-text">App.jsx</span></p>
             <div class="code-block">
 <span class="highlight-text">//Definiendo las propiedades con la sintaxis normal</span>
 
@@ -131,7 +94,105 @@ function Imagen ({<span class="highlight-text">altImagen</span>, <span class="hi
 export default Imagen;
             </div>
         </li>
+		<li>
+			<p>Definiendo el componente con una <span class="highlight-text">función flecha</span></p>
+			<div class="code-block">
+const Imagen = ({<span class="highlight-text">altImagen</span>, <span class="highlight-text">tituloImagen</span>}) => {
+	return (
+		&lt;picture className="imagen-paisaje"&gt;
+			&lt;img
+				src={paisaje}
+				alt={<span class="highlight-text">altImagen</span>}
+				title={<span class="highlight-text">tituloImagen</span>}
+			/&gt;
+		&lt;/picture&gt;
+	)
+}
+			</div>
+		</li>
     </ol>
+    <h2>Exportar un componente</h2>
+    <ol>
+        <li>
+            <p>Exportanción <span class="highlight-text">por defecto</span>. Se define al final del archivo del componente que se quiera exportar</p>
+            <div class="code-block">
+export default NOMBRECOMPONENTE
+            </div>
+        </li>
+        <li>
+            <p>Exportanción <span class="highlight-text">nombrada</span>. Exporta un determinado componente de un archivo de componentes. Se define al comienzo de la funcion del elemento a exportar</p>
+            <div class="code-block">
+export function Article() {
+    return (
+        ...
+    );
+}
+            </div>
+        </li>
+    </ol>
+    <h2>Importar un componente</h2>
+    <ol>
+        <li>
+            <p>Importando componentes <span class="highlight-text">exportados por defecto</span>. Se definen en la parte superior del documento que los importará</p>
+            <div class="code-block">
+import NOMBRECOMPONENTE1 from './CARPETA/ARCHIVO1.jsx';
+import NOMBRECOMPONENTE2 from './CARPETA/ARCHIVO2.jsx';
+            </div>
+        </li>
+        <li>
+            <p>Importando componentes <span class="highlight-text">nombrados</span>. También se definen en la parte superior del documento que los importará</p>
+            <div class="code-block">
+import {NOMBRECOMPONENTE1, NOMBRECOMPONENTE2} from './CARPETA/ARCHIVO.jsx';
+import {NOMBRECOMPONENTE3} from './CARPETA/ARCHIVO3.jsx';
+            </div>
+        </li>
+        <li>
+            <p>Importando ambas clases de componentes desde un mismo archivo</p>
+            <div class="code-block">
+import NOMBRECOMPONENTE1, {NOMBRECOMPONENTE2} from './CARPETA/ARCHIVO.jsx';
+            </div>
+        </li>
+    </ol>
+    <h2>Importar un hook</h2>
+    <div class="code-block">
+import {useState} from 'react';
+    </div>
+    <h2>props</h2>
+    <p>Son variables cuyo valores se pasan desde la <span class="highlight-text">App principal</span> hacia los <span class="highlight-text">componentes que renderiza</span> 
+    <ol>
+        <li>
+            <p>Se llaman en el componente como parámetro de la función y se retornan junto con el nombre asignado en App</p>
+            <div class="code-block">
+const PropsComponent = (<span class="highlight-text">props</span>) => {
+    return (
+        &lt;h1 className={<span class="highlight-text">props.styleColor</span>} title={<span class="highlight-text">props.title</span>}&gt;Texto de prueba con <span class="highlight-text">{props.title}</span>&lt;/h1&gt;
+    )
+}
+            </div>
+            <div class="code-block">
+const PropsComponent = ({<span class="highlight-text">styleColor</span>, <span class="highlight-text">titles</span> ,<span class="highlight-text">title</span>}) => {
+    return (
+        &lt;h1 className={<span class="highlight-text">styleColor</span>} title={<span class="highlight-text">title</span>}&gt;Texto de prueba con <span class="highlight-text">{title}</span>&lt;/h1&gt;
+     )
+}
+            </div>
+        </li>
+        <li>
+            <p>Se definen en la App como variables cuyos valores se llaman desde el componente</p>
+            <div class="code-block">
+&lt;PropsComponent
+    <span class="highlight-text">titles</span>="titulo"
+    <span class="highlight-text">title</span>="ahora si"
+    <span class="highlight-text">styleColor</span>="propsColor"
+/&gt;
+            </div>
+        </li>
+    </ol>
+
+
+
+
+    <hr />
     <h2>Importando la librería de React para su uso directo</h2>
     <div class="code-block">
 &lt;!DOCTYPE html&gt;
@@ -150,7 +211,6 @@ export default Imagen;
     &lt;script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin&gt;&lt;/script&gt;
     &lt;script&gt;
     class HolaMundo extends React.Component{
-        
         render() {
         return React.createElement('p',{},'Hola mundo');
         }
