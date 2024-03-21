@@ -35,6 +35,9 @@
                 <a href="#desconectar-db">Cerrar conexión a la base de datos</a>
             </li>
             <li>
+                <a href="#obtener-id">Enviar y recibir un ID para obtener sus datos</a>
+            </li>
+            <li>
                 <a href="#obtener-datos">Obtener datos</a>
             </li>
             <li>
@@ -49,26 +52,44 @@
             <li>
                 <div class="code-block">
 &lt?php
-    <span class="highlight-text">print</span> "&lth2&gtHello World!&lt/h2&gt";
+    print "&lth2&gtHello World!&lt/h2&gt";
 ?&gt
                 </div>
-                            
             </li>
             <li>
-                <p>La función <span class="highlight-text">echo</span> es más utilizada y permite imprimir varios valores simultáneamente</p>
+                <p>La función echo es más utilizada y permite imprimir varios valores simultáneamente</p>
                 <div class="code-block">
 &lt?php
-    <span class="highlight-text">echo</span> "&lth2&gtHello World!&lt/h2&gt", "&ltp&gtHello World!&lt/p&gt";
+    echo "&lth2&gtHello World!&lt/h2&gt", "&ltp&gtHello World!&lt/p&gt";
 ?&gt
+                </div>
+            </li>
+            <li>
+                <p>Imprimiendo la fecha</p>
+                <div class="code-block">
+&lt?php
+    $date1 = date('Y-m-d');
+    $date2 = date('Y/m/d');
+    $date3 = date('d/m/Y');
+    $date4 = date('l, F j, Y');
+
+    echo "la fecha es $date4";
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Cargando la fecha de hoy en el campo de un formulario</p>
+                <div class="code-block">
+&ltinput type='date' name='date' value='".date('Y-m-d')."' /&gt
                 </div>
             </li>
         </ol>
         <h2><a name="variables" class="anchor">Variables</a></h2>
         <div class="code-block">
 &lt?php
-$myVar = "Esto es un string";
+    $myVar = "Esto es un string";
 
-$myNumVar = 8520;
+    $myNumVar = 8520;
 ?&gt
         </div>
 
@@ -82,9 +103,9 @@ $myNumVar = 8520;
         <h2><a name="arrays" class="anchor">Arrays</a></h2>
         <div class="code-block">
 &lt?php
-$myArray = array("Leandro", 38, "Argentina", "Italiana");
+    $myArray = array("Leandro", 38, "Argentina", "Italiana");
 
-echo $myArray[2];
+    echo $myArray[2];
 ?&gt
         </div>
         <h2><a name="condicionales" class="anchor">Condicionales</a></h2>
@@ -105,16 +126,16 @@ $var1 = 34;
         <h2><a name="conectar-db" class="anchor">Conectar a la base de datos</a></h2>
         <div class="code-block">
 &lt?php
-    $mysqli = <span class="highlight-text">new mysqli</span>("localhost", "root", "", "php_test");
-    if ($mysqli->connect_errno) {
-        echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    $conn = new mysqli("localhost", "root", "", "php_test");
+    if ($conn->connect_errno) {
+        echo "Fallo al conectar a MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
     }
     echo $mysqli->host_info . "\n";
 ?&gt
         </div>
         <div class="code-block">
 &lt?php
-    $conn = <span class="highlight-text">mysqli_connect</span>("127.0.0.1", "root", "", "php_test");
+    $conn = mysqli_connect("127.0.0.1", "root", "", "php_test");
     if ($conn-&gtconnect_errno) {
         echo "Fallo al conectar a MySQL: (" . $conn-&gtconnect_errno . ") " . $conn-&gtconnect_error;
     }
@@ -126,7 +147,39 @@ $var1 = 34;
             <li>
                 <div class="code-block">
 &lt?php
-    mysqli_close($mysqli);
+    mysqli_close($conn);
+?&gt
+                </div>
+            </li>
+            <li>
+                <div class="code-block">
+&lt?php
+    $conn->close();
+?&gt
+                </div>
+            </li>
+        </ol>
+        <h2><a name="obtener-id" class="anchor">Enviar y recibir un ID para obtener sus datos</a></h2>
+        <ol>
+            <li>
+                <p>Enviando un ID a través de una variable en la URL</p>
+                <div class="code-block">
+&lt?php
+    echo "
+        &lta href='articulo.php?id=".$row['id']."'&gt&lt/a&gt
+    ";
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Si existe un ID, tomarlo y cargarlo en una variable. Sino se envió un ID, retornar mensaje de error</p>
+                <div class="code-block">
+&lt?php
+    if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+    } else {
+        echo "No se proporcionó un ID en la URL.";
+    }
 ?&gt
                 </div>
             </li>
@@ -134,12 +187,21 @@ $var1 = 34;
         <h2><a name="obtener-datos" class="anchor">Obtener datos de la base de datos</a></h2>
         <ol>
             <li>
-                <p>Definiendo la <span class="highlight-text">consulta SQL</span> que recuperará los datos</p>
+                <p>Definiendo la consulta SQL que recuperará los datos</p>
                 <div class="code-block">
 &lt?php
-    $resultado = <span class="highlight-text">mysqli_query</span>($mysqli, "select * from articulos");
-    if (!$resultado) {
-        die('Consulta no válida: ' . mysql_error());
+    $query = mysqli_query($conn, "SELECT * FROM articulos");
+    if (!$query) {
+        die('Consulta no válida: ' . mysqli_error());
+    }
+?&gt
+                </div>
+                <div class="code-block">
+&lt?php
+    $sql = "SELECT * FROM articulos";
+    $query = mysqli_query($conn, $sql);
+    if (!$query) {
+        die('Consulta no válida: ' . mysqli_error());
     }
 ?&gt
                 </div>
@@ -148,15 +210,15 @@ $var1 = 34;
                 <p>Bucle para obtener datos en serie</p>
                 <div class="code-block">
 &lt?php
-    while ($fila = <span class="highlight-text">mysqli_fetch_array</span>($resultado)) {
-        echo "&ltdiv style='border: 1px solid #333;'&gt".$fila["titulo"]."&lt/div&gt";
+    while ($row = mysqli_fetch_array($query)) {
+        echo "&ltdiv style='border: 1px solid #333;'&gt".$row["titulo"]."&lt/div&gt";
     }
 ?&gt
                 </div>
                 <div class="code-block">
 &lt?php
-    while ($fila = <span class="highlight-text">mysqli_fetch_assoc</span>($resultado)) {
-        echo "&ltdiv style='border: 1px solid #333;'&gt".$fila["titulo"]."&lt/div&gt";
+    while ($row = mysqli_fetch_assoc($query)) {
+        echo "&ltdiv style='border: 1px solid #333;'&gt".$row["titulo"]."&lt/div&gt";
     }
 ?&gt
                 </div>
@@ -165,10 +227,10 @@ $var1 = 34;
                 <p>Función para obtener un determinado dato de la tabla</p>
                 <div class="code-block">
 &lt?php
-    $fila = <span class="highlight-text">mysqli_fetch_row</span>($resultado);
+    $row = mysqli_fetch_row($query);
 
     echo "&ltdiv&gt&ltp&gtTitular del día&lt/p&gt&lt/div&gt
-    &ltdiv&gt&ltp&gt.$fila[1].&lt/p&gt&lt/div&gt"
+    &ltdiv&gt&ltp&gt.$row[1].&lt/p&gt&lt/div&gt"
 ?&gt
                 </div>
             </li>
@@ -177,20 +239,22 @@ $var1 = 34;
         <div class="code-block">
 &lt?php
     $i = 0;
-    <span class="highlight-text">do</span> {
+    do {
         echo "
             mostrando el valor de ".$i." 25 veces
         ";
         $i += 1;
     }
-    <span class="highlight-text">while</span> ($i &lt 25);
+    while ($i &lt 25);
 ?&gt
         </div>
         <h2><a name="foreach" class="anchor">foreach</a></h2>
-        <p>Devolver datos por cada entrada de la fila</p>
-        <div class="code-block">
+        <ol>
+            <li>
+                <p>Retornando datos por cada columna de la fila. Por cada retorno de $row se imprime $x en el bucle</p>
+                <div class="code-block">
 &lt?php
-    <span class="highlight-text">foreach</span> ($row as $x) {
+    foreach ($row as $x) {
         echo "
         &ltpicture&gt
             &lta href='".$x."' target='_blank'&gt&ltimg src='".$x."' alt='' /&gt&lt/a&gt
@@ -198,10 +262,58 @@ $var1 = 34;
         ";
     }
 ?&gt
-
-
+                </div>
+            </li>
+            <li>
+                <p>Retornando datos a partir de una determinada fila</p>
+                <div class="code-block">
+&lt?php
+    $images = array_slice($row, 4);
+    foreach ($images as $x) {
+        echo "
+        &ltpicture&gt
+            &lta href='".$x."' target='_blank'&gt&ltimg src='".$x."' alt='' /&gt&lt/a&gt
+        &lt/picture&gt
+        ";
+    }
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Retornando datos de un rango de filas</p>
+                <div class="code-block">
+&lt?php
+    $images = array_slice($row, 4, 6);
+    foreach ($images as $x) {
+        echo "
+        &ltpicture&gt
+            &lta href='".$x."' target='_blank'&gt&ltimg src='".$x."' alt='' /&gt&lt/a&gt
+        &lt/picture&gt
+        ";
+    }
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Retornando datos de un rango de filas ignorando las filas vacías</p>
+                <div class="code-block">
+&lt?php
+    $images = array_slice($row, 4, 6);
+    foreach ($images as $x) {
+        if (!empty($x)) {
+            echo "
+                &ltpicture&gt
+                    &lta href='".$x."' target='_blank'&gt&ltimg src='".$x."' alt='' /&gt&lt/a&gt
+                &lt/picture&gt
+            ";
+        }
+    }
+?&gt
+                </div>
+            </li>
+        </ol>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <a href="javascript:" id="return-to-top"><span>></span></a>
+        <a href="javascript:" id="return-to-top"><span>></a>
         <script>
         // ===== Scroll to Top ==== 
         $(window).scroll(function() {
