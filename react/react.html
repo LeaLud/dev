@@ -45,7 +45,7 @@ npx create-next-app@latest
         </li>
     </ol>
 	<h2>Estructura básica de un componente</h2>
-    <p>Son funciones que se definen en archivos JSX independientes y que luego se llaman desde la App principal donde serán renderizados</p>
+    <p>Son funciones que se definen en archivos JSX independientes y que luego se llaman desde la App principal donde serán renderizados. Los nombres dentro del código siempre se definen con la primera letra en mayúscula, no así en el nombre del archivo</p>
     <ol>
         <li>
             <p>Importando los elementos del componente</p>
@@ -188,7 +188,17 @@ const PropsComponent = ({<span class="highlight-text">styleColor</span>, <span c
             </div>
         </li>
     </ol>
-
+    <h2>props predefinidas</h2>
+    <p>Son atributos predefinidos en el componente para mostrarlos en caso de que no se hayan definido en la App principal. De este modo, no dará error</span> 
+    <div class="code-block">
+const UserData = ({userName = "User name", userLastName = "User last name", age}) => {
+    &lt;ul&gt;
+        &lt;li&gt;{userName}&lt;/li&gt;
+        &lt;li&gt;{userLastName}&lt;/li&gt;
+        &lt;li&gt;{age}&lt;/li&gt;
+    &lt;/ul&gt;
+}
+    </div>
 
 
 
