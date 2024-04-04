@@ -22,21 +22,32 @@ npx create-next-app@latest
       
         </li>
     </ol>
-    <h2>Comandos iniciales en consola</h2>
+    <h2>Comandos más comunes de la consola</h2>
     <ol>
         <li>
-            <span class="highlight-text">cd RUTA-APP</span>
+            <span class="highlight-text">cd RUTA</span> para moverse entre directorios
         </li>
         <li>
-            <span class="highlight-text">npm start</span> inicia el servidor de desarrollo en <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a></li>
+            <span class="highlight-text">npm start</span> inicia el servidor de desarrollo en <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>
+        </li>
         <li>
-            <span class="highlight-text">npx create-react-app CARPETA</span> crea una app en la carpeta señalada</li>
+            <span class="highlight-text">npx create-react-app CARPETA</span> crea una App en la carpeta señalada
+        </li>
         <li>
-            <span class="highlight-text">npx create-react-app .</span> crea una app en la carpeta actual</li>
+            <span class="highlight-text">npx create-react-app .</span> crea una App en la carpeta actual
+        </li>
         <li>
-            <span class="highlight-text">npm run build</span> agrupa la aplicación en archivos estáticos para producción</li>
+            <span class="highlight-text">npm install LIBRERIA</span> instala una librería para el uso de sus componentes pre fabricados
+        </li>
         <li>
-            <span class="highlight-text">npm test</span> inicia el corredor de pruebas</li>
+            <span class="highlight-text">npm uninstall LIBRERIA</span> instala una librería para el uso de sus componentes pre fabricados
+        </li>
+        <li>
+            <span class="highlight-text">npm run build</span> agrupa la aplicación en archivos estáticos para producción
+        </li>
+        <li>
+            <span class="highlight-text">npm test</span> inicia el corredor de pruebas
+        </li>
         <li>
             <span class="highlight-text">npm run eject</span> Elimina esta herramienta y copia las dependencias de compilación, los archivos de configuración y los scripts en el directorio de la aplicación. Esta acción no puede ser revertida
         </li>
@@ -116,7 +127,7 @@ const Imagen = ({<span class="highlight-text">altImagen</span>, <span class="hig
         <li>
             <p>Exportanción <span class="highlight-text">por defecto</span>. Se define al final del archivo del componente que se quiera exportar</p>
             <div class="code-block">
-export default NOMBRECOMPONENTE
+export default NombreComponente;
             </div>
         </li>
         <li>
@@ -135,21 +146,21 @@ export function Article() {
         <li>
             <p>Importando componentes <span class="highlight-text">exportados por defecto</span>. Se definen en la parte superior del documento que los importará</p>
             <div class="code-block">
-import NOMBRECOMPONENTE1 from './CARPETA/ARCHIVO1.jsx';
-import NOMBRECOMPONENTE2 from './CARPETA/ARCHIVO2.jsx';
+import Componente1 from './carpeta/Archivo1.jsx';
+import Componente2 from './carpeta/Archivo2.jsx';
             </div>
         </li>
         <li>
             <p>Importando componentes <span class="highlight-text">nombrados</span>. También se definen en la parte superior del documento que los importará</p>
             <div class="code-block">
-import {NOMBRECOMPONENTE1, NOMBRECOMPONENTE2} from './CARPETA/ARCHIVO.jsx';
-import {NOMBRECOMPONENTE3} from './CARPETA/ARCHIVO3.jsx';
+import {Componente1, Componente2} from './carpeta/Archivo.jsx';
+import {Componente3} from './carpeta/Archivo3.jsx';
             </div>
         </li>
         <li>
             <p>Importando ambas clases de componentes desde un mismo archivo</p>
             <div class="code-block">
-import NOMBRECOMPONENTE1, {NOMBRECOMPONENTE2} from './CARPETA/ARCHIVO.jsx';
+import Componente1, {Componente2} from './carpeta/Archivo.jsx';
             </div>
         </li>
     </ol>
@@ -199,7 +210,20 @@ const UserData = ({userName = "User name", userLastName = "User last name", age}
     &lt;/ul&gt;
 }
     </div>
+    <h2>React Icons</h2>
+    <div class="code-block">
+npm install react-icons
+    </div>
+    <div class="code-block">
+import { FaBeer } from 'react-icons/fa';
+    </div>
+    <div class="code-block">
+const App = () => {
+    return &lt;h3&gt;Lets go for a &lt;FaBeer/&gt;?&lt;/h3&gt;
+};
 
+export default App;
+    </div>
 
 
     <hr />
