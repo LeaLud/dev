@@ -20,13 +20,22 @@
                 <a href="#variables">Variables</a>
             </li>
             <li>
+                <a href="#constantes">Constantes</a>
+            </li>
+            <li>
+                <a href="#variables-match">Variables con Match</a>
+            </li>
+            <li>
+                <a href="#constantes-globales">Constantes globales</a>
+            </li>
+            <li>
                 <a href="#includes">Inclusión de archivos</a>
             </li>
             <li>
                 <a href="#arrays">Arrays</a>
             </li>
             <li>
-                <a href="#condicionales">Condicionales</a>
+                <a href="#arrays-asociativos">Arrays asociativos</a>
             </li>
             <li>
                 <a href="#conectar-db">Conectar a la base de datos</a>
@@ -41,16 +50,31 @@
                 <a href="#obtener-datos">Obtener datos</a>
             </li>
             <li>
-                <a href="#do-while">Bucle do while datos</a>
+                <a href="#condicional-if">Condicional if</a>
+            </li>
+            <li>
+                <a href="#do-while">do while</a>
             </li>
             <li>
                 <a href="#foreach">foreach</a>
+            </li>
+            <li>
+                <a href="#api">Obtener datos de una API</a>
             </li>
         </ol>
         <h2><a name="impresion-datos" class="anchor">Impresión de datos</a></h2>
         <ol>
             <li>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     print "&lth2&gtHello World!&lt/h2&gt";
 ?&gt
@@ -58,15 +82,65 @@
             </li>
             <li>
                 <p>La función echo es más utilizada y permite imprimir varios valores simultáneamente</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     echo "&lth2&gtHello World!&lt/h2&gt", "&ltp&gtHello World!&lt/p&gt";
 ?&gt
                 </div>
             </li>
             <li>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lth2&gt&lt?= "Hello World!" ?&gt&lt/h2&gt
+                </div>
+            </li>
+            <li>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    $name = 'Resumen PHP';
+?&gt
+
+&ltp&gtesto es el &lt?= $name?&gt&lt/p&gt
+                </div>
+            </li>
+            <li>
                 <p>Imprimiendo la fecha</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     $date1 = date('Y-m-d');
     $date2 = date('Y/m/d');
@@ -79,12 +153,30 @@
             </li>
             <li>
                 <p>Cargando la fecha de hoy en el campo de un formulario</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &ltinput type='date' name='date' value='".date('Y-m-d')."' /&gt
                 </div>
             </li>
         </ol>
         <h2><a name="variables" class="anchor">Variables</a></h2>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
         <div class="code-block">
 &lt?php
     $myVar = "Esto es un string";
@@ -92,8 +184,99 @@
     $myNumVar = 8520;
 ?&gt
         </div>
+        <h2><a name="constantes" class="anchor">Constantes</a></h2>
+        <p>A diferencia de las variables, las constantes no llevan el signo "$"</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    const myConst = "Esto es un string";
 
+    const myConst = 8520;
+?&gt
+        </div>
+
+        <h2><a name="variables-match" class="anchor">Variables con Match</a></h2>
+        <p>Asigna valores a una variable através de condiciones y carga el resultado en otra variable</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    $edad = 17;
+
+    $rangoEdad = match (true) {
+        $edad < 18 => 'Menor de edad',
+        $edad >= 18 => 'Mayor de edad'
+    };
+
+    echo $rangoEdad;
+?&gt
+        </div>
+
+
+        <h2><a name="constantes-globales" class="anchor">Constantes globales</a></h2>
+        <ol>
+            <li>
+                <p>Definiendo la constante global</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    define("SrcLogo", "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/PHP-logo.svg/800px-PHP-logo.svg.png");
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Mostrando la constante global</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    echo "
+    &ltimg src='".SrcLogo."' alt='' /&gt
+    ";
+?&gt
+                </div>
+            </li>
+        </ol>
         <h2><a name="includes" class="anchor">Inclusión de archivos</a></h2>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
         <div class="code-block">
 &lt?php
     include "ARCHIVO.php";
@@ -101,30 +284,75 @@
 ?&gt
         </div>
         <h2><a name="arrays" class="anchor">Arrays</a></h2>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
         <div class="code-block">
 &lt?php
-    $myArray = array("Leandro", 38, "Argentina", "Italiana");
+    $myArray = ["Leandro", 38, "Argentina", "Italiana"];
 
-    echo $myArray[2];
+    // Modificando el valor en la posición 0
+    $myArray[0] = 'Federico';
+
+    // Modificando el valor en la posición 1
+    $myArray[3] = 'Paraguaya';
+
+    // Al no indicar la posición, agrega el valor al final del array
+    $myArray[] = 48 . 'kg.';
+
+    echo $myArray[0] . ' posee las ciudadanías ' . $myArray[2] . ' e ' . $myArray[3];
 ?&gt
         </div>
-        <h2><a name="condicionales" class="anchor">Condicionales</a></h2>
+        <h2><a name="arrays-asociativos" class="anchor">Arrays asociativos</a></h2>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
         <div class="code-block">
 &lt?php
-$var1 = 34;
-    $var2 = 45;
+    $myArray = [
+        "Leandro" => 38,
+        "Federico" => 40,
+        "Ludueña" => 42,
+        "Habilidades" => ["PHP", "JavaScript", "HTML", "CSS"]
+    ];
 
-    if ($var1 &gt $var2) {
-        echo "$var1 es mayor";
-    } elseif ($var1 === $var2) {
-        echo "los valores son iguales";
-    } else {
-        echo "$var1 es menor que $var2";
-    }
+    //Modificando un valor del array asociativo
+    $myArray["Ludueña"] = 49;
+    $myArray['Habilidades'][2] = 'React';
+
+    //Agregando un valor al array asociativo
+    $myArray["Peso"] = 82 . 'Kg.';
+    $myArray['Habilidades'][] = 'ASP';
+
+    echo $myArray['Ludueña'] . '&ltbr /&gt';
+    echo $myArray['Peso'] . '&ltbr /&gt';
+    echo 'El tipo sabe ' . $myArray['Habilidades'][0] . ', ' . $myArray['Habilidades'][1] . ' y ' . $myArray['Habilidades'][4];
 ?&gt
         </div>
         <h2><a name="conectar-db" class="anchor">Conectar a la base de datos</a></h2>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
         <div class="code-block">
+            
 &lt?php
     $conn = new mysqli("localhost", "root", "", "php_test");
     if ($conn->connect_errno) {
@@ -132,6 +360,15 @@ $var1 = 34;
     }
     echo $mysqli->host_info . "\n";
 ?&gt
+        </div>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
         </div>
         <div class="code-block">
 &lt?php
@@ -145,14 +382,32 @@ $var1 = 34;
         <h2><a name="desconectar-db" class="anchor">Cerrar la conexión a la base de datos</a></h2>
         <ol>
             <li>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     mysqli_close($conn);
 ?&gt
                 </div>
             </li>
             <li>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     $conn->close();
 ?&gt
@@ -163,6 +418,15 @@ $var1 = 34;
         <ol>
             <li>
                 <p>Enviando un ID a través de una variable en la URL</p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
                 <div class="code-block">
 &lt?php
     echo "
@@ -173,7 +437,16 @@ $var1 = 34;
             </li>
             <li>
                 <p>Si existe un ID, tomarlo y cargarlo en una variable. Sino se envió un ID, retornar mensaje de error</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     if (isset($_GET['id'])) {
         $id = $_GET['id'];
@@ -188,7 +461,16 @@ $var1 = 34;
         <ol>
             <li>
                 <p>Definiendo la consulta SQL que recuperará los datos</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     $query = mysqli_query($conn, "SELECT * FROM articulos");
     if (!$query) {
@@ -196,7 +478,16 @@ $var1 = 34;
     }
 ?&gt
                 </div>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     $sql = "SELECT * FROM articulos";
     $query = mysqli_query($conn, $sql);
@@ -208,14 +499,32 @@ $var1 = 34;
             </li>
             <li>
                 <p>Bucle para obtener datos en serie</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     while ($row = mysqli_fetch_array($query)) {
         echo "&ltdiv style='border: 1px solid #333;'&gt".$row["titulo"]."&lt/div&gt";
     }
 ?&gt
                 </div>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     while ($row = mysqli_fetch_assoc($query)) {
         echo "&ltdiv style='border: 1px solid #333;'&gt".$row["titulo"]."&lt/div&gt";
@@ -225,7 +534,16 @@ $var1 = 34;
             </li>
             <li>
                 <p>Función para obtener un determinado dato de la tabla</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     $row = mysqli_fetch_row($query);
 
@@ -235,7 +553,76 @@ $var1 = 34;
                 </div>
             </li>
         </ol>
-        <h2><a name="do-while" class="anchor">Bucle do while</a></h2>
+        <h2><a name="condicional-if" class="anchor">Condicional if</a></h2>
+        <ol>
+            <li>
+                <p>La sintaxis con llaves no requiere cerrar el if</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    $var1 = 34;
+    $var2 = 45;
+
+    if ($var1 &gt $var2) {
+        echo "$var1 es mayor";
+    } elseif ($var1 === $var2) {
+        echo "los valores son iguales";
+    } else {
+        echo "$var1 es menor que $var2";
+    }
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Sintaxis que requiere cerrar el if</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    $alive = true;
+    $var1 = 45;
+
+    if ($var1 > 85) : ?&gt
+        &ltdiv&gt
+            &ltp&gtHTML puro&lt/p&gt
+        &lt/div&gt
+    &lt?php elseif ($alive === false) : ?&gt
+        &ltdiv&gt
+            &ltp&gtSeguimos probando&lt/p&gt
+        &lt/div&gt
+    &lt?php else : ?&gt
+        &ltdiv&gt
+            &ltp&gtMás HTML&lt/p&gt
+        &lt/div&gt
+&lt?php endif?&gt
+                </div>
+            </li>
+        </ol>
+        <h2><a name="do-while" class="anchor">do while</a></h2>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
         <div class="code-block">
 &lt?php
     $i = 0;
@@ -252,7 +639,16 @@ $var1 = 34;
         <ol>
             <li>
                 <p>Retornando datos por cada columna de la fila. Por cada retorno de $row se imprime $x en el bucle</p>
-                <div class="code-block">
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
 &lt?php
     foreach ($row as $x) {
         echo "
@@ -266,6 +662,15 @@ $var1 = 34;
             </li>
             <li>
                 <p>Retornando datos a partir de una determinada fila</p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
                 <div class="code-block">
 &lt?php
     $images = array_slice($row, 4);
@@ -281,6 +686,15 @@ $var1 = 34;
             </li>
             <li>
                 <p>Retornando datos de un rango de filas</p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
                 <div class="code-block">
 &lt?php
     $images = array_slice($row, 4, 6);
@@ -296,6 +710,15 @@ $var1 = 34;
             </li>
             <li>
                 <p>Retornando datos de un rango de filas ignorando las filas vacías</p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
                 <div class="code-block">
 &lt?php
     $images = array_slice($row, 4, 6);
@@ -311,8 +734,121 @@ $var1 = 34;
 ?&gt
                 </div>
             </li>
+            <li>
+                <p>Retornando cada dato del <a href="#arrays">array de ejemplo</a></p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
+                <div class="code-block">
+&lt?php
+    $myArray = ["Leandro", 38, "Argentina", "Italiana"];
+?&gt
+
+&ltul&gt
+    &lt?php
+    foreach ($myArray as $dato) {
+        echo "
+            &ltli&gt$dato&lt/li&gt
+        ";
+    }
+    ?&gt
+&lt/ul&gt
+                </div>
+            </li>
         </ol>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <h2><a name="api" class="anchor">Obtener datos de una API</a></h2>
+        <ol>
+            <li>
+                <p>A través de un cURL handle</p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
+                <div class="code-block">
+&lt?php
+    const API_URL = 'https://whenisthenextmcufilm.com/api';
+
+    // Iniciando una sesión de cURL handle
+    $ch = curl_init(API_URL);
+
+    // Recibiendo el resultado de la petición
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    // Ejecutando la petición y almacenando el resultado
+    $result = curl_exec($ch);
+
+    // Cerrando la sesión de cURL handle
+    curl_close($ch);
+?&gt
+                </div>
+            </li>
+            <li>
+                <p>Obteniendo los datos directamente</p>
+                <div class="copyCodeWrap">
+                    <button class="copyCode">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                            <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                            <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                        </svg>
+                        <p>Copiar</p>
+                    </button>
+                </div>
+                <div class="code-block">
+&lt?php
+    const API_URL = 'https://whenisthenextmcufilm.com/api';
+
+    $result = file_get_contents(API_URL);
+?&gt
+                </div>
+            </li>
+        </ol>
+        <p>Extraer los datos de la API</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&lt?php
+    $data = json_decode($result, true);
+?&gt
+        </div>
+        <p>Formatear la vista de los datos</p>
+        <div class="copyCodeWrap">
+            <button class="copyCode">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                </svg>
+                <p>Copiar</p>
+            </button>
+        </div>
+        <div class="code-block">
+&ltpre&gt
+    &lt? var_dump($data);?&gt
+&lt/pre&gt
+        </div>
+
+
+
+
+        <script type="text/javascript" src="../javascript/copyCode.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <a href="javascript:" id="return-to-top"><span>></a>
         <script>
         // ===== Scroll to Top ==== 
@@ -330,6 +866,5 @@ $var1 = 34;
         });
         </script>
     </main>
-    <script src="javascript-basics.js"></script>
 </body>
 </html>

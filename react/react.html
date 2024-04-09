@@ -7,7 +7,7 @@
 
     <!--Go Top-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <title>React basics</title>
+    <title>React</title>
 </head>
 <body>
     <button class="button-goback" onClick="history.back()">Go back</button>
@@ -210,20 +210,58 @@ const UserData = ({userName = "User name", userLastName = "User last name", age}
     &lt;/ul&gt;
 }
     </div>
-    <h2>React Icons</h2>
-    <div class="code-block">
+    <h2>React Icons <a href="https://react-icons.github.io/react-icons/" target="_blank"><span>&#8599;</span></a></h2>
+    <ol>
+        <li>
+            <div class="code-block">
 npm install react-icons
-    </div>
-    <div class="code-block">
+            </div>
+        </li>
+        <li>
+            <div class="code-block">
 import { FaBeer } from 'react-icons/fa';
-    </div>
-    <div class="code-block">
+            </div>
+        </li>
+        <li>
+            <div class="code-block">
 const App = () => {
-    return &lt;h3&gt;Lets go for a &lt;FaBeer/&gt;?&lt;/h3&gt;
+return &lt;h3&gt;Lets go for a &lt;FaBeer/&gt;?&lt;/h3&gt;
 };
 
 export default App;
-    </div>
+            </div>
+        </li>
+    </ol>
+    <h2>Material-UI <a href="https://mui.com/material-ui/getting-started/installation/" target="_blank"><span>&#8599;</span></a></h2>
+    <p>Librería de componentes para interfaz gráfica de React</p>
+    <ol>
+        <li>
+            <p>Instalación Material-UI</p>
+            <div class="code-block">
+npm install @mui/material @emotion/react @emotion/styled
+            </div>
+        </li>
+        <li>
+            <p>Instalación fuente Roboto</p>
+            <div class="code-block">
+npm install @fontsource/roboto
+            </div>
+            <div class="code-block">
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';                
+            </div>
+        </li>
+        <li>
+            <p>Instalación de iconos de M-UI</p>
+            <div class="code-block">
+npm install @mui/icons-material
+            </div>
+        </li>
+    </ol>
+
+    
 
 
     <hr />
