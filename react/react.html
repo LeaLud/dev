@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css" />
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="../img/favicons/favicon.ico">
 
     <!--Go Top-->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -14,14 +17,36 @@
     <h1>React</h1>
     <h2>Programas necesarios</h2>
     <ol>
-        <li><a href="https://nodejs.org/en" target="_blank">Node.js</a> para el desarrollo local</li>
-        <li><a href="https://nextjs.org/" target="_blank">Next.js</a> es un framework de React. Se ejecuta con el comando:      
-        <div class="code-block">
+        <li>
+            <a href="https://nodejs.org/en" target="_blank">Node.js</a> para el desarrollo local</li>
+        <li>
+            <a href="https://nextjs.org/" target="_blank">Next.js</a> es un framework de React. Se ejecuta con el comando:      
+            <div class="code-block">
 npx create-next-app@latest
-      </div>
-      
+            </div>
         </li>
     </ol>
+    <h2>NPM (Node Package Manager)</h2>
+    <p>Es un gestor de paquetes para los proyectos de Node.js que se encuentran disponibles para su uso público. Estos proyectos están en el registro de npm y se denominan paquetes.</p>
+    <ol>
+        <li>
+            <p>Comprobar versión instalada</p>
+            <div class="code-block">
+npm -v
+            </div>
+            <div class="code-block">
+npm --version
+            </div>
+        </li>
+        <li>
+            <p>Instalar/actualizar la última versión</p>
+            <div class="code-block">
+npm install -g npm@latest
+            </div>
+        </li>
+    </ol>
+
+
     <h2>Comandos más comunes de la consola</h2>
     <ol>
         <li>
@@ -31,7 +56,7 @@ npx create-next-app@latest
             <span class="highlight-text">npm start</span> inicia el servidor de desarrollo en <a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a>
         </li>
         <li>
-            <span class="highlight-text">npx create-react-app CARPETA</span> crea una App en la carpeta señalada
+            <span class="highlight-text">npx create-react-app carpeta-app</span> crea una App en la carpeta señalada. No se aceptan mayúsculas para el nombre
         </li>
         <li>
             <span class="highlight-text">npx create-react-app .</span> crea una App en la carpeta actual
@@ -269,19 +294,168 @@ npm install @mui/icons-material
     </ul>
     <h2><a name="usestate" class="anchor">Hook useState</a></h2>
     <p>Es una función compuesta por una variable y una función, por lo tanto se debe ejecutar en la aplicación asignándole ambos elementos</p>
+    <div class="copyCodeWrap">
+        <button class="copyCode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+            </svg>
+            <p>Copiar</p>
+        </button>
+    </div>
     <div class="code-block">
         ...
     </div>
-
     <h2><a name="useeffect" class="anchor">Hook useEffect</a></h2>
     <p>Es una función compuesta por otra función, por lo tanto se debe ejecutar en la aplicación asignándole una</p>
+    <div class="copyCodeWrap">
+        <button class="copyCode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+            </svg>
+            <p>Copiar</p>
+        </button>
+    </div>
     <div class="code-block">
         ...
     </div>
+    <h2><a name="useeffect" class="anchor">Bucle map</a></h2>
+    <p>Es un método que permite iterar sobre un array y transformar cada uno de sus elementos en un nuevo valor según una función proporcionada</p>
+    <ul>
+        <li>
+            <p>Ejemplo de <a href="/dev/javascript/copyCode.js" target="_blank">array</a> en JavaScript</p>
+            <div class="copyCodeWrap">
+                <button class="copyCode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>
+                    <p>Copiar</p>
+                </button>
+            </div>
+            <div class="code-block">
+const taskList = [
+    {
+        id: 1,
+        title: 'Primera tarea',
+        author: 'Leandro',
+        startDate: '11/04/2024',
+        endDate: '1204/2024'
+    },
+    {
+        id: 2,
+        title: 'Segunda tarea',
+        author: 'Federico',
+        startDate: '09/04/2024',
+        endDate: '11/04/2024'
+    },
+    {
+        id: 3,
+        title: 'Tercera tarea',
+        author: 'Ludueña',
+        startDate: '05/04/2024',
+        endDate: '15/05/2024'
+    },
+    {
+        id: 4,
+        title: 'Programar',
+        author: 'Leandro',
+        startDate: '10/04/2024',
+        endDate: '12/05/2024'
+    },
+    {
+        id: 5,
+        title: 'Estudiar y testear',
+        author: 'Federico',
+        startDate: '20/04/2024',
+        endDate: '22/05/2024'
+    }
+]
+
+export default taskList;
+            </div>
+        </li>
+        <li>
+            <p>Llamando al array con .map(), asignándole una variable cualquiera para cada objeto (task) y otra para sus respectivos índices</p>
+            <div class="copyCodeWrap">
+                <button class="copyCode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>
+                    <p>Copiar</p>
+                </button>
+            </div>
+            <div class="code-block">
+import React from 'react';
+import taskList from '../taskList.js';
+
+const BucleMap = () => {
+    return (
+        &ltdiv&gt
+            {taskList.map((task, i) => (
+                &ltul key={i}&gt
+                    &ltli&gt{task.title}&lt/li&gt
+                    &ltli&gt{task.author}&lt/li&gt
+                    &ltli&gt{task.startDate}&lt/li&gt
+                    &ltli&gt{task.endDate}&lt/li&gt
+                &lt/ul&gt
+            ))}
+        &lt/div>
+    )
+}
+
+export default BucleMap;
+            </div>
+        </li>
+        <li>
+            <p>Llamando al array nuevamente pero asignando una key a partir del ID de cada objeto</p>
+            <div class="copyCodeWrap">
+                <button class="copyCode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+                    </svg>
+                    <p>Copiar</p>
+                </button>
+            </div>
+            <div class="code-block">
+import React from 'react';
+import taskList from '../taskList.js';
+
+const BucleMap = () => {
+    return (
+        &ltdiv&gt
+            {taskList.map((task) => (
+                &ltul key={task.id}&gt
+                    &ltli&gt{task.title}&lt/li&gt
+                    &ltli&gt{task.author}&lt/li&gt
+                    &ltli&gt{task.startDate}&lt/li&gt
+                    &ltli&gt{task.endDate}&lt/li&gt
+                &lt/ul&gt
+            ))}
+        &lt/div>
+    )
+}
+
+export default BucleMap;
+            </div>
+        </li>
+    </ul>
 
 
     <hr />
     <h2>Importando la librería de React para su uso directo</h2>
+    <div class="copyCodeWrap">
+        <button class="copyCode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+            </svg>
+            <p>Copiar</p>
+        </button>
+    </div>
     <div class="code-block">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -330,10 +504,20 @@ npm install @mui/icons-material
         </li>
         <li>
             <p>
-                Tanto el nombre de los componentes como el de sus respectivos archivos deben empezar con mayúscula
+                Tanto el nombre de los componentes como el de sus respectivos archivos deben empezar con mayúscula (PascalCase)
             </p>
         </li>
+        <li>
+            <p>Convenciones de nombrado de archivos para desarrollo</p>
+            <ul>
+                <li>PascalCase</li>
+                <li>camelCase</li>
+                <li>snake_case</li>
+                <li>kebab-case</li>
+            </ul>
+        </li>
     </ol>
+    <script type="text/javascript" src="../javascript/copyCode.js"></script>
     <a href="javascript:" id="return-to-top"><span>></span></a>
     <script>
     // ===== Scroll to Top ==== 
