@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Obteniendo el array en JavaScript o en JSON
 const taskList = [
     {
         id: 1,
