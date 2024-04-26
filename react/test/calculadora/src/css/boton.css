@@ -1,0 +1,45 @@
+.contenedor-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contenedor-calculadora .fila .boton {
+    background-color: #111b21;
+    border-radius: 100%;
+    height: 62.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s;
+}
+
+.contenedor-calculadora .fila .boton:active {
+    background-color: black;
+}
+
+.contenedor-calculadora .fila .boton p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    transition: color .2s;
+}
+
+.contenedor-calculadora .fila .boton:active p {
+    color: gray;
+}
+
+.contenedor-calculadora .fila:last-child .boton {
+    border-radius: 50px;
+}
+
+.contenedor-calculadora .fila .botonOperador {
+    background-color :slategray;
+}
+
+.contenedor-calculadora .fila .botonClear {
+    text-transform: uppercase;
+    background-color: slategray;
+}

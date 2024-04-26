@@ -1,0 +1,27 @@
+body {
+    background-color:black;
+}
+
+h2, li {
+    color:black;
+    /*-webkit-text-stroke: 1px white;*/
+    text-shadow: 0 0 20px lime,0 0 10px lime,0 0 5px lime;
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+ul {
+    width: 90%;
+    margin: auto;
+    font-weight: lighter;
+}
+
+li {
+    font-size: 60px;
+    list-style: none;
+    display: inline;
+}

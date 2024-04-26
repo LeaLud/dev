@@ -1,0 +1,33 @@
+body {
+  background-color: slateblue;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: 1px solid #333;
+  color: #333;
+  font-size: 36px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+  width: 250px;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+.activeButton {
+  border-color: whitesmoke;
+  color: whitesmoke;
+  background-color: firebrick;
+}
+
+.activeButton:hover {
+  background-color: #992525;
+}

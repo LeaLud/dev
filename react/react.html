@@ -189,9 +189,76 @@ import Componente1, {Componente2} from './carpeta/Archivo.jsx';
             </div>
         </li>
     </ol>
+    <h2>Hooks</h2>
+    <p>Los hooks son funciones que agregan ciertas capacidades a la aplicación. Los más comunes son:</p>
+    <ul>
+        <li><a href="#usestate">useState</a></li>
+        <li><a href="#useeffect">useEffect</a></li>
+        <li><a href="#usestate">useState</a></li>
+    </ul>
     <h2>Importar un hook</h2>
     <div class="code-block">
 import {useState} from 'react';
+    </div>
+    <div class="code-block">
+import {useState, useEffect} from 'react';
+    </div>
+    <h2><a name="usestate" class="anchor">Hook useState</a></h2>
+    <p>Es un arreglo compuesto por una variable y una función que modifica esa variable, por lo tanto se debe ejecutar en la aplicación asignándole ambos elementos</p>
+    <div class="copyCodeWrap">
+        <button class="copyCode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+            </svg>
+            <p>Copiar</p>
+        </button>
+    </div>
+    <div class="code-block">
+import React, { useState } from 'react';
+
+const HookUseState = () => {
+    
+    <span class="highlight-text">const [value, setValue] = useState(0)</span> 
+
+    const updateValue = () => {
+        <span class="highlight-text">setValue</span>(<span class="highlight-text">value</span> + 1)
+    }
+
+    return (
+        &ltbutton onClick={<span class="highlight-text">updateValue</span>}&gt
+            {value}
+        &lt/button&gt
+    )
+}
+
+export default HookUseState
+    </div>
+    <h2><a name="useeffect" class="anchor">Hook useEffect</a></h2>
+    <p>Es una función que recibe como parámetro otra función que ejecuta el efecto secundario</p>
+    <div class="copyCodeWrap">
+        <button class="copyCode">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+            </svg>
+            <p>Copiar</p>
+        </button>
+    </div>
+    <div class="code-block">
+import React, { useEffect } from 'react';
+
+function Componente() {
+    useEffect(
+        () => {
+            // Código de efecto secundario
+        }
+    )
+
+    return (
+        // JSX del componente
+    )
+}
     </div>
     <h2>props</h2>
     <p>Son variables cuyo valores se pasan desde la <span class="highlight-text">App principal</span> hacia los <span class="highlight-text">componentes que renderiza</span> 
@@ -290,41 +357,6 @@ npm install @mui/icons-material
             </div>
         </li>
     </ol>
-    <h2>Hooks</h2>
-    <p>Los hooks son funciones que agregan ciertas capacidades a la aplicación. Los más comunes son:</p>
-    <ul>
-        <li><a href="#usestate">useState</a></li>
-        <li><a href="#useeffect">useEffect</a></li>
-        <li><a href="#usestate">useState</a></li>
-    </ul>
-    <h2><a name="usestate" class="anchor">Hook useState</a></h2>
-    <p>Es una función compuesta por una variable y una función, por lo tanto se debe ejecutar en la aplicación asignándole ambos elementos</p>
-    <div class="copyCodeWrap">
-        <button class="copyCode">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
-                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
-            </svg>
-            <p>Copiar</p>
-        </button>
-    </div>
-    <div class="code-block">
-        ...
-    </div>
-    <h2><a name="useeffect" class="anchor">Hook useEffect</a></h2>
-    <p>Es una función compuesta por otra función, por lo tanto se debe ejecutar en la aplicación asignándole una</p>
-    <div class="copyCodeWrap">
-        <button class="copyCode">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
-                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
-            </svg>
-            <p>Copiar</p>
-        </button>
-    </div>
-    <div class="code-block">
-        ...
-    </div>
     <h2><a name="useeffect" class="anchor">Bucle map</a></h2>
     <p>Es un método que permite iterar sobre un array y transformar cada uno de sus elementos en un nuevo valor según una función proporcionada</p>
     <ul>

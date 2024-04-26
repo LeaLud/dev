@@ -1,0 +1,37 @@
+.display {
+    margin: 10px 0 40px 0;
+    border: 6px solid #111b21;
+    border-radius: 6px;
+	background-color: black;
+    position: relative;
+}
+
+.display p:not(#backgroundNums) {
+    font-family: digital-font;
+    text-align: right;
+    font-size: 30px;
+    margin: 25px 10px;
+    color: white;
+    background-color: rgba(35, 15, 15 , .8);
+	border-radius: 2px;
+    text-shadow: 0 0 5px firebrick, 0 0 5px firebrick, 0 0 10px firebrick, 0 0 15px firebrick, 0 0 15px firebrick;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+#backgroundNums {
+    position:absolute;
+    color: #666;
+    top: 0;
+    left: 0;
+    font-family: digital-font;
+    font-size: 30px;
+    margin: 25px 10px;
+    opacity: .8;
+}
+
+@font-face {
+    font-family: digital-font;
+    src: url(../fonts/DigitalNumbers-Regular.woff);
+}
