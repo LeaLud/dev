@@ -782,12 +782,12 @@ class TypeShuffle {
     ];
     // effects and respective methods
     effects = {
-        "fx5": ()=>this.fx1(),
+        "fx6": ()=>this.fx1(),
         "fx2": ()=>this.fx2(),
         "fx3": ()=>this.fx3(),
         "fx4": ()=>this.fx4(),
-        "fx1": ()=>this.fx5(),
-        "fx6": ()=>this.fx6()
+        "fx5": ()=>this.fx5(),
+        "fx1": ()=>this.fx6()
     };
     totalChars = 0;
     /**
