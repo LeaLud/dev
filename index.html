@@ -69,10 +69,16 @@
             &ltbody&gt
             <br />
             <br />
-            &ltscript src=javascript/javascript-basics.js&gt&lt/script&gt
+            &lt!--Con ASYNC el script se ejecuta tan pronto como está disponible--&gt<br />
+            &ltscript src=javascript/javascript-basics.js type="text/javascript" async&gt&lt/script&gt
+            <br /><br />
+            &lt!--Con DEFER el script se ejecuta de manera asíncrona después de que el documento HTML haya sido completamente analizado--&gt<br />
+            &ltscript src=javascript/javascript-basics.js type="text/javascript" defer&gt&lt/script&gt
+            <br />
             <br />
             &lt/body&gt
         </div>
+        <br />
         <iframe style="width: 70%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/BA328RQa08M?si=L72teTthIHZbZylD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <a href="javascript:" id="return-to-top"><span>></span></a>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

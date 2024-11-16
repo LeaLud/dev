@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--ckeditor-->
+    <script type="text/javascript" src="ckeditor.js"></script>
+
+    <style>
+        .ck-content {
+            height: 400px;
+        }
+    </style>
+    <title>ckeditor</title>
+</head>
+<body>
+    <form>
+        <textarea></textarea>
+    </form>
+
+    <!--ckeditor-->
+    <script>
+        ClassicEditor
+            .create( document.querySelector( "textarea" ))
+            .catch( error => {
+                console.error( error );
+            });
+    </script>
+</body>
+</html>
