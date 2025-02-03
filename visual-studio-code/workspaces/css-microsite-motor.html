@@ -1,0 +1,149 @@
+<style>
+    /*CSS Desktop*/
+    @media screen and (min-width:1300px) {
+        .titulo-seccion {
+            border-top: unset;
+        }
+
+        .titulo-seccion h3 {
+            margin-bottom: 60px;
+            font-size: 2rem;
+        }
+
+        #slider-portada .txt h2 {
+            font-size: 2rem;
+        }
+    }
+    /*CSS Desktop*/
+
+    /*CSS Tablet*/
+    @media screen and (min-width:768px) and (max-width:1299px) {
+        .titulo-seccion {
+            border-top: unset;
+        }
+
+        .titulo-seccion h3 {
+            margin-bottom: 60px;
+            font-size: 2rem;
+        }
+
+        #slider-portada .txt h2 {
+            font-size: 2rem;
+        }
+    }
+    /*CSS Tablet*/
+
+    /*CSS Mobile*/
+    @media screen and (max-width:767px) {
+        .titulo-seccion h3 {
+            margin-bottom: 40px;
+            font-size: 1.4rem;
+        }
+
+        #slider-portada .txt h2 {
+            font-size: 1.8rem;
+        }
+    }
+    /*CSS Mobile*/
+
+    /*CSS Small*/
+    .titulo-seccion h3 {
+        text-align: center;
+    }
+
+    #slider-portada {
+        position: relative;
+    }
+    
+    #botonera-portada .item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #botonera-portada .item a {
+        width: 180px;
+        display: block;
+        font-size: 0.8rem;
+        font-weight: 100;
+    }
+
+    #slider-portada .img {
+        width: 100%;
+        aspect-ratio: 1;
+    }
+
+    #slider-portada .txt {
+        width: 55%;
+        left: 3%;
+        bottom: 0;
+        padding: 30px;
+    }
+
+    #slider-portada .txt {
+        background: linear-gradient(rgba(0, 0, 0, .9), rgba(0, 0, 0, .6), rgba(0, 0, 0, 0));
+        position: absolute;
+        color: white;
+    }
+
+    #slider-portada .txt .tag {
+        position: absolute;
+        top: -16px;
+        background: #E9B000;
+        display: block;
+        padding: 2px 10px;
+    }
+
+    #botonera-portada .item svg {
+        width: 70px;
+        height: 70px;
+    }
+
+    #descubri-tv {
+        border-radius: 10px;
+        display: grid;
+        overflow: hidden;
+    }
+
+    #descubri-tv .nota {
+        position: relative;
+        overflow:hidden;
+        width: 100%;
+        height:300px;
+    }
+
+    #descubri-tv .nota h2 {
+        color: white;
+        text-shadow: 2px 1px #333;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.4rem;
+        width: 90%;
+        margin: auto;
+    }
+
+    #descubri-tv .nota div:nth-child(3) {
+        position: absolute;
+        height: 300px;
+        bottom: -110px;
+        transition: all 0.4s;
+    }
+
+    #descubri-tv svg {
+        width: 70px;
+        height: 70px;
+        fill: white;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 50px;
+        display: block;
+    }
+    
+    #descubri-tv .nota:hover div:nth-child(3) {
+        bottom: 110px;
+    }
+
+    .bloque-notas article {
+        
+    }
+    /*CSS Small*/
+</style>
