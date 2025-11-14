@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <title>SASS - Index</title>
+</head>
+<body>
+    <main>
+		<a class="button-goback" onclick="history.back()">Go back</a>
+        <h1>SASS - Compilación de CSS</h1>
+		<p>Compilar CSS transforma código escrito en preprocesadores (lenguajes más avanzados) en CSS estándar que los navegadores pueden entender. Las extensiones del CSS compilado pueden ser <span class="highlight-text">.SCSS</span> o <span class="highlight-text">.SASS</span> pero se recomienda <span class="highlight-text">.SCSS</span> debido a la similitud de sintaxis con el <span class="highlight-text">.CSS</span> normal</p>
+        <h2>Programas necesarios</h2>
+        <ol>
+            <li>
+                <a href="https://nodejs.org/en" target="_blank">Node.js</a> para el desarrollo local
+            </li>
+            <li>
+                <p>Comprobar versión instalada en consola de comandos</p>
+                <div class="code-block">
+    node -v
+                </div>
+                <div class="code-block">
+    node --version
+                </div>
+            </li>
+            <li>
+                <p>NPM (Node Package Manager). Instalar/actualizar la última versión</p>
+                <div class="code-block">
+    npm install -g npm@latest
+                </div>
+            </li>
+            <li>
+                <p>Comprobar versión instalada</p>
+                <div class="code-block">
+    npm -v
+                </div>
+                <div class="code-block">
+    npm --version
+                </div>
+            </li>
+        </ol>
+        <h2>Instalación SASS</h2>
+        <ol>
+            <li>
+                <div class="code-block">
+    npm install -g sass
+                </div>
+                <p>Comprobar versión instalada</p>
+                <div class="code-block">
+    sass --version
+                </div>
+            </li>
+            
+        </ol>
+        <h2>Compilando las hojas de estilo</h2>
+        <ol>
+            <li>
+                <p>Entrar por consola al directorio donde están los archivos <span class="highlight-text">.SCSS</span> o <span class="highlight-text">.SASS</span></p>
+                <div class="code-block">
+    cd C:/dev/sass/css
+                </div>
+            </li>
+            <li>
+                <p>Apuntar el archivo de entrada en busca de cambios y definir el archivo de salida <span class="highlight-text">.css</span></p>
+                <div class="code-block">
+    sass --watch style.scss style.css
+                </div>
+            </li>
+            <li>
+                <p>Para deja de observar los cambios en el archivo</p>
+                <div class="code-block">
+    Ctrl-C
+                </div>
+            </li>
+        </ol>
+        <h2>Módulos</h2>
+        <p>Son hojas de estilo separadas para distintos elementos. Por ejemplo, se puede definir un reset o el estilo de los banners por separado y luego integrarlos en la hoja principal <span class="highlight-text">style.scss</span></p>
+        <ol>
+            <li>
+                <p>_reset.scss</p>
+                <p>_banners.scss</p>
+                <div class="code-block">
+    @use 'reset';
+    @use 'banners';
+                </div>
+            </li>
+        </ol>
+        <h2>Variables</h2>
+        <ol>
+            <li>
+                <p>Definidas en <span class="highlight-text">_variables.scss</span></p>
+                <div class="code-block">
+    // Colores
+    $primary-color: #3498db;
+    $secondary-color: #2ecc71;
+    
+    // Tamaños
+    $width100: 100%;
+    $width50: 50%;
+
+    // Fuentes
+    $font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    $font-secondary: 'Georgia', serif;
+                </div>
+            </li>
+            <li>
+                <p>En cada hoja de estilo, llamar las variables</p>
+                <p>_reset.scss</p>
+                <p>_banners.scss</p>
+                <div class="code-block">
+    @use 'variables' as *;
+                </div>
+            </li>
+        </ol>  
+        <ol>
+            <li>
+                <p><a href="ejemplo.html" target="_blank">Página de ejemplo</a></p>
+            </li>
+        </ol>
+        
+        <script>
+        // ===== Scroll to Top ==== 
+        $(window).scroll(function() {
+            if ($(this).scrollTop() >= 100) {        // If page is scrolled more than 50px
+                $('#return-to-top').fadeIn(200);    // Fade in the arrow
+            } else {
+                $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+            }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+            $('body,html').animate({
+                scrollTop : 0                       // Scroll to top of body
+            }, 50);
+        });
+        </script>
+    </main>
+</body>
+</html>

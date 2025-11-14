@@ -1,0 +1,55 @@
+//Inclusión de archivos
+@use 'reset';
+@use 'variables' as *;
+@use 'banners';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+    background-color: $background-color;
+    padding: 20px;
+}
+
+img {
+    width: $width100;
+    border: 4px solid $success-color;
+    margin: $margin-y;
+}
+
+// Anidación de selectores
+main {
+    h1, h2 {
+        font-family: $font-primary;
+        margin: $margin-y;
+        color: $success-color;
+    }
+    
+    p {
+        color: $text-color;
+        margin: $margin-x;
+        font-family: $font-primary;
+    }
+
+    img {
+        border-color: $primary-color;
+    }
+}
+
+article {
+    border: 2px solid $border-color;
+    padding: 15px;
+    margin: $margin-y;
+    background-color: $warning-color;
+
+    h2 {
+        color: $secondary-color;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 1.6;
+    }
+}
