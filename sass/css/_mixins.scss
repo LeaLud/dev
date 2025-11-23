@@ -1,0 +1,15 @@
+@mixin center-block {
+    display: block;
+    width: 85%;
+    margin: auto;
+}
+
+body {
+    @include center-block;
+}
+
+@mixin articles-box($bg-color: red, $text-color: blue, $font-size: 16px) {
+    background-color: $bg-color;
+    color: $text-color;
+    font-size: $font-size;
+}

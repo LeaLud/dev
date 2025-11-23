@@ -106,14 +106,83 @@
                 </div>
             </li>
             <li>
-                <p>En cada hoja de estilo, llamar las variables</p>
+                <p>En cada hoja de estilo, llamar las variables para poder reutilizarlas</p>
                 <p>_reset.scss</p>
                 <p>_banners.scss</p>
                 <div class="code-block">
     @use 'variables' as *;
                 </div>
             </li>
-        </ol>  
+        </ol>
+        <h2>Mixins</h2>
+        <p>Son plantillas de estilos que pueden ser reutilizados en varios elementos</p>
+        <ol>
+            <li>
+                <p>Definiendo el mixin en <span class="highlight-text">_mixins.scss</span></p>
+                <div class="code-block">
+    @mixin center-block {
+        display: block;
+        width: 75%;
+        margin: auto;
+    }
+                </div>
+            </li>
+            <li>
+                <p>Llamando la hoja de mixins en la hoja principal <span class="highlight-text">style.scss</span></p>
+                <div class="code-block">
+    @use 'mixins' as *;
+                </div>
+            </li>
+            <li>
+                <p>Aplicando el mixin en selectores</p>
+                <div class="code-block">
+    main {
+        @include center-block;
+    }
+
+    img {
+        @include center-block;
+    }
+                </div>
+            </li>
+            <li>
+                <p>Pasando atributos como parámetros</p>
+                <div class="code-block">
+    @mixin articles-box($bg-color: gray, $text-color: blue, $font-size: 16px) {
+        background-color: $bg-color;
+        color: $text-color;
+        font-size: $font-size;
+    }
+                </div>
+            </li>
+            <li>
+                <p>Aplicando el mixin en selectores</p>
+                <div class="code-block">
+    aside {
+        @include articles-box;
+    }
+                </div>
+            </li>
+            <li>
+                <p>Aplicando el mixin en selectores y cambiando los parámetros</p>
+                <div class="code-block">
+    aside {
+        @include articles-box($text-color: darkblue, $font-size: 14px);
+    }
+                </div>
+            </li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
         <ol>
             <li>
                 <p><a href="ejemplo.html" target="_blank">Página de ejemplo</a></p>

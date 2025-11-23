@@ -1,7 +1,12 @@
+//Inclusión de variables
+@use 'variables' as *;
+
 //Inclusión de archivos
 @use 'reset';
-@use 'variables' as *;
 @use 'banners';
+
+//Inclusión de archivos
+@use 'mixins' as *;
 
 * {
     margin: 0;
@@ -11,12 +16,14 @@
 main {
     background-color: $background-color;
     padding: 20px;
+    @include center-block;
 }
 
 img {
     width: $width100;
     border: 4px solid $success-color;
     margin: $margin-y;
+    @include center-block;
 }
 
 // Anidación de selectores
@@ -52,4 +59,8 @@ article {
     p {
         line-height: 1.6;
     }
+}
+
+aside {
+    @include articles-box($text-color: darkblue, $font-size: 14px);
 }
